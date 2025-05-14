@@ -1,0 +1,43 @@
+### Crear un nuevo horario
+POST http://localhost:8080/api/schedules
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWlyLnJvamFzQHVjYi5lZHUuYm8iLCJyb2xlcyI6WyJQQVRJRU5UIiwiQURNSU4iLCJUSEVSQVBJU1QiXSwiZmlyc3ROYW1lIjoiQU1JUiBBRE9MRk8iLCJsYXN0TmFtZSI6IlJPSkFTIEJFTExJRE8iLCJ1c2VySWQiOjYsImlhdCI6MTc0NDE2Mzk1NywiZXhwIjoxNzQ0MTY0ODU3fQ.vf4iRA13l9cjtBl_9ZImGVv6_kOZN_rnv305SbQ8rok
+
+{
+  "userTherapistId": 7,
+  "date": "2025-04-10",
+  "startTime": "14:00",
+  "endTime": "13:00"
+}
+
+### Actualizar un horario existente
+PUT http://localhost:8080/api/schedules/1
+Content-Type: application/json
+Authorization: Bearer <TU_TOKEN_JWT_AQUÍ>
+
+{
+  "userTherapistId": 6,
+  "date": "2021-12-31",
+  "startTime": "10:00",
+  "endTime": "11:00"
+}
+
+### Listar todos los horarios
+GET http://localhost:8080/api/schedules
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWlyLnJvamFzQHVjYi5lZHUuYm8iLCJyb2xlcyI6WyJQQVRJRU5UIiwiQURNSU4iLCJUSEVSQVBJU1QiXSwiZmlyc3ROYW1lIjoiQU1JUiBBRE9MRk8iLCJsYXN0TmFtZSI6IlJPSkFTIEJFTExJRE8iLCJpYXQiOjE3NDM3MzE3NjksImV4cCI6MTc0MzczMjY2OX0.lRRlhSoAI2Ql5jYr-iUM-VAiyDLV5juw71h_wKcm91E
+
+### Listar horarios de un terapeuta especifico
+GET http://localhost:8080/api/schedules/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtZWxhbnkua2F1bmVAdWNiLmVkdS5ibyIsInJvbGVzIjpbIlBBVElFTlQiLCJUSEVSQVBJU1QiXSwiZmlyc3ROYW1lIjoiTUVMQU5ZIFBBVFJJQ0lBIiwibGFzdE5hbWUiOiJLQVVORSBBUkFOSUJBUiIsInVzZXJJZCI6NywiaWF0IjoxNzQ2NDkwMDgwLCJleHAiOjE3NDY0OTA5ODB9.8oNPzP-MRnb3d2I5ZkFOqnIGz5QRHGaReb4pikjrSKM
+
+### Aceptar un horario
+PUT http://localhost:8080/api/sessions/15/state
+Content-Type: application/json
+
+{
+  "newState": "ACCEPTED"
+}
+
+### Obtener citas en estado pendiente
+GET http://localhost:8080/api/sessions/?state=PENDING
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtZWxhbnkua2F1bmVAdWNiLmVkdS5ibyIsInJvbGVzIjpbIlBBVElFTlQiLCJUSEVSQVBJU1QiXSwiZmlyc3ROYW1lIjoiTUVMQU5ZIFBBVFJJQ0lBIiwibGFzdE5hbWUiOiJLQVVORSBBUkFOSUJBUiIsInVzZXJJZCI6NywiaWF0IjoxNzQ2NDkwMDgwLCJleHAiOjE3NDY0OTA5ODB9.8oNPzP-MRnb3d2I5ZkFOqnIGz5QRHGaReb4pikjrSKM

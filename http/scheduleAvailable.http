@@ -1,0 +1,11 @@
+### GET PARA OBTENER LOS HORARIOS DISPONIBLES
+GET http://localhost:8080/api/schedules/available
+
+### GET PARA OBTENER LOS HORARIOS SOLO DE UN TERAPEUTA
+GET http://localhost:8080/api/schedules/available?therapistId=6
+
+### GET PARA OBTENER LOS HORARIOS DE UN DÍA EN ESPECÍFICO
+GET http://localhost:8080/api/schedules/available?date=2025-04-10
+
+### GET PARA OBTENER LOS HORARIOS DE UN DÍA EN ESPECÍFICO Y DE UN TERAPEUTA
+GET http://localhost:8080/api/schedules/available?therapistId=6&date=2025-04-10

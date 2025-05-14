@@ -1,0 +1,20 @@
+### Endpoint para iniciar el proceso de autenticación con Google
+GET http://localhost:8080/oauth2/authorization/google
+Accept: application/json
+
+### Endpoint para manejar la redirección tras autenticación con Google
+GET http://localhost:8080/auth/success
+
+### Endpoint para asignar un rol a un usuario (solo accesible para ADMIN)
+POST http://localhost:8080/api/admin/roles/assign
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWlyLnJvamFzQHVjYi5lZHUuYm8iLCJyb2xlcyI6WyJQQVRJRU5UIiwiQURNSU4iLCJUSEVSQVBJU1QiXSwiZmlyc3ROYW1lIjoiQU1JUiBBRE9MRk8iLCJsYXN0TmFtZSI6IlJPSkFTIEJFTExJRE8iLCJpYXQiOjE3NDQwNDg5MzMsImV4cCI6MTc0NDA0OTgzM30.UHszSxMrZ0-ny3KrrkdpWDc4IXPR6QCJGYc1cde0xk4
+
+{
+  "email": "melany.kaune@ucb.edu.bo",
+  "role": "THERAPIST"
+}
+
+### Endpoint protegido (requiere autenticación con JWT)
+GET http://localhost:8080/protected-endpoint
+Authorization: Bearer <TU_TOKEN_JWT_AQUÍ>
