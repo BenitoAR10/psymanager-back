@@ -69,7 +69,7 @@ public class SecurityConfig {
 
                                 // Diferenciar entre cliente móvil y web
                                 redirectUrl = switch (registrationId) {
-                                    case "google-mobile" -> "http://localhost:19006/auth/success?accessToken=" + user.getAccessToken()
+                                    case "google-mobile" -> "http://localhost:8081/auth/success?accessToken=" + user.getAccessToken()
                                             + "&refreshToken=" + user.getRefreshToken();
                                     case "google" -> "http://localhost:5173/auth/success?accessToken=" + user.getAccessToken()
                                             + "&refreshToken=" + user.getRefreshToken();
