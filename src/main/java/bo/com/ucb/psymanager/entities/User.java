@@ -38,6 +38,10 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
+    /** Contraseña encriptada (solo si usa login tradicional) */
+    @Column(name = "password")
+    private String password;
+
     /** Número de teléfono (opcional, usado para notificaciones) */
     @Column(name = "phone_number")
     private String phoneNumber;

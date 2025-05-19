@@ -1,13 +1,17 @@
 package bo.com.ucb.psymanager.controllers;
 
 import bo.com.ucb.psymanager.bl.AuthenticatedUserBl;
+import bo.com.ucb.psymanager.bl.ManualUserRegistrationBl;
+import bo.com.ucb.psymanager.dto.AuthResponseDto;
 import bo.com.ucb.psymanager.dto.CompleteProfileRequestDto;
+import bo.com.ucb.psymanager.dto.LoginRequestDto;
+import bo.com.ucb.psymanager.dto.RegisterPatientRequestDto;
 import bo.com.ucb.psymanager.entities.User;
-import bo.com.ucb.psymanager.util.CustomOAuth2User;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,13 +30,15 @@ public class AuthController {
     private static final Logger logger = Logger.getLogger(AuthController.class);
 
     private final AuthenticatedUserBl authenticatedUserBl;
+    private final ManualUserRegistrationBl manualUserRegistrationBl;
+
 
 
 
     @Autowired
-    public AuthController(AuthenticatedUserBl authenticatedUserBl) {
+    public AuthController(AuthenticatedUserBl authenticatedUserBl, ManualUserRegistrationBl manualUserRegistrationBl) {
         this.authenticatedUserBl = authenticatedUserBl;
-
+        this.manualUserRegistrationBl = manualUserRegistrationBl;
     }
 
     /**
@@ -108,23 +114,54 @@ public class AuthController {
     }
 
     /**
-     * Permite que el usuario autenticado complete la información de su perfil,
-     * incluyendo datos personales como CI, dirección, género, etc.
+     * Endpoint para iniciar sesión con email y contraseña.
      *
-     * @param email Email del usuario autenticado extraído del token JWT.
-     * @param profileDto DTO con los campos que debe completar.
+     * @param dto Objeto que contiene las credenciales de inicio de sesión.
+     * @return ResponseEntity con los tokens JWT si la autenticación es exitosa.
+     */
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponseDto> login(@RequestBody LoginRequestDto dto) {
+        logger.info("Solicitud de inicio de sesión recibida para: " + dto.getEmail());
+        AuthResponseDto response = authenticatedUserBl.loginWithEmailAndPassword(dto);
+        logger.info("Login exitoso para: " + dto.getEmail());
+        return ResponseEntity.ok(response);
+    }
+
+    /**
+     * Endpoint para registrar a un nuevo paciente con email y contraseña.
+     *
+     * @param dto DTO con los datos básicos requeridos para el registro.
+     * @return ResponseEntity con código 201 (Created) si el registro es exitoso.
+     */
+    @PostMapping("/register")
+    public ResponseEntity<Void> registerNewPatient(@RequestBody RegisterPatientRequestDto dto) {
+        logger.info("Solicitud de registro recibida para: " + dto.getEmail());
+        manualUserRegistrationBl.registerNewPatientUser(dto);
+        logger.info("Registro exitoso para: " + dto.getEmail());
+        return ResponseEntity.status(201).build();
+    }
+
+
+
+    /**
+     * Permite que el usuario autenticado complete su información personal y académica.
+     * Email del usuario autenticado extraído del token JWT.
+     * @param profileDto DTO con los campos personales y académicos a completar.
      * @return Respuesta 200 si se actualiza correctamente, 500 en caso de error.
      */
     @PutMapping("/complete-profile")
     public ResponseEntity<String> completeProfile(
-            @AuthenticationPrincipal String email,
+            Authentication authentication,
             @RequestBody CompleteProfileRequestDto profileDto
     ) {
+        String email = authentication.getName();
         try {
-            authenticatedUserBl.completeUserProfile(email, profileDto);
+            logger.info("Solicitud para completar perfil del usuario: " + email);
+            manualUserRegistrationBl.completePatientProfile(email, profileDto);
+            logger.info("Perfil completado correctamente para: " + email);
             return ResponseEntity.ok("Perfil completado correctamente");
         } catch (Exception e) {
-            logger.error("Error al completar perfil", e);
+            logger.error("Error al completar perfil para: " + email, e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error al completar el perfil");
         }

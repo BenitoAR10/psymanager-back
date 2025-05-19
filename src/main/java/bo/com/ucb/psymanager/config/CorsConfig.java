@@ -29,7 +29,10 @@ public class CorsConfig {
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:5173",   // Frontend web React
                 "http://localhost:8081",   // Redirección OAuth móvil
-                "http://localhost:19006"   // Expo Go (React Native)
+                "http://localhost:19006",   // Expo Go (React Native)
+                "http://192.168.1.204:8081",
+                "http://192.168.1.204:19006",
+                "http://192.168.1.204:8080"
         ));
 
         // Métodos HTTP permitidos

@@ -4,10 +4,12 @@ import bo.com.ucb.psymanager.dao.UserDao;
 import bo.com.ucb.psymanager.dao.UserRoleDao;
 import bo.com.ucb.psymanager.dto.AuthResponseDto;
 import bo.com.ucb.psymanager.dto.CompleteProfileRequestDto;
+import bo.com.ucb.psymanager.dto.LoginRequestDto;
 import bo.com.ucb.psymanager.entities.User;
 import bo.com.ucb.psymanager.util.JwtUtil;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.apache.log4j.Logger;
 
@@ -24,12 +26,15 @@ public class AuthenticatedUserBl {
     private final UserDao userDao;
     private final UserRoleDao userRoleDao;
     private final JwtUtil jwtUtil;
+    private final PasswordEncoder passwordEncoder;
+
 
     @Autowired
-    public AuthenticatedUserBl(UserDao userDao, UserRoleDao userRoleDao, JwtUtil jwtUtil) {
+    public AuthenticatedUserBl(UserDao userDao, UserRoleDao userRoleDao, JwtUtil jwtUtil, PasswordEncoder passwordEncoder) {
         this.userDao = userDao;
         this.userRoleDao = userRoleDao;
         this.jwtUtil = jwtUtil;
+        this.passwordEncoder = passwordEncoder;
     }
 
     /**
@@ -168,5 +173,42 @@ public class AuthenticatedUserBl {
                     return new RuntimeException("Usuario no encontrado");
                 });
     }
+
+    /**
+     * Realiza la autenticación de un usuario utilizando email y contraseña.
+     * Verifica que el usuario exista y que la contraseña coincida.
+     * En caso exitoso, genera y retorna los tokens de autenticación.
+     *
+     * @param dto DTO que contiene las credenciales de inicio de sesión.
+     * @return AuthResponseDto con accessToken y refreshToken.
+     * @throws RuntimeException si el usuario no existe o la contraseña es inválida.
+     */
+    public AuthResponseDto loginWithEmailAndPassword(LoginRequestDto dto) {
+        logger.info("Iniciando autenticación para email: " + dto.getEmail());
+
+        // Buscar al usuario por email
+        User user = userDao.findByEmail(dto.getEmail())
+                .orElseThrow(() -> {
+                    logger.warn("Intento de login con email no registrado: " + dto.getEmail());
+                    return new RuntimeException("Credenciales inválidas");
+                });
+
+        // Verificar si tiene contraseña registrada
+        if (user.getPassword() == null || user.getPassword().isEmpty()) {
+            logger.warn("El usuario " + dto.getEmail() + " no tiene una contraseña configurada.");
+            throw new RuntimeException("Este usuario no tiene acceso por contraseña.");
+        }
+
+        // Verificar contraseña (en producción deberías usar BCrypt)
+        if (!passwordEncoder.matches(dto.getPassword(), user.getPassword())) {
+            logger.warn("Contraseña incorrecta para el usuario: " + dto.getEmail());
+            throw new RuntimeException("Credenciales inválidas");
+        }
+
+
+        logger.info("Autenticación exitosa para " + dto.getEmail());
+        return generateTokens(dto.getEmail());
+    }
+
 
 }

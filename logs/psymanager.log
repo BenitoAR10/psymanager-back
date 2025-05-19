@@ -7667,3 +7667,852 @@ Caused by: org.postgresql.util.PSQLException: ERROR: llave duplicada viola restr
 [2025-05-15 12:37:38] [INFO] [AuthController] - Solicitud a /auth/me
 [2025-05-15 12:37:38] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
 [2025-05-15 12:37:38] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-15 14:08:50] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-15 14:08:50] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-15 14:08:50] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-15 14:18:22] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-15 14:18:22] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-15 14:21:16] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-15 14:21:16] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-15 14:21:31] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-15 14:21:31] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-15 14:21:37] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-15 14:21:37] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-15 14:22:50] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-15 14:22:50] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-15 14:22:50] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-15 14:22:50] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-15 14:22:50] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-15 14:22:50] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT, THERAPIST]
+[2025-05-15 14:22:50] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-15 14:41:33] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas.bellido@gmail.com
+[2025-05-15 14:41:33] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 14:41:33] [INFO] [OAuth2AuthenticationBl] - Nuevo usuario creado y rol 'PATIENT' asignado: amir.rojas.bellido@gmail.com
+[2025-05-15 14:41:33] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas.bellido@gmail.com: [PATIENT]
+[2025-05-15 14:41:33] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas.bellido@gmail.com
+[2025-05-15 14:41:34] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 14:41:34] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 14:41:34] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 14:42:42] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 14:42:42] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 14:42:42] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 14:43:36] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 14:43:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 14:43:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:05:01] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 15:05:01] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-15 15:05:01] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: anonymousUser
+[2025-05-15 15:05:01] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-15 15:05:01] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-15 15:05:01] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-15 15:05:01] [ERROR] [AuthenticatedUserBl] - Usuario no encontrado con email: anonymousUser
+[2025-05-15 15:05:01] [ERROR] [AuthController] - Error al obtener la información del usuario
+java.lang.RuntimeException: Usuario no encontrado
+	at bo.com.ucb.psymanager.bl.AuthenticatedUserBl.lambda$getUserByEmail$5(AuthenticatedUserBl.java:168)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at bo.com.ucb.psymanager.bl.AuthenticatedUserBl.getUserByEmail(AuthenticatedUserBl.java:166)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723)
+	at bo.com.ucb.psymanager.bl.AuthenticatedUserBl$$SpringCGLIB$$0.getUserByEmail(<generated>)
+	at bo.com.ucb.psymanager.controllers.AuthController.getUserInfo(AuthController.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at bo.com.ucb.psymanager.util.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-05-15 15:05:35] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas.bellido@gmail.com
+[2025-05-15 15:05:35] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:05:35] [INFO] [OAuth2AuthenticationBl] - Nuevo usuario creado y rol 'PATIENT' asignado: amir.rojas.bellido@gmail.com
+[2025-05-15 15:05:35] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas.bellido@gmail.com: [PATIENT]
+[2025-05-15 15:05:35] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas.bellido@gmail.com
+[2025-05-15 15:05:36] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 15:05:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:05:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:06:08] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 15:06:08] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:06:08] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:06:25] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 15:06:25] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:06:25] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:06:44] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 15:06:44] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:06:44] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:11:01] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 15:11:01] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:11:01] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:11:11] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas.bellido@gmail.com
+[2025-05-15 15:11:11] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas.bellido@gmail.com: [PATIENT]
+[2025-05-15 15:11:11] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas.bellido@gmail.com
+[2025-05-15 15:11:13] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 15:11:13] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:11:13] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:12:00] [INFO] [AuthController] - Solicitud a /auth/me
+[2025-05-15 15:12:00] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 15:12:00] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-15 21:41:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-15 21:41:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-15 21:41:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-15 21:41:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-15 21:41:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-15 21:41:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-15 21:41:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-15 21:41:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-15 21:42:07] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-15 21:42:07] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-15 21:42:07] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-16 01:13:42] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-16 01:13:42] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-16 01:13:42] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-16 01:16:36] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-16 01:16:36] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-18 16:59:05] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-18 16:59:05] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-18 16:59:06] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 13
+[2025-05-18 17:02:14] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-18 17:02:14] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-18 17:02:14] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-18 17:02:14] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-18 17:02:14] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-18 17:02:14] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: []
+[2025-05-18 17:02:14] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-18 17:02:21] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-18 17:02:21] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-18 17:02:21] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-18 17:02:21] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-18 17:02:21] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-18 17:02:21] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: []
+[2025-05-18 17:02:21] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-18 17:02:35] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-18 17:02:35] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-18 17:02:35] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-18 17:02:35] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-18 17:02:35] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-18 17:02:35] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: []
+[2025-05-18 17:02:35] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-18 17:03:09] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.coma
+[2025-05-18 17:03:09] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.coma
+[2025-05-18 17:03:09] [WARN] [AuthenticatedUserBl] - Intento de login con email no registrado: amirbellido@gmail.coma
+[2025-05-18 17:03:16] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-18 17:03:16] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-18 17:03:16] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-18 17:03:16] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-18 17:03:16] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-18 17:03:16] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: []
+[2025-05-18 17:03:16] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-18 17:04:14] [INFO] [AuthController] - Solicitud de registro recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 17:04:14] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amir.rojas.bellido@gmail.com
+[2025-05-18 17:04:14] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 14
+[2025-05-18 17:19:55] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-18 17:19:55] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-18 17:19:55] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-18 17:19:55] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-18 17:24:42] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-18 17:24:42] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-18 17:29:29] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.coma
+[2025-05-18 17:29:29] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.coma
+[2025-05-18 17:29:29] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 15
+[2025-05-18 17:29:29] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 15
+[2025-05-18 17:29:29] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amirbellido@gmail.coma
+[2025-05-18 17:29:29] [INFO] [AuthController] - Registro exitoso para: amirbellido@gmail.coma
+[2025-05-18 17:29:30] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.coma
+[2025-05-18 17:29:30] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.coma
+[2025-05-18 17:29:30] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.coma
+[2025-05-18 17:29:30] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.coma
+[2025-05-18 17:29:30] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.coma
+[2025-05-18 17:29:30] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 17:29:30] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.coma
+[2025-05-18 17:30:43] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.coma
+[2025-05-18 17:30:43] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.coma
+[2025-05-18 17:30:43] [WARN] [AuthenticatedUserBl] - Contraseña incorrecta para el usuario: amirbellido@gmail.coma
+[2025-05-18 17:30:57] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.coma
+[2025-05-18 17:30:57] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.coma
+[2025-05-18 17:30:57] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.coma
+[2025-05-18 17:30:57] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.coma
+[2025-05-18 17:30:57] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.coma
+[2025-05-18 17:30:57] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 17:30:57] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.coma
+[2025-05-18 21:53:35] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-18 21:53:35] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-18 21:53:35] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-18 21:53:35] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-18 21:53:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-18 21:53:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-18 21:53:36] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-18 21:53:36] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-18 21:54:18] [INFO] [AuthController] - Solicitud de registro recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 16
+[2025-05-18 21:54:18] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 16
+[2025-05-18 21:54:18] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [INFO] [AuthController] - Registro exitoso para: amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-18 21:54:18] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 21:54:19] [INFO] [AuthController] - Login exitoso para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [INFO] [AuthController] - Solicitud de registro recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 17
+[2025-05-18 22:02:07] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 17
+[2025-05-18 22:02:07] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [INFO] [AuthController] - Registro exitoso para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:02:07] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 22:02:07] [INFO] [AuthController] - Login exitoso para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:04:34] [INFO] [AuthController] - Solicitud de registro recibida para: juan.perez@gmail.com
+[2025-05-18 22:04:34] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: juan.perez@gmail.com
+[2025-05-18 22:04:34] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 18
+[2025-05-18 22:04:34] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 18
+[2025-05-18 22:04:34] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: juan.perez@gmail.com
+[2025-05-18 22:04:34] [INFO] [AuthController] - Registro exitoso para: juan.perez@gmail.com
+[2025-05-18 22:04:34] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-18 22:04:34] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-18 22:04:34] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-18 22:04:34] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-18 22:04:34] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-18 22:04:34] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 22:04:34] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-18 22:11:00] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-18 22:11:00] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-18 22:11:00] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 19
+[2025-05-18 22:11:00] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 19
+[2025-05-18 22:11:00] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amirbellido@gmail.com
+[2025-05-18 22:11:00] [INFO] [AuthController] - Registro exitoso para: amirbellido@gmail.com
+[2025-05-18 22:11:00] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-18 22:11:00] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-18 22:11:00] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-18 22:11:00] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-18 22:11:00] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-18 22:11:00] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 22:11:00] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-18 22:17:19] [INFO] [AuthController] - Solicitud de registro recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 20
+[2025-05-18 22:17:19] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 20
+[2025-05-18 22:17:19] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [INFO] [AuthController] - Registro exitoso para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:17:19] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 22:17:19] [INFO] [AuthController] - Login exitoso para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:22:11] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-18 22:22:11] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-18 22:22:11] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 21
+[2025-05-18 22:22:11] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 21
+[2025-05-18 22:22:11] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amirbellido@gmail.com
+[2025-05-18 22:22:11] [INFO] [AuthController] - Registro exitoso para: amirbellido@gmail.com
+[2025-05-18 22:22:12] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-18 22:22:12] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-18 22:22:12] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-18 22:22:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-18 22:22:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-18 22:22:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 22:22:12] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-18 22:23:26] [INFO] [AuthController] - Solicitud de registro recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 22
+[2025-05-18 22:23:26] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 22
+[2025-05-18 22:23:26] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [INFO] [AuthController] - Registro exitoso para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas.bellido@gmail.com
+[2025-05-18 22:23:26] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 22:23:26] [INFO] [AuthController] - Login exitoso para: amir.rojas.bellido@gmail.com
+[2025-05-18 22:24:47] [INFO] [AuthController] - Solicitud de registro recibida para: juan.perez@gmail.com
+[2025-05-18 22:24:47] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: juan.perez@gmail.com
+[2025-05-18 22:24:47] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 23
+[2025-05-18 22:24:47] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 23
+[2025-05-18 22:24:47] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: juan.perez@gmail.com
+[2025-05-18 22:24:47] [INFO] [AuthController] - Registro exitoso para: juan.perez@gmail.com
+[2025-05-18 22:24:47] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-18 22:24:47] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-18 22:24:47] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-18 22:24:47] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-18 22:24:47] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-18 22:24:47] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-18 22:24:47] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-19 09:23:42] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 09:23:42] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 09:23:42] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 09:23:42] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 09:23:42] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 09:23:42] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 09:23:42] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 09:23:42] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 09:24:08] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.coma
+[2025-05-19 09:24:08] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.coma
+[2025-05-19 09:24:08] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 24
+[2025-05-19 09:24:08] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 24
+[2025-05-19 09:24:08] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amirbellido@gmail.coma
+[2025-05-19 09:24:08] [INFO] [AuthController] - Registro exitoso para: amirbellido@gmail.coma
+[2025-05-19 09:24:09] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.coma
+[2025-05-19 09:24:09] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.coma
+[2025-05-19 09:24:09] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.coma
+[2025-05-19 09:24:09] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.coma
+[2025-05-19 09:24:09] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.coma
+[2025-05-19 09:24:09] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 09:24:09] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.coma
+[2025-05-19 09:25:11] [INFO] [AuthController] - Solicitud para completar perfil del usuario: amirbellido@gmail.coma
+[2025-05-19 09:25:11] [INFO] [ManualUserRegistrationBl] - Completando perfil del paciente con email: amirbellido@gmail.coma
+[2025-05-19 09:25:11] [INFO] [ManualUserRegistrationBl] - Datos personales completados para: amirbellido@gmail.coma
+[2025-05-19 09:25:11] [ERROR] [AuthController] - Error al completar perfil para: amirbellido@gmail.coma
+org.springframework.dao.DataIntegrityViolationException: not-null property references a null or transient value: bo.com.ucb.psymanager.entities.CareerDepartment.careerName
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:307)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy153.save(Unknown Source)
+	at bo.com.ucb.psymanager.bl.ManualUserRegistrationBl.completePatientProfile(ManualUserRegistrationBl.java:144)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723)
+	at bo.com.ucb.psymanager.bl.ManualUserRegistrationBl$$SpringCGLIB$$0.completePatientProfile(<generated>)
+	at bo.com.ucb.psymanager.controllers.AuthController.completeProfile(AuthController.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at bo.com.ucb.psymanager.util.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value: bo.com.ucb.psymanager.entities.CareerDepartment.careerName
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:112)
+	at org.hibernate.engine.internal.Nullability.checkNullability(Nullability.java:57)
+	at org.hibernate.action.internal.AbstractEntityInsertAction.nullifyTransientReferencesIfNotAlready(AbstractEntityInsertAction.java:126)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:73)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:393)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:307)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:223)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy2/jdk.proxy2.$Proxy136.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy2/jdk.proxy2.$Proxy136.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:627)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:752)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 116 more
+[2025-05-19 10:32:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 10:32:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 10:32:12] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 10:32:12] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 10:33:19] [INFO] [AuthController] - Solicitud de registro recibida para: juen.perez@gmail.com
+[2025-05-19 10:33:19] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: juen.perez@gmail.com
+[2025-05-19 10:33:20] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 25
+[2025-05-19 10:33:20] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 25
+[2025-05-19 10:33:20] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: juen.perez@gmail.com
+[2025-05-19 10:33:20] [INFO] [AuthController] - Registro exitoso para: juen.perez@gmail.com
+[2025-05-19 10:33:20] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juen.perez@gmail.com
+[2025-05-19 10:33:20] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juen.perez@gmail.com
+[2025-05-19 10:33:20] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juen.perez@gmail.com
+[2025-05-19 10:33:20] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juen.perez@gmail.com
+[2025-05-19 10:33:20] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juen.perez@gmail.com
+[2025-05-19 10:33:20] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 10:33:20] [INFO] [AuthController] - Login exitoso para: juen.perez@gmail.com
+[2025-05-19 10:53:27] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.coma
+[2025-05-19 10:53:27] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.coma
+[2025-05-19 10:53:28] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 26
+[2025-05-19 10:53:28] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 26
+[2025-05-19 10:53:28] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amirbellido@gmail.coma
+[2025-05-19 10:53:28] [INFO] [AuthController] - Registro exitoso para: amirbellido@gmail.coma
+[2025-05-19 10:53:28] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.coma
+[2025-05-19 10:53:28] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.coma
+[2025-05-19 10:53:28] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.coma
+[2025-05-19 10:53:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.coma
+[2025-05-19 10:53:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.coma
+[2025-05-19 10:53:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 10:53:28] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.coma
+[2025-05-19 11:10:37] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 11:10:37] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 11:10:37] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 11:10:37] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 11:10:38] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 11:10:38] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 11:10:38] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 11:10:38] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 11:11:04] [INFO] [AuthController] - Solicitud de registro recibida para: juan.perez@gmail.com
+[2025-05-19 11:11:04] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: juan.perez@gmail.com
+[2025-05-19 11:11:04] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 27
+[2025-05-19 11:11:04] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 27
+[2025-05-19 11:11:04] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: juan.perez@gmail.com
+[2025-05-19 11:11:04] [INFO] [AuthController] - Registro exitoso para: juan.perez@gmail.com
+[2025-05-19 11:11:05] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-19 11:11:05] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-19 11:11:05] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-19 11:11:05] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-19 11:11:05] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-19 11:11:05] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 11:11:05] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-19 11:11:40] [INFO] [AuthController] - Solicitud para completar perfil del usuario: juan.perez@gmail.com
+[2025-05-19 11:11:40] [INFO] [ManualUserRegistrationBl] - Completando perfil del paciente con email: juan.perez@gmail.com
+[2025-05-19 11:11:40] [INFO] [ManualUserRegistrationBl] - Datos personales completados para: juan.perez@gmail.com
+[2025-05-19 11:11:40] [INFO] [ManualUserRegistrationBl] - Carrera académica registrada para el paciente: juan.perez@gmail.com
+[2025-05-19 11:11:40] [INFO] [AuthController] - Perfil completado correctamente para: juan.perez@gmail.com
+[2025-05-19 11:24:51] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 11:24:51] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 11:24:51] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 28
+[2025-05-19 11:24:51] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 28
+[2025-05-19 11:24:51] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amirbellido@gmail.com
+[2025-05-19 11:24:51] [INFO] [AuthController] - Registro exitoso para: amirbellido@gmail.com
+[2025-05-19 11:24:51] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-19 11:24:51] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-19 11:24:52] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-19 11:24:52] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-19 11:24:52] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-19 11:24:52] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 11:24:52] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-19 11:25:30] [INFO] [AuthController] - Solicitud para completar perfil del usuario: amirbellido@gmail.com
+[2025-05-19 11:25:30] [INFO] [ManualUserRegistrationBl] - Completando perfil del paciente con email: amirbellido@gmail.com
+[2025-05-19 11:25:30] [INFO] [ManualUserRegistrationBl] - Datos personales completados para: amirbellido@gmail.com
+[2025-05-19 11:25:30] [INFO] [ManualUserRegistrationBl] - Carrera académica registrada para el paciente: amirbellido@gmail.com
+[2025-05-19 11:25:30] [INFO] [AuthController] - Perfil completado correctamente para: amirbellido@gmail.com
+[2025-05-19 11:26:01] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-19 11:26:01] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-19 11:26:01] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-19 11:26:01] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-19 11:26:01] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-19 11:26:01] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 11:26:01] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-19 11:26:22] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-19 11:26:22] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-19 11:26:22] [WARN] [AuthenticatedUserBl] - Intento de login con email no registrado: juan.perez@gmail.com
+[2025-05-19 11:27:16] [INFO] [AuthController] - Solicitud de registro recibida para: juan.perez@gmail.com
+[2025-05-19 11:27:16] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: juan.perez@gmail.com
+[2025-05-19 11:27:16] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 29
+[2025-05-19 11:27:16] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 29
+[2025-05-19 11:27:16] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: juan.perez@gmail.com
+[2025-05-19 11:27:16] [INFO] [AuthController] - Registro exitoso para: juan.perez@gmail.com
+[2025-05-19 11:27:16] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-19 11:27:16] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-19 11:27:16] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-19 11:27:16] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-19 11:27:16] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-19 11:27:16] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 11:27:16] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-19 11:28:00] [INFO] [AuthController] - Solicitud para completar perfil del usuario: juan.perez@gmail.com
+[2025-05-19 11:28:00] [INFO] [ManualUserRegistrationBl] - Completando perfil del paciente con email: juan.perez@gmail.com
+[2025-05-19 11:28:00] [ERROR] [AuthController] - Error al completar perfil para: juan.perez@gmail.com
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [ERROR: llave duplicada viola restricción de unicidad «ukkopyqpavdna1ba6s5rityr4xx»
+  Detail: Ya existe la llave (ci_number)=(5571753).] [update ps_user set address=?,birth_date=?,birth_gender=?,ci_complement=?,ci_extension=?,ci_number=?,email=?,first_name=?,identity_gender=?,last_name=?,mothers_last_name=?,password=?,phone_number=? where user_id=?]; SQL [update ps_user set address=?,birth_date=?,birth_gender=?,ci_complement=?,ci_extension=?,ci_number=?,email=?,first_name=?,identity_gender=?,last_name=?,mothers_last_name=?,password=?,phone_number=? where user_id=?]; constraint [null]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:290)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:566)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy139.save(Unknown Source)
+	at bo.com.ucb.psymanager.bl.ManualUserRegistrationBl.completePatientProfile(ManualUserRegistrationBl.java:128)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723)
+	at bo.com.ucb.psymanager.bl.ManualUserRegistrationBl$$SpringCGLIB$$0.completePatientProfile(<generated>)
+	at bo.com.ucb.psymanager.controllers.AuthController.completeProfile(AuthController.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at bo.com.ucb.psymanager.util.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: llave duplicada viola restricción de unicidad «ukkopyqpavdna1ba6s5rityr4xx»
+  Detail: Ya existe la llave (ci_number)=(5571753).] [update ps_user set address=?,birth_date=?,birth_gender=?,ci_complement=?,ci_extension=?,ci_number=?,email=?,first_name=?,identity_gender=?,last_name=?,mothers_last_name=?,password=?,phone_number=? where user_id=?]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:97)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.doStaticUpdate(UpdateCoordinatorStandard.java:781)
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.performUpdate(UpdateCoordinatorStandard.java:328)
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.update(UpdateCoordinatorStandard.java:245)
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:169)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:644)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:511)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:414)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1429)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:491)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2354)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1978)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	... 123 more
+Caused by: org.postgresql.util.PSQLException: ERROR: llave duplicada viola restricción de unicidad «ukkopyqpavdna1ba6s5rityr4xx»
+  Detail: Ya existe la llave (ci_number)=(5571753).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 144 more
+[2025-05-19 11:28:24] [INFO] [AuthController] - Solicitud para completar perfil del usuario: juan.perez@gmail.com
+[2025-05-19 11:28:24] [INFO] [ManualUserRegistrationBl] - Completando perfil del paciente con email: juan.perez@gmail.com
+[2025-05-19 11:28:24] [INFO] [ManualUserRegistrationBl] - Datos personales completados para: juan.perez@gmail.com
+[2025-05-19 11:28:24] [INFO] [ManualUserRegistrationBl] - Carrera académica registrada para el paciente: juan.perez@gmail.com
+[2025-05-19 11:28:24] [INFO] [AuthController] - Perfil completado correctamente para: juan.perez@gmail.com
+[2025-05-19 11:45:34] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 11:45:34] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 11:45:34] [WARN] [ManualUserRegistrationBl] - Intento de registro con email ya existente: amirbellido@gmail.com

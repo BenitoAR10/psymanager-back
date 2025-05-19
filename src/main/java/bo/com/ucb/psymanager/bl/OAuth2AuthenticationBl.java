@@ -3,13 +3,11 @@ package bo.com.ucb.psymanager.bl;
 import bo.com.ucb.psymanager.dao.RoleDao;
 import bo.com.ucb.psymanager.dao.UserDao;
 import bo.com.ucb.psymanager.dao.UserRoleDao;
-import bo.com.ucb.psymanager.dto.CompleteProfileRequestDto;
 import bo.com.ucb.psymanager.entities.Role;
 import bo.com.ucb.psymanager.entities.User;
 import bo.com.ucb.psymanager.entities.UserRole;
 import bo.com.ucb.psymanager.util.CustomOAuth2User;
 import bo.com.ucb.psymanager.util.JwtUtil;
-import jakarta.transaction.Transactional;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -18,6 +16,7 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -96,7 +95,5 @@ public class OAuth2AuthenticationBl implements OAuth2UserService<OAuth2UserReque
 
         return newUser;
     }
-
-
 
 }
