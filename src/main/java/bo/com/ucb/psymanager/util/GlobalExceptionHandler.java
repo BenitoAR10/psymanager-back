@@ -97,4 +97,22 @@ public class GlobalExceptionHandler {
         ErrorResponseDto error = new ErrorResponseDto(status, message, request.getRequestURI());
         return ResponseEntity.status(status).body(error);
     }
+
+    /**
+     * Maneja excepciones de correo electrónico ya registrado.
+     */
+    @ExceptionHandler(EmailAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponseDto> handleEmailExists(EmailAlreadyExistsException ex, HttpServletRequest request) {
+        log.warn("Email ya registrado: {}", ex.getMessage());
+        return buildErrorResponse(HttpStatus.CONFLICT, ex.getMessage(), request);
+    }
+
+    /**
+     * Maneja excepciones de número de CI ya registrado.
+     */
+    @ExceptionHandler(CiNumberAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponseDto> handleCiExists(CiNumberAlreadyExistsException ex, HttpServletRequest request) {
+        log.warn("CI ya registrado: {}", ex.getMessage());
+        return buildErrorResponse(HttpStatus.CONFLICT, ex.getMessage(), request);
+    }
 }

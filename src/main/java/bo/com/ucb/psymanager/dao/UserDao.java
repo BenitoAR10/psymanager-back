@@ -19,4 +19,13 @@ public interface UserDao extends JpaRepository<User, Long> {
      * @return usuario correspondiente, si existe
      */
     Optional<User> findByEmail(String email);
+
+    /**
+     * Busca un usuario por su número de CI único.
+     *
+     * @param ciNumber número de CI del usuario
+     * @return usuario correspondiente, si existe
+     */
+    boolean existsByCiNumber(String ciNumber);
+
 }

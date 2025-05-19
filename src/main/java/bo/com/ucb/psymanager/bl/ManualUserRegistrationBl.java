@@ -4,6 +4,8 @@ import bo.com.ucb.psymanager.dao.*;
 import bo.com.ucb.psymanager.dto.CompleteProfileRequestDto;
 import bo.com.ucb.psymanager.dto.RegisterPatientRequestDto;
 import bo.com.ucb.psymanager.entities.*;
+import bo.com.ucb.psymanager.exceptions.CiNumberAlreadyExistsException;
+import bo.com.ucb.psymanager.exceptions.EmailAlreadyExistsException;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
@@ -65,9 +67,9 @@ public class ManualUserRegistrationBl {
         logger.info("Registrando nuevo paciente con email: " + dto.getEmail());
 
         if (userDao.findByEmail(dto.getEmail()).isPresent()) {
-            logger.warn("Intento de registro con email ya existente: " + dto.getEmail());
-            throw new RuntimeException("Este correo ya está registrado.");
+            throw new EmailAlreadyExistsException("El correo electrónico ya está registrado.");
         }
+
 
         String hashedPassword = passwordEncoder.encode(dto.getPassword());
 
@@ -115,6 +117,14 @@ public class ManualUserRegistrationBl {
                     logger.error("Usuario no encontrado al completar perfil: " + email);
                     return new RuntimeException("Usuario no encontrado");
                 });
+
+
+        if (user.getCiNumber() == null || !user.getCiNumber().equals(dto.getCiNumber())) {
+            boolean exists = userDao.existsByCiNumber(dto.getCiNumber());
+            if (exists) {
+                throw new CiNumberAlreadyExistsException("El número de carnet ya está registrado.");
+            }
+        }
 
         // Actualizar datos del usuario
         user.setBirthDate(dto.getBirthDate());
