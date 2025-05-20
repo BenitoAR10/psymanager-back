@@ -9401,3 +9401,25 @@ bo.com.ucb.psymanager.exceptions.CiNumberAlreadyExistsException: El número de c
 [2025-05-20 15:51:09] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
 [2025-05-20 15:51:16] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
 [2025-05-20 15:51:16] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-20 19:01:06] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-20 19:01:06] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [THERAPIST]
+[2025-05-20 19:01:06] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-20 19:01:07] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-20 19:04:16] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-20 19:04:16] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-20 19:04:19] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-20 19:04:25] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-20 19:04:25] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-20 19:04:28] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-20 19:05:00] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-20 19:05:00] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-20 19:05:02] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-20 19:05:08] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-20 19:15:06] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-20 19:15:06] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-20 19:15:06] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-20 19:15:06] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-20 19:15:06] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-20 19:15:06] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-20 19:15:06] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-20 19:15:06] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
