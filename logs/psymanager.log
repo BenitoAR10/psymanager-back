@@ -8516,3 +8516,342 @@ Caused by: org.postgresql.util.PSQLException: ERROR: llave duplicada viola restr
 [2025-05-19 11:45:34] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
 [2025-05-19 11:45:34] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
 [2025-05-19 11:45:34] [WARN] [ManualUserRegistrationBl] - Intento de registro con email ya existente: amirbellido@gmail.com
+[2025-05-19 15:15:23] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:15:23] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:15:23] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 30
+[2025-05-19 15:15:23] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 30
+[2025-05-19 15:15:23] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: amirbellido@gmail.com
+[2025-05-19 15:15:23] [INFO] [AuthController] - Registro exitoso para: amirbellido@gmail.com
+[2025-05-19 15:15:23] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-19 15:15:23] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-19 15:15:23] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-19 15:15:23] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-19 15:15:24] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-19 15:15:24] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 15:15:24] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-19 15:16:01] [INFO] [AuthController] - Solicitud para completar perfil del usuario: amirbellido@gmail.com
+[2025-05-19 15:16:01] [INFO] [ManualUserRegistrationBl] - Completando perfil del paciente con email: amirbellido@gmail.com
+[2025-05-19 15:16:01] [INFO] [ManualUserRegistrationBl] - Datos personales completados para: amirbellido@gmail.com
+[2025-05-19 15:16:01] [INFO] [ManualUserRegistrationBl] - Carrera académica registrada para el paciente: amirbellido@gmail.com
+[2025-05-19 15:16:01] [INFO] [AuthController] - Perfil completado correctamente para: amirbellido@gmail.com
+[2025-05-19 15:16:58] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:16:58] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:17:08] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:17:09] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:17:18] [INFO] [AuthController] - Solicitud de registro recibida para: juan.perez@gmail.com
+[2025-05-19 15:17:18] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: juan.perez@gmail.com
+[2025-05-19 15:17:18] [INFO] [ManualUserRegistrationBl] - Usuario creado con ID: 31
+[2025-05-19 15:17:18] [INFO] [ManualUserRegistrationBl] - Entidad UserPatient creada para el usuario ID: 31
+[2025-05-19 15:17:18] [INFO] [ManualUserRegistrationBl] - Rol 'PATIENT' asignado al usuario: juan.perez@gmail.com
+[2025-05-19 15:17:18] [INFO] [AuthController] - Registro exitoso para: juan.perez@gmail.com
+[2025-05-19 15:17:18] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-19 15:17:18] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-19 15:17:18] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-19 15:17:18] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-19 15:17:18] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-19 15:17:18] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 15:17:18] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-19 15:17:47] [INFO] [AuthController] - Solicitud para completar perfil del usuario: juan.perez@gmail.com
+[2025-05-19 15:17:47] [INFO] [ManualUserRegistrationBl] - Completando perfil del paciente con email: juan.perez@gmail.com
+[2025-05-19 15:17:47] [ERROR] [AuthController] - Error al completar perfil para: juan.perez@gmail.com
+bo.com.ucb.psymanager.exceptions.CiNumberAlreadyExistsException: El número de carnet ya está registrado.
+	at bo.com.ucb.psymanager.bl.ManualUserRegistrationBl.completePatientProfile(ManualUserRegistrationBl.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723)
+	at bo.com.ucb.psymanager.bl.ManualUserRegistrationBl$$SpringCGLIB$$0.completePatientProfile(<generated>)
+	at bo.com.ucb.psymanager.controllers.AuthController.completeProfile(AuthController.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at bo.com.ucb.psymanager.util.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-05-19 15:18:00] [INFO] [AuthController] - Solicitud para completar perfil del usuario: juan.perez@gmail.com
+[2025-05-19 15:18:00] [INFO] [ManualUserRegistrationBl] - Completando perfil del paciente con email: juan.perez@gmail.com
+[2025-05-19 15:18:00] [INFO] [ManualUserRegistrationBl] - Datos personales completados para: juan.perez@gmail.com
+[2025-05-19 15:18:00] [INFO] [ManualUserRegistrationBl] - Carrera académica registrada para el paciente: juan.perez@gmail.com
+[2025-05-19 15:18:00] [INFO] [AuthController] - Perfil completado correctamente para: juan.perez@gmail.com
+[2025-05-19 15:19:22] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:19:22] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:19:51] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:19:51] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:20:27] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:20:27] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:22:50] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:22:51] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:26:15] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:26:15] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:26:19] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:26:20] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:28:41] [INFO] [AuthController] - Solicitud de registro recibida para: amirbellido@gmail.com
+[2025-05-19 15:28:41] [INFO] [ManualUserRegistrationBl] - Registrando nuevo paciente con email: amirbellido@gmail.com
+[2025-05-19 15:32:54] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-19 15:32:54] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-19 15:32:54] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-19 15:32:54] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-19 15:32:54] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-19 15:32:54] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 15:32:54] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-19 15:40:20] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-19 15:40:20] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-19 15:40:20] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-19 15:40:20] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-19 15:40:20] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-19 15:40:20] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 15:40:20] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-19 15:58:52] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 15:58:52] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 15:58:52] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 15:58:52] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 15:58:52] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 15:58:52] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 15:58:52] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 15:58:52] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 15:59:02] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.comaa
+[2025-05-19 15:59:02] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.comaa
+[2025-05-19 15:59:02] [WARN] [AuthenticatedUserBl] - Intento de login con email no registrado: amirbellido@gmail.comaa
+[2025-05-19 15:59:07] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-19 15:59:07] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-19 15:59:07] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-19 15:59:07] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-19 15:59:07] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-19 15:59:07] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 15:59:07] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-19 16:02:42] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 16:02:42] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 16:02:42] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 16:02:42] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 16:02:42] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 16:02:42] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 16:02:42] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 16:02:42] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 17:26:28] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 17:26:28] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 17:26:28] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 17:40:28] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 17:40:28] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 17:40:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT, THERAPIST]
+[2025-05-19 17:40:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT, THERAPIST]
+[2025-05-19 17:40:28] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-19 17:40:28] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-19 17:52:34] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 17:52:34] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 17:52:34] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 17:59:31] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-05-19 17:59:31] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [PATIENT, ADMIN, THERAPIST]
+[2025-05-19 17:59:31] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-05-19 18:05:28] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 18:05:28] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 18:05:28] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 18:05:58] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:05:58] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:06:34] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:06:34] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:22:41] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-05-19 18:22:41] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [PATIENT, ADMIN, THERAPIST]
+[2025-05-19 18:22:41] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-05-19 18:25:49] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:25:49] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:27:17] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:27:17] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:30:11] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 18:30:11] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 18:30:11] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 18:37:23] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:37:23] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:41:35] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:41:35] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:44:06] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 18:44:06] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 18:44:06] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 18:44:06] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 18:44:06] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-19 18:44:06] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-19 18:44:06] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 18:44:06] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 18:44:06] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 18:44:06] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 18:44:06] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT, THERAPIST]
+[2025-05-19 18:44:06] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT, THERAPIST]
+[2025-05-19 18:44:06] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-19 18:44:06] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-19 18:48:40] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 18:48:40] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 18:48:40] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 18:49:18] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 18:49:18] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 18:49:18] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 18:52:25] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 18:52:25] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 18:52:25] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 18:56:07] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 18:56:07] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 18:56:07] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 18:56:10] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:56:10] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:59:08] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-19 18:59:08] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-19 18:59:08] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-19 18:59:08] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-19 18:59:08] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-19 18:59:08] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-19 18:59:08] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-19 18:59:14] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:59:14] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:59:30] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=7, fecha=2025-05-19, horaInicio=15:00, horaFin=16:00
+[2025-05-19 18:59:30] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=7
+[2025-05-19 18:59:30] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=51
+[2025-05-19 18:59:30] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:59:30] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 18:59:46] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=7, fecha=2025-05-20, horaInicio=12:00, horaFin=13:00
+[2025-05-19 18:59:46] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=7
+[2025-05-19 18:59:46] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=52
+[2025-05-19 18:59:46] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 18:59:46] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 21:24:59] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 21:24:59] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 21:24:59] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 21:24:59] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-19 21:24:59] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 21:24:59] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-19 21:24:59] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 21:24:59] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-19 21:25:12] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 21:25:12] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [PATIENT, THERAPIST]
+[2025-05-19 21:25:12] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-19 21:25:18] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 21:25:18] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 21:25:37] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=7, fecha=2025-05-27, horaInicio=12:00, horaFin=13:00
+[2025-05-19 21:25:37] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=7
+[2025-05-19 21:25:37] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=53
+[2025-05-19 21:25:37] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 21:25:37] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 21:25:46] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=7, fecha=2025-06-03, horaInicio=12:00, horaFin=13:00
+[2025-05-19 21:25:46] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=7
+[2025-05-19 21:25:46] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=54
+[2025-05-19 21:25:46] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 21:25:46] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 21:25:55] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=7, fecha=2025-06-10, horaInicio=12:00, horaFin=13:00
+[2025-05-19 21:25:55] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=7
+[2025-05-19 21:25:55] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=55
+[2025-05-19 21:25:55] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 21:25:55] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 21:25:58] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 21:25:58] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 21:28:16] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-19 21:28:16] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-19 21:39:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-19 21:39:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 21:39:12] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-19 21:39:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-19 21:39:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 21:39:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT, THERAPIST]
+[2025-05-19 21:39:12] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.

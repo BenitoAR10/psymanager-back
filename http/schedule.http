@@ -23,8 +23,8 @@ Authorization: Bearer <TU_TOKEN_JWT_AQUÍ>
 }
 
 ### Listar todos los horarios
-GET http://localhost:8080/api/schedules
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWlyLnJvamFzQHVjYi5lZHUuYm8iLCJyb2xlcyI6WyJQQVRJRU5UIiwiQURNSU4iLCJUSEVSQVBJU1QiXSwiZmlyc3ROYW1lIjoiQU1JUiBBRE9MRk8iLCJsYXN0TmFtZSI6IlJPSkFTIEJFTExJRE8iLCJpYXQiOjE3NDM3MzE3NjksImV4cCI6MTc0MzczMjY2OX0.lRRlhSoAI2Ql5jYr-iUM-VAiyDLV5juw71h_wKcm91E
+GET  https://45bf-200-105-158-140.ngrok-free.app/api/schedules
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWlyLnJvamFzQHVjYi5lZHUuYm8iLCJyb2xlcyI6WyJQQVRJRU5UIiwiQURNSU4iLCJUSEVSQVBJU1QiXSwiZmlyc3ROYW1lIjoiQU1JUiBBRE9MRk8iLCJsYXN0TmFtZSI6IlJPSkFTIEJFTExJRE8iLCJ1c2VySWQiOjYsImlhdCI6MTc0NzY5MzM2MSwiZXhwIjoxNzQ3Njk0MjYxfQ.tv4H1l5ANvpoTm5Ma_uKts0ZKb8_pAH6J5gnv9cDG00
 
 ### Listar horarios de un terapeuta especifico
 GET http://localhost:8080/api/schedules/1
