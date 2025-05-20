@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * DTO para actualizar y completar el perfil profesional del terapeuta.
- * Incluye datos personales, especialidades y periodo de servicio.
+ * Incluye datos personales y especialidades.
  */
 @Data
 public class TherapistProfileUpdateDto {
@@ -30,13 +30,4 @@ public class TherapistProfileUpdateDto {
 
     /** Lista de IDs de especialidades seleccionadas */
     private List<Integer> specialtyIds;
-
-    /** Cargo o rol actual dentro del servicio (ej: Pasante, Encargado) */
-    private String position;
-
-    /** Fecha de inicio del periodo de servicio actual */
-    private LocalDate startDate;
-
-    /** Fecha de finalización del periodo (puede ser null si sigue en curso) */
-    private LocalDate endDate;
 }
