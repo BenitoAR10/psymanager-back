@@ -1,13 +1,12 @@
 package bo.com.ucb.psymanager.bl;
 
-import bo.com.ucb.psymanager.dao.RoleDao;
-import bo.com.ucb.psymanager.dao.UserDao;
-import bo.com.ucb.psymanager.dao.UserRoleDao;
-import bo.com.ucb.psymanager.entities.Role;
-import bo.com.ucb.psymanager.entities.User;
-import bo.com.ucb.psymanager.entities.UserRole;
+import bo.com.ucb.psymanager.dao.*;
+import bo.com.ucb.psymanager.entities.*;
 import bo.com.ucb.psymanager.util.CustomOAuth2User;
 import bo.com.ucb.psymanager.util.JwtUtil;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -18,6 +17,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,19 +31,35 @@ public class OAuth2AuthenticationBl implements OAuth2UserService<OAuth2UserReque
     private final RoleDao roleDao;
     private final UserRoleDao userRoleDao;
     private final JwtUtil jwtUtil;
+    private final UserTherapistDao userTherapistDao;
+    private final TherapistServicePeriodDao therapistServicePeriodDao;
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
 
     @Autowired
-    public OAuth2AuthenticationBl(UserDao userDao, RoleDao roleDao, UserRoleDao userRoleDao, JwtUtil jwtUtil) {
+    public OAuth2AuthenticationBl(
+            UserDao userDao,
+            RoleDao roleDao,
+            UserRoleDao userRoleDao,
+            JwtUtil jwtUtil,
+            UserTherapistDao userTherapistDao,
+            TherapistServicePeriodDao therapistServicePeriodDao
+    ) {
         this.userDao = userDao;
         this.roleDao = roleDao;
         this.userRoleDao = userRoleDao;
         this.jwtUtil = jwtUtil;
+        this.userTherapistDao = userTherapistDao;
+        this.therapistServicePeriodDao = therapistServicePeriodDao;
     }
 
     /**
      * Procesa la autenticación OAuth2, crea usuario si no existe y genera tokens JWT.
      */
     @Override
+    @Transactional
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
         OAuth2User oAuth2User = new DefaultOAuth2UserService().loadUser(userRequest);
         String email = oAuth2User.getAttribute("email");
@@ -75,25 +91,44 @@ public class OAuth2AuthenticationBl implements OAuth2UserService<OAuth2UserReque
     }
 
     /**
-     * Crea un nuevo usuario en la base de datos con el rol por defecto "PATIENT".
+     * Crea un nuevo usuario en la base de datos con el rol "THERAPIST",
+     * crea su entrada en UserTherapist y registra su primer periodo de servicio.
      */
-    private User createNewUser(OAuth2User oAuth2User) {
+    public User createNewUser(OAuth2User oAuth2User) {
+        // 1. Crear entidad User
         User newUser = new User();
         newUser.setEmail(oAuth2User.getAttribute("email"));
         newUser.setFirstName(oAuth2User.getAttribute("given_name") != null ? oAuth2User.getAttribute("given_name") : "SinNombre");
         newUser.setLastName(oAuth2User.getAttribute("family_name") != null ? oAuth2User.getAttribute("family_name") : "SinApellido");
         userDao.save(newUser);
 
-        Role defaultRole = roleDao.findByRole("PATIENT")
-                .orElseThrow(() -> {
-                    logger.error("Rol 'PATIENT' no encontrado");
-                    return new RuntimeException("Role 'PATIENT' not found");
-                });
+        entityManager.flush();
 
-        userRoleDao.save(new UserRole(newUser, defaultRole));
-        logger.info("Nuevo usuario creado y rol 'PATIENT' asignado: " + newUser.getEmail());
+        // 2. Asignar rol THERAPIST
+        Role therapistRole = roleDao.findByRole("THERAPIST")
+                .orElseThrow(() -> {
+                    logger.error("Rol 'THERAPIST' no encontrado");
+                    return new RuntimeException("Role 'THERAPIST' not found");
+                });
+        userRoleDao.save(new UserRole(newUser, therapistRole));
+
+        // 3. Crear entidad UserTherapist con MapsId
+        UserTherapist userTherapist = new UserTherapist();
+        userTherapist.setUser(newUser); // ahora está bien vinculado
+        userTherapistDao.save(userTherapist);
+
+        // 4. Registrar periodo de servicio
+        TherapistServicePeriod period = new TherapistServicePeriod();
+        period.setUserTherapist(userTherapist);
+        period.setStartDate(LocalDate.now());
+        period.setEndDate(null);
+        period.setPosition("Por asignar");
+        therapistServicePeriodDao.save(period);
+
+        logger.info("Usuario creado como terapeuta: " + newUser.getEmail());
 
         return newUser;
     }
+
 
 }

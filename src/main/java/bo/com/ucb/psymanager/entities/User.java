@@ -30,10 +30,6 @@ public class User {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    /** Apellido materno (opcional) */
-    @Column(name = "mothers_last_name")
-    private String mothersLastName;
-
     /** Email institucional del usuario, único en el sistema */
     @Column(nullable = false, unique = true)
     private String email;

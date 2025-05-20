@@ -8855,3 +8855,24 @@ bo.com.ucb.psymanager.exceptions.CiNumberAlreadyExistsException: El número de c
 [2025-05-19 21:39:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
 [2025-05-19 21:39:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT, THERAPIST]
 [2025-05-19 21:39:12] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-19 22:30:37] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 22:30:37] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 22:30:37] [ERROR] [OAuth2AuthenticationBl] - Rol 'THERAPIST' no encontrado
+[2025-05-19 22:34:14] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 22:34:14] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 22:39:32] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 22:39:32] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 22:42:38] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 22:42:38] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 22:45:52] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 22:45:52] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 22:49:37] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-05-19 22:49:37] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: amir.rojas@ucb.edu.bo
+[2025-05-19 22:49:37] [INFO] [OAuth2AuthenticationBl] - Usuario creado como terapeuta: amir.rojas@ucb.edu.bo
+[2025-05-19 22:49:37] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-05-19 22:49:37] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-05-19 22:50:44] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-19 22:50:44] [INFO] [OAuth2AuthenticationBl] - Usuario no encontrado, creando nuevo usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-19 22:50:44] [INFO] [OAuth2AuthenticationBl] - Usuario creado como terapeuta: melany.kaune@ucb.edu.bo
+[2025-05-19 22:50:44] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [THERAPIST]
+[2025-05-19 22:50:44] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
