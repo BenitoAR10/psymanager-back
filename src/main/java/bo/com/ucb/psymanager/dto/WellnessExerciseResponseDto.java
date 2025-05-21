@@ -1,0 +1,17 @@
+package bo.com.ucb.psymanager.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+/**
+ * DTO para exponer los datos de un ejercicio de bienestar al frontend.
+ */
+@Data
+@AllArgsConstructor
+public class WellnessExerciseResponseDto {
+    private Long id;
+    private String title;
+    private String category;
+    private Integer pointsReward;
+    private String audioUrl; // Este será la URL firmada generada con MinIO
+}

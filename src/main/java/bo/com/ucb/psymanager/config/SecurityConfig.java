@@ -47,7 +47,8 @@ public class SecurityConfig {
                                 "/auth/login",
                                 "/auth/success",
                                 "/api/auth/register",
-                                "/api/auth/login"
+                                "/api/auth/login",
+                                "/api/wellness-exercises/**"
                         ).permitAll()
 
                         // Endpoints por rol
