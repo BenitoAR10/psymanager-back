@@ -142,6 +142,47 @@ public class ScheduledSessionBl {
     }
 
     /**
+     * Marca una sesión de tipo suelta (fuera de tratamiento) como COMPLETED.
+     * Aplica validaciones para evitar marcar sesiones futuras o ya marcadas.
+     *
+     * @param sessionId ID de la sesión a marcar como completada.
+     */
+    @Transactional
+    public void markScheduleSessionAsCompleted(Long sessionId) {
+        logger.info("Solicitando marcar como COMPLETED la sesión ID={}", sessionId);
+
+        ScheduleSession session = scheduledSessionDao.findById(sessionId)
+                .orElseThrow(() -> new IllegalArgumentException("La sesión no existe."));
+
+        // Validar que no esté ya en estado COMPLETED
+        if (session.getState() == SessionState.COMPLETED) {
+            logger.warn("La sesión ID={} ya fue marcada como COMPLETED", sessionId);
+            throw new IllegalStateException("Esta sesión ya fue completada.");
+        }
+
+        // Validar que no sea parte de un tratamiento (debe usarse otro método en ese caso)
+        if (session.getTreatmentSessions() != null && !session.getTreatmentSessions().isEmpty()) {
+            logger.warn("La sesión ID={} pertenece a un tratamiento, se debe marcar desde TreatmentSessionBl", sessionId);
+            throw new IllegalStateException("Esta sesión forma parte de un tratamiento y debe completarse desde el módulo correspondiente.");
+        }
+
+        // Validar que la sesión ya ocurrió
+        LocalDateTime endDateTime = session.getTherapistScheduled()
+                .getDate()
+                .atTime(session.getTherapistScheduled().getEndTime());
+
+        if (endDateTime.isAfter(LocalDateTime.now())) {
+            logger.warn("La sesión ID={} aún no terminó. No se puede marcar como COMPLETED", sessionId);
+            throw new IllegalStateException("No puedes completar una sesión que aún no ha terminado.");
+        }
+
+        // Marcar como completada
+        session.setState(SessionState.COMPLETED);
+        scheduledSessionDao.save(session);
+        logger.info("Sesión ID={} marcada como COMPLETED exitosamente.", sessionId);
+    }
+
+    /**
      * Convierte una entidad ScheduleSession a DTO para vista de agenda.
      */
     private UpcomingAppointmentDto mapSessionToDto(ScheduleSession s) {

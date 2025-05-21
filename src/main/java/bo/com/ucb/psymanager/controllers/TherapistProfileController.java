@@ -35,7 +35,7 @@ public class TherapistProfileController {
     @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<Void> updateProfile(Principal principal,
                                               @RequestBody TherapistProfileUpdateDto dto) {
-        String email = principal.getName(); // obtenido desde el JWT
+        String email = principal.getName();
         logger.info("Solicitud para actualizar perfil del terapeuta autenticado: " + email);
 
         therapistProfileBl.updateTherapistProfile(email, dto);

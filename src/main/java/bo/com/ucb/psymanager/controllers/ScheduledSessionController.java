@@ -75,6 +75,23 @@ public class ScheduledSessionController {
     }
 
     /**
+     * Marca una sesión individual (fuera de tratamiento) como completada.
+     * Esta operación solo está disponible para sesiones que ya finalizaron y no están asociadas a un tratamiento.
+     *
+     * @param sessionId ID de la sesión a marcar como completada
+     * @return Respuesta 200 OK si se completó exitosamente
+     */
+    @PutMapping("/{sessionId}/complete")
+    public ResponseEntity<Void> markSessionAsCompleted(@PathVariable Long sessionId) {
+        logger.info("Petición para marcar como COMPLETED la sesión ID={}", sessionId);
+
+        scheduledSessionBl.markScheduleSessionAsCompleted(sessionId);
+
+        return ResponseEntity.ok().build();
+    }
+
+
+    /**
      * Devuelve las próximas citas del terapeuta autenticado, ordenadas por fecha.
      *
      * @param email email del terapeuta autenticado

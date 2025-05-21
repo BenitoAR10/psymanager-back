@@ -5,6 +5,7 @@ import bo.com.ucb.psymanager.dao.UserDao;
 import bo.com.ucb.psymanager.dto.UserAppointmentDetailDto;
 import bo.com.ucb.psymanager.dto.UserAppointmentDto;
 import bo.com.ucb.psymanager.entities.ScheduleSession;
+import bo.com.ucb.psymanager.entities.SessionState;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,16 +29,20 @@ public class UserAppointmentBl {
     private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     /**
-     * Obtiene todas las citas agendadas por un paciente específico.
+     * Obtiene todas las citas activas agendadas por un paciente específico.
+     * Solo se devuelven sesiones en estado PENDING o ACCEPTED.
      *
      * @param userId ID del paciente autenticado.
-     * @return Lista de citas agendadas por el paciente.
+     * @return Lista de citas activas del paciente.
      */
+    public List<UserAppointmentDto> getUserAppointments(Long userId) {
+        logger.info("Buscando citas ACTIVAS para el usuario con ID: {}", userId);
 
-    public List<UserAppointmentDto> getUserAppointments(Long userId){
-        logger.info("Buscando citas agendadas para el usuario con ID: {}", userId);
-
-        List<ScheduleSession> sessions = scheduledSessionDao.findByUserPatient_User_UserId(userId.intValue());
+        List<ScheduleSession> sessions = scheduledSessionDao
+                .findByUserPatient_UserPatientIdAndStateIn(
+                        userId.intValue(),
+                        List.of(SessionState.ACCEPTED, SessionState.PENDING)
+                );
 
         return sessions.stream().map(session -> {
             String therapistName = userDao.findById((long) session.getTherapistScheduled().getUserTherapistId())
@@ -53,6 +58,7 @@ public class UserAppointmentBl {
             );
         }).collect(Collectors.toList());
     }
+
     /**
      * Obtiene los detalles de una cita agendada específica por su ID, validando que
      * pertenezca al usuario autenticado.

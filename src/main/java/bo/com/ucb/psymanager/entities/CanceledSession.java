@@ -30,5 +30,5 @@ public class CanceledSession {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "schedule_session_id", nullable = false)
-    private ScheduleSession scheduledSession;
+    private ScheduleSession scheduleSession;
 }

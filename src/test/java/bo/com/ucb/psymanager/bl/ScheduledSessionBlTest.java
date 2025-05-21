@@ -159,7 +159,7 @@ public class ScheduledSessionBlTest {
     void updateSessionState_InvalidState_ThrowsException() {
 
         assertThrows(IllegalArgumentException.class, () -> {
-            scheduledSessionBl.updateSessionState(1L, SessionState.AVAILABLE);
+            scheduledSessionBl.updateSessionState(1L, SessionState.ACCEPTED);
         });
     }
 

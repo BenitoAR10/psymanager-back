@@ -4,11 +4,20 @@ import bo.com.ucb.psymanager.entities.UserPatient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 /**
  * DAO para acceder a la información de los pacientes registrados en el sistema.
  * Usa clave primaria compartida con la entidad User.
  */
 @Repository
 public interface UserPatientDao extends JpaRepository<UserPatient, Long> {
-    // Por ahora solo operaciones básicas (findById, save, delete, etc.)
+    /**
+     * Busca un UserPatient por el email del usuario base.
+     *
+     * @param email email institucional del usuario
+     * @return UserPatient correspondiente (si existe)
+     */
+    Optional<UserPatient> findByUser_Email(String email);
+
 }

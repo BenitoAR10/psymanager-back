@@ -168,7 +168,7 @@ public class TreatmentSessionBl {
         }
 
         ScheduleSession schedule = session.getScheduleSession();
-        schedule.setState(SessionState.AVAILABLE);
+        schedule.setState(SessionState.CANCELED);
         scheduleSessionDao.save(schedule);
 
         treatmentSessionDao.delete(session);

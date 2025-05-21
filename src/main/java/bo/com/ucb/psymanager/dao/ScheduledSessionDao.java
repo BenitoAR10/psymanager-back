@@ -79,4 +79,17 @@ public interface ScheduledSessionDao extends JpaRepository<ScheduleSession, Long
             int userPatientId,
             List<SessionState> states
     );
+
+    /**
+     * Busca las sesiones programadas por un paciente específico,
+     * filtrando por una lista de estados deseados (ej. PENDING, ACCEPTED).
+     *
+     * @param userPatientId ID del paciente
+     * @param states Lista de estados a incluir en la búsqueda
+     * @return Lista de sesiones del paciente con estados válidos
+     */
+    List<ScheduleSession> findByUserPatient_UserPatientIdAndStateIn(
+            Integer userPatientId,
+            List<SessionState> states
+    );
 }
