@@ -47,9 +47,15 @@ public class ScheduledSessionBl {
      * @param therapistScheduledId ID del horario
      * @param userId ID del paciente (desde token)
      */
-    public void createScheduledSession(Long therapistScheduledId, Long userId) {
+    public void createScheduledSession(Long therapistScheduledId, Long userId, String reason)
+    {
         UserPatient userPatient = userPatientDao.findById(userId)
                 .orElseThrow(() -> new UserNotPatientException("El usuario no está registrado como paciente"));
+
+        if (reason != null && reason.length() > 500) {
+            throw new IllegalArgumentException("El motivo de la solicitud no debe exceder los 500 caracteres.");
+        }
+
 
         String fullName = userPatient.getUser().getFirstName() + " " + userPatient.getUser().getLastName();
         logger.info("Paciente {} solicita reservar el horario {}", fullName, therapistScheduledId);
@@ -90,6 +96,8 @@ public class ScheduledSessionBl {
         session.setTherapistScheduled(schedule);
         session.setUserPatient(userPatient);
         session.setState(SessionState.PENDING);
+        session.setReason(reason);
+
 
         scheduledSessionDao.save(session);
         logger.info("Solicitud de sesión registrada correctamente. Estado inicial: {}", session.getState());
@@ -203,7 +211,8 @@ public class ScheduledSessionBl {
                 studentName,
                 dateTime,
                 s.getState().name(),
-                isPartOfTreatment
+                isPartOfTreatment,
+                s.getReason()
         );
     }
 

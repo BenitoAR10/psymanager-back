@@ -50,7 +50,8 @@ public class ScheduledSessionController {
         Long userId = user.getUserId();
         logger.info("POST /api/sessions → usuario {} solicita horario {}", userId, request.getTherapistScheduledId());
 
-        scheduledSessionBl.createScheduledSession(request.getTherapistScheduledId(), userId);
+        scheduledSessionBl.createScheduledSession(request.getTherapistScheduledId(), userId, request.getReason());
+
 
         return ResponseEntity.ok("Solicitud de cita registrada correctamente.");
     }

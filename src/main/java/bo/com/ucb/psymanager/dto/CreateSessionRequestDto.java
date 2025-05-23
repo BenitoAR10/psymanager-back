@@ -9,4 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CreateSessionRequestDto {
     private Long therapistScheduledId;
+    private String reason; // puede ser null
 }

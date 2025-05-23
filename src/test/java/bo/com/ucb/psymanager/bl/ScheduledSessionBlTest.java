@@ -84,7 +84,7 @@ public class ScheduledSessionBlTest {
                 .thenReturn(Optional.empty());
         when(scheduledSessionDao.save(any())).thenReturn(testSession);
 
-        scheduledSessionBl.createScheduledSession(1L, 1L);
+        scheduledSessionBl.createScheduledSession(1L, 1L, "Test reason");
 
         verify(scheduledSessionDao, times(1)).save(any());
     }
@@ -94,7 +94,7 @@ public class ScheduledSessionBlTest {
         when(userPatientDao.findById(1L)).thenReturn(Optional.empty());
 
         assertThrows(UserNotPatientException.class, () -> {
-            scheduledSessionBl.createScheduledSession(1L, 1L);
+            scheduledSessionBl.createScheduledSession(1L, 1L, "Test reason");
         });
     }
 
@@ -104,7 +104,7 @@ public class ScheduledSessionBlTest {
         when(therapistScheduledDao.findById(1L)).thenReturn(Optional.empty());
 
         assertThrows(ScheduleNotFoundException.class, () -> {
-            scheduledSessionBl.createScheduledSession(1L, 1L);
+            scheduledSessionBl.createScheduledSession(1L, 1L, "Test reason");
         });
     }
 
@@ -115,7 +115,7 @@ public class ScheduledSessionBlTest {
         when(scheduledSessionDao.existsByTherapistScheduled_TherapistScheduledIdAndStateIn(anyLong(), any())).thenReturn(true);
 
         assertThrows(SessionAlreadyExistsException.class, () -> {
-            scheduledSessionBl.createScheduledSession(1L, 1L);
+            scheduledSessionBl.createScheduledSession(1L, 1L, "Test reason");
         });
     }
 

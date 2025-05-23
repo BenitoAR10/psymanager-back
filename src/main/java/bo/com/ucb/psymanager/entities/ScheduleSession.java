@@ -48,6 +48,11 @@ public class ScheduleSession {
     @Column(name = "state", nullable = false)
     private SessionState state;
 
+    /** Motivo proporcionado por el paciente al solicitar la sesión (solo aplica a sesiones sueltas) */
+    @Column(name = "reason", columnDefinition = "TEXT")
+    private String reason;
+
+
     /** Lista de sesiones de tratamiento asociadas (si aplica) */
     @OneToMany(mappedBy = "scheduleSession", fetch = FetchType.LAZY)
     private List<TreatmentSession> treatmentSessions;
