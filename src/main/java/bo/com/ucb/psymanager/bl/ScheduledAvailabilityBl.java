@@ -4,6 +4,7 @@ import bo.com.ucb.psymanager.dao.ScheduledSessionDao;
 import bo.com.ucb.psymanager.dao.TherapistScheduledDao;
 import bo.com.ucb.psymanager.dao.UserDao;
 import bo.com.ucb.psymanager.dto.ScheduleAvailabilityDto;
+import bo.com.ucb.psymanager.dto.ScheduleAvailabilityWithContactDto;
 import bo.com.ucb.psymanager.entities.ScheduleSession;
 import bo.com.ucb.psymanager.entities.SessionState;
 import bo.com.ucb.psymanager.entities.TherapistScheduled;
@@ -78,13 +79,14 @@ public class ScheduledAvailabilityBl {
 
 
     /**
-     * Obtiene los horarios disponibles de un terapeuta específico según el ID del horario base (scheduleId).
+     * Obtiene los horarios disponibles de un terapeuta específico según el ID del horario base (scheduleId),
+     * incluyendo información de contacto del terapeuta.
      *
      * @param scheduleId ID del horario seleccionado.
-     * @return Lista de horarios disponibles del mismo terapeuta para esa fecha.
+     * @return Lista de horarios disponibles del mismo terapeuta para esa fecha, con contacto.
      */
-    public List<ScheduleAvailabilityDto> getAvailableSchedulesByScheduleId(Long scheduleId) {
-        logger.info("Obteniendo horarios disponibles relacionados al scheduleId={}", scheduleId);
+    public List<ScheduleAvailabilityWithContactDto> getAvailableSchedulesByScheduleId(Long scheduleId) {
+        logger.info("Obteniendo horarios disponibles relacionados al scheduleId={} (con contacto)", scheduleId);
 
         TherapistScheduled baseSchedule = therapistScheduledDao.findById(scheduleId)
                 .orElseThrow(() -> new RuntimeException("Horario no encontrado"));
@@ -94,7 +96,7 @@ public class ScheduledAvailabilityBl {
 
         return therapistScheduledDao.findAll().stream()
                 .filter(s -> s.getUserTherapistId() == therapistId && s.getDate().isEqual(date))
-                .map(this::buildDto)
+                .map(this::buildDtoWithContact)
                 .toList();
     }
 
@@ -152,6 +154,41 @@ public class ScheduledAvailabilityBl {
                 sessionState
         );
     }
+
+
+    private ScheduleAvailabilityWithContactDto buildDtoWithContact(TherapistScheduled schedule) {
+        Optional<ScheduleSession> maybeSession = scheduledSessionDao
+                .findByTherapistScheduled_TherapistScheduledId(schedule.getTherapistScheduledId())
+                .stream()
+                .filter(session -> session.getState() == SessionState.PENDING || session.getState() == SessionState.ACCEPTED)
+                .findFirst();
+
+        Long reservedByUserId = maybeSession
+                .map(s -> (long) s.getUserPatient().getUser().getUserId())
+                .orElse(null);
+
+        SessionState sessionState = maybeSession
+                .map(ScheduleSession::getState)
+                .orElse(null);
+
+        return userDao.findById((long) schedule.getUserTherapistId())
+                .map(user -> new ScheduleAvailabilityWithContactDto(
+                        schedule.getTherapistScheduledId(),
+                        schedule.getUserTherapistId(),
+                        schedule.getDate(),
+                        schedule.getStartTime().format(timeFormatter),
+                        schedule.getEndTime().format(timeFormatter),
+                        reservedByUserId != null ? "taken" : "available",
+                        user.getFirstName() + " " + user.getLastName(),
+                        reservedByUserId,
+                        sessionState,
+                        user.getPhoneNumber(),
+                        user.getEmail()
+                ))
+                .orElseThrow(() -> new RuntimeException("Usuario terapeuta no encontrado"));
+    }
+
+
 
 
 }

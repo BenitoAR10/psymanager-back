@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -51,6 +52,12 @@ public class ScheduledSessionBl {
     {
         UserPatient userPatient = userPatientDao.findById(userId)
                 .orElseThrow(() -> new UserNotPatientException("El usuario no está registrado como paciente"));
+
+        if (userPatient.getBlockedUntil() != null && userPatient.getBlockedUntil().isAfter(LocalDateTime.now())) {
+            String unblockTime = userPatient.getBlockedUntil().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+            throw new IllegalStateException("Tu cuenta está temporalmente bloqueada para solicitar citas. Podrás hacerlo nuevamente después del: " + unblockTime);
+        }
+
 
         if (reason != null && reason.length() > 500) {
             throw new IllegalArgumentException("El motivo de la solicitud no debe exceder los 500 caracteres.");
@@ -114,18 +121,27 @@ public class ScheduledSessionBl {
     public List<UpcomingAppointmentDto> getUpcomingAppointmentsForTherapist(Long therapistUserId, int limit) {
         List<ScheduleSession> sessions = scheduledSessionDao
                 .findByTherapistScheduled_UserTherapistIdAndStateIn(
-                        therapistUserId.intValue(), List.of(SessionState.PENDING, SessionState.ACCEPTED)
+                        therapistUserId.intValue(),
+                        List.of(SessionState.PENDING, SessionState.ACCEPTED, SessionState.COMPLETED)
                 );
 
         LocalDateTime now = LocalDateTime.now();
 
         return sessions.stream()
                 .map(this::mapSessionToDto)
-                .filter(dto -> now.isBefore(dto.getDateTime().plusHours(1)))
+                .filter(dto -> {
+                    LocalDateTime endTime = dto.getDateTime().plusHours(1);
+                    boolean isUpcoming = now.isBefore(endTime); // sesiones activas o futuras
+                    boolean isGraceCompleted = "COMPLETED".equals(dto.getState()) &&
+                            now.isBefore(endTime.plusMinutes(10)); // completadas hace poco
+
+                    return isUpcoming || isGraceCompleted;
+                })
                 .sorted(Comparator.comparing(UpcomingAppointmentDto::getDateTime))
                 .limit(limit)
                 .toList();
     }
+
 
     /**
      * Devuelve las sesiones PENDING futuras de un terapeuta.
@@ -174,15 +190,6 @@ public class ScheduledSessionBl {
             throw new IllegalStateException("Esta sesión forma parte de un tratamiento y debe completarse desde el módulo correspondiente.");
         }
 
-        // Validar que la sesión ya ocurrió
-        LocalDateTime endDateTime = session.getTherapistScheduled()
-                .getDate()
-                .atTime(session.getTherapistScheduled().getEndTime());
-
-        if (endDateTime.isAfter(LocalDateTime.now())) {
-            logger.warn("La sesión ID={} aún no terminó. No se puede marcar como COMPLETED", sessionId);
-            throw new IllegalStateException("No puedes completar una sesión que aún no ha terminado.");
-        }
 
         // Marcar como completada
         session.setState(SessionState.COMPLETED);
@@ -309,6 +316,23 @@ public class ScheduledSessionBl {
         );
         eventPublisher.publishRejected(rejected);
         logger.info("AppointmentRejectedEvent enviado: {}", rejected);
+        Long patientId = session.getUserPatient().getUserPatientId();
+
+        // Contar sesiones rechazadas activas
+        int rejectionCount = scheduledSessionDao
+                .countByUserPatient_UserPatientIdAndState(patientId, SessionState.REJECTED);
+
+        logger.info("Paciente {} ha sido rechazado {} vez/veces", patientId, rejectionCount);
+
+        // Si es el segundo rechazo, bloquear por 24 horas
+        if (rejectionCount >= 2) {
+            UserPatient patient = session.getUserPatient();
+            LocalDateTime blockUntil = LocalDateTime.now().plusHours(24);
+            patient.setBlockedUntil(blockUntil);
+            userPatientDao.save(patient);
+
+            logger.warn("Paciente {} bloqueado hasta {}", patientId, blockUntil);
+        }
     }
 
     /**

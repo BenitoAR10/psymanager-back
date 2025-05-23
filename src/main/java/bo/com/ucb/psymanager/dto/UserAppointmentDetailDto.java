@@ -10,7 +10,8 @@ import lombok.NoArgsConstructor;
 public class UserAppointmentDetailDto {
     private Long sessionId;
     private String therapistName;
-    private String date;      // Formato: yyyy-MM-dd
-    private String startTime; // Formato: HH:mm
-    private String endTime;   // Formato: HH:mm
+    private String therapistPhoneNumber;
+    private String date;
+    private String startTime;
+    private String endTime;
 }

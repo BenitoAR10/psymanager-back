@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 /**
  * Representa un paciente en el sistema. Extiende los datos básicos de la entidad User.
  * Usa clave primaria compartida con la tabla ps_user mediante @MapsId.
@@ -22,6 +24,11 @@ public class UserPatient {
     @Id
     @Column(name = "user_patient_id")
     private Long userPatientId;
+
+    /** Fecha y hora hasta la cual el paciente no puede solicitar nuevas sesiones */
+    @Column(name = "blocked_until")
+    private LocalDateTime blockedUntil;
+
 
     /** Relación uno a uno con el usuario general del sistema */
     @OneToOne

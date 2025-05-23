@@ -2,6 +2,7 @@ package bo.com.ucb.psymanager.controllers;
 
 import bo.com.ucb.psymanager.bl.ScheduledAvailabilityBl;
 import bo.com.ucb.psymanager.dto.ScheduleAvailabilityDto;
+import bo.com.ucb.psymanager.dto.ScheduleAvailabilityWithContactDto;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -65,15 +66,12 @@ public class ScheduledAvailabilityController {
      * @return Lista de horarios disponibles asociados al terapeuta y fecha.
      */
     @GetMapping("/available/by-schedule/{scheduleId}")
-    public ResponseEntity<List<ScheduleAvailabilityDto>> getSchedulesByScheduleId(
+    public ResponseEntity<List<ScheduleAvailabilityWithContactDto>> getSchedulesByScheduleId(
             @PathVariable Long scheduleId) {
 
         logger.info("Solicitud de horarios disponibles por scheduleId={}", scheduleId);
-        List<ScheduleAvailabilityDto> result = scheduledAvailabilityBl.getAvailableSchedulesByScheduleId(scheduleId);
+        List<ScheduleAvailabilityWithContactDto> result = scheduledAvailabilityBl.getAvailableSchedulesByScheduleId(scheduleId);
         return ResponseEntity.ok(result);
     }
-
-
-
 
 }

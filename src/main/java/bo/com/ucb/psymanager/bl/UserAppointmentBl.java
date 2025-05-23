@@ -6,6 +6,7 @@ import bo.com.ucb.psymanager.dto.UserAppointmentDetailDto;
 import bo.com.ucb.psymanager.dto.UserAppointmentDto;
 import bo.com.ucb.psymanager.entities.ScheduleSession;
 import bo.com.ucb.psymanager.entities.SessionState;
+import bo.com.ucb.psymanager.entities.User;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -73,18 +74,26 @@ public class UserAppointmentBl {
         return scheduledSessionDao.findById(sessionId)
                 .filter(session -> session.getUserPatient().getUser().getUserId() == userId.intValue())
                 .map(session -> {
-                    String therapistName = userDao.findById((long) session.getTherapistScheduled().getUserTherapistId())
+                    Optional<User> therapistOpt = userDao.findById((long) session.getTherapistScheduled().getUserTherapistId());
+
+                    String therapistName = therapistOpt
                             .map(user -> user.getFirstName() + " " + user.getLastName())
                             .orElse("Terapeuta no encontrado");
+
+                    String phoneNumber = therapistOpt
+                            .map(User::getPhoneNumber)
+                            .orElse(null);
 
                     return new UserAppointmentDetailDto(
                             session.getScheduleSessionId(),
                             therapistName,
+                            phoneNumber,
                             session.getTherapistScheduled().getDate().format(dateFormatter),
                             session.getTherapistScheduled().getStartTime().format(timeFormatter),
                             session.getTherapistScheduled().getEndTime().format(timeFormatter)
                     );
                 });
     }
+
 
 }

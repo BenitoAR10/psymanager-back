@@ -92,4 +92,7 @@ public interface ScheduledSessionDao extends JpaRepository<ScheduleSession, Long
             Integer userPatientId,
             List<SessionState> states
     );
+
+    int countByUserPatient_UserPatientIdAndState(Long userPatientId, SessionState state);
+
 }
