@@ -367,6 +367,15 @@ public class TreatmentBl {
         log.info("Historial de tratamiento ID={} cargado correctamente con {} notas", treatmentId, notes.size());
         return dto;
     }
+
+    @Transactional
+    public boolean hasActiveTreatment(Long patientId) {
+        log.info("Verificando si el paciente ID={} tiene tratamiento activo", patientId);
+        return treatmentDao.findByUserPatient_UserPatientId(patientId).stream()
+                .anyMatch(t -> !closeTreatmentDao.existsByTreatment_TreatmentId(t.getTreatmentId()));
+    }
+
+
 }
 
 

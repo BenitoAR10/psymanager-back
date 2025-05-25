@@ -55,8 +55,10 @@ public class UserAppointmentBl {
                     therapistName,
                     session.getTherapistScheduled().getDate().format(dateFormatter),
                     session.getTherapistScheduled().getStartTime().format(timeFormatter),
-                    session.getTherapistScheduled().getEndTime().format(timeFormatter)
+                    session.getTherapistScheduled().getEndTime().format(timeFormatter),
+                    session.getState()
             );
+
         }).collect(Collectors.toList());
     }
 
@@ -90,8 +92,10 @@ public class UserAppointmentBl {
                             phoneNumber,
                             session.getTherapistScheduled().getDate().format(dateFormatter),
                             session.getTherapistScheduled().getStartTime().format(timeFormatter),
-                            session.getTherapistScheduled().getEndTime().format(timeFormatter)
+                            session.getTherapistScheduled().getEndTime().format(timeFormatter),
+                            session.getState()
                     );
+
                 });
     }
 

@@ -11162,3 +11162,1161 @@ bo.com.ucb.psymanager.exceptions.CiNumberAlreadyExistsException: El número de c
 [2025-05-23 19:13:02] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
 [2025-05-23 19:13:02] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
 [2025-05-23 19:13:02] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-23 19:16:28] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-23 19:16:28] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-23 19:16:28] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-23 19:16:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 19:16:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 19:16:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 19:16:28] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-23 19:24:30] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 19:24:30] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 19:24:30] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 19:24:30] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 19:24:30] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 19:24:30] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 19:24:30] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 19:29:15] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 19:29:15] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 19:29:15] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 19:29:15] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 19:29:15] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 19:29:15] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 19:29:15] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 19:34:02] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 19:34:02] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 19:34:02] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 19:34:02] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 19:34:02] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 19:34:02] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 19:34:02] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 19:36:03] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 19:36:03] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 19:36:03] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 19:36:03] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 19:36:03] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 19:36:03] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 19:36:03] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:02:52] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-23 20:02:52] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-23 20:02:52] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-23 20:02:52] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:02:52] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:02:52] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:02:52] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-23 20:08:03] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:08:03] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 20:08:03] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 20:08:03] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:08:03] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:08:03] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:08:03] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:10:08] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:10:08] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 20:10:08] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 20:10:08] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:10:08] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:10:08] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:10:08] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:12:13] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:12:13] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 20:12:13] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 20:12:13] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:12:13] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:12:13] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:12:13] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:14:18] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:14:18] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 20:14:18] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 20:14:18] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:14:18] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:14:18] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:14:18] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:16:18] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:16:18] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 20:16:18] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 20:16:18] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:16:18] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:16:18] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:16:18] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:17:41] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:17:41] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [THERAPIST]
+[2025-05-23 20:17:41] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-05-23 20:17:45] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:17:50] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-23 20:17:50] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-23 20:18:19] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:18:19] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 20:18:19] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 20:18:19] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:18:19] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:18:19] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:18:19] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:18:22] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-23 20:18:22] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-23 20:18:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:18:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:18:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:18:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:18:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 20:18:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 20:18:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:18:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:19:08] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-23 20:19:08] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-23 20:19:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:19:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:19:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:19:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:19:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 20:19:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 20:19:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:19:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:20:19] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:20:19] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 20:20:19] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 20:20:19] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:20:19] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:20:19] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:20:19] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:20:36] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-23 20:20:36] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-23 20:20:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:20:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:20:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:20:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:20:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 20:20:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 20:20:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:20:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:21:04] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-23 20:21:04] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-23 20:21:07] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-23 20:21:07] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-23 20:21:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:21:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:21:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:21:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:21:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 20:21:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 20:21:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:21:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:22:24] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:22:24] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-23 20:22:24] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-23 20:22:24] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:22:24] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:22:24] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:22:24] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:24:58] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-23 20:24:58] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-23 20:24:58] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-23 20:24:58] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-23 20:24:58] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-23 20:24:58] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:24:58] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-23 20:26:33] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-23 20:26:33] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-23 20:26:33] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-23 20:26:33] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:26:33] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:26:33] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:26:33] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-23 20:27:52] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-23 20:27:52] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-23 20:27:52] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-23 20:27:52] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:27:52] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:27:52] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:27:52] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-23 20:31:52] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-05-23 20:31:52] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-05-23 20:31:55] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:31:55] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:34:03] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-23 20:34:03] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-23 20:34:04] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-23 20:34:04] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-23 20:34:04] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-23 20:34:04] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:34:04] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-23 20:35:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:35:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:35:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 20:35:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 20:35:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:35:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:35:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:35:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:48:07] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:48:08] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:48:27] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-23 20:48:27] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-23 20:48:28] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-23 20:48:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-23 20:48:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-23 20:48:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:48:28] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-23 20:49:24] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-23 20:49:24] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-23 20:49:24] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-23 20:49:24] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-23 20:49:24] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-23 20:49:24] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 20:49:24] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-23 20:49:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:49:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 20:49:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 20:49:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 20:49:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:49:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 20:49:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 20:49:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 21:03:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 21:03:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 21:03:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-05-23 21:03:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 21:03:41] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-23 21:03:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 21:03:41] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-05-23 21:05:41] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-23 21:05:41] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-23 21:05:41] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-23 21:05:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-23 21:05:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-23 21:05:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 21:05:41] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-23 23:01:39] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:39] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:39] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:39] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:39] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:39] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:39] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:39] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:41] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:41] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:41] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:41] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:43] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:43] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:43] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:43] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:44] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:44] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:44] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:44] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:49] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:49] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:49] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:49] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:50] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:50] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:50] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:50] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:51] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:51] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:51] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:51] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:55] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:55] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:55] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:55] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:57] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:57] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:57] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:57] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:01:59] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:01:59] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:01:59] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:01:59] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:02:00] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:02:00] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:02:00] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:02:00] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:02:01] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:02:01] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:02:01] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:02:01] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:02:14] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-23 23:02:14] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-23 23:02:14] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-23 23:02:14] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-23 23:02:14] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-23 23:02:14] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 23:02:14] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-23 23:17:14] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:14] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:14] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:14] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:19] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:19] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:19] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:19] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:25] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:25] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:25] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:25] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:31] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:31] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:31] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:31] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:31] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:31] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:31] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:31] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:33] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:33] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:33] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:33] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:36] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:36] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:36] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:36] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:40] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:40] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:40] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:40] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:42] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:42] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:42] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:42] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:43] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:43] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:43] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:43] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:44] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:44] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:44] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:44] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:47] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:47] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:47] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:47] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:48] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:48] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:48] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:48] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:51] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:51] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:51] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:51] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:53] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:53] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:53] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:53] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:56] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:56] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:56] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:56] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:58] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:58] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:58] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:58] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:17:59] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:17:59] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:17:59] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:17:59] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:03] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:03] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:03] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:03] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:04] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:04] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:04] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:04] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:05] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:05] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:05] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:05] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:07] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:07] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:07] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:07] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:10] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:10] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:10] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:10] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:10] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:10] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:10] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:10] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:14] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:14] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:14] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:14] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:16] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:16] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:16] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:16] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:16] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:16] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:16] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:16] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:18] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:18] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:18] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:18] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:20] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:20] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:20] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:20] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:21] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:21] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:21] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:21] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:25] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:25] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:25] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:25] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:27] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:27] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:27] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:27] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:28] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:28] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:28] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:28] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:29] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:29] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:29] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:29] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:32] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:32] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:32] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:32] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:32] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:32] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:32] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:32] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:37] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:37] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:37] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:37] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:38] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:38] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:38] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:38] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:39] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:39] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:39] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:39] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:40] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:40] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:40] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:40] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:43] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:43] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:43] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:43] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:44] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:44] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:44] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:44] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:48] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:48] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:48] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:48] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:49] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:49] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:49] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:49] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:18:55] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:18:55] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:18:55] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:18:55] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:19:17] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@gmail.com
+[2025-05-23 23:19:17] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@gmail.com
+[2025-05-23 23:19:17] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@gmail.com
+[2025-05-23 23:19:17] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@gmail.com
+[2025-05-23 23:19:17] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@gmail.com
+[2025-05-23 23:19:17] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-23 23:19:17] [INFO] [AuthController] - Login exitoso para: juan.perez@gmail.com
+[2025-05-23 23:34:49] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:34:49] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:34:49] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:34:49] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:34:51] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:34:51] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:34:51] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:34:51] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:34:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:34:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:34:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:34:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:34:55] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:34:55] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:34:55] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:34:55] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:34:58] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:34:58] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:34:58] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:34:58] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:01] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:01] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:01] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:01] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:01] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:01] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:01] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:01] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:03] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:03] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:03] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:03] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:06] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:06] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:06] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:06] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:06] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:06] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:06] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:06] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:10] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:10] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:10] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:10] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:12] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:12] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:13] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:13] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:13] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:13] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:15] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:15] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:15] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:15] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:17] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:17] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:17] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:17] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:17] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:17] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:17] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:17] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:22] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:22] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:22] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:22] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:23] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:23] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:23] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:23] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:24] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:24] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:24] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:24] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:25] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:25] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:25] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:25] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:28] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:28] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:28] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:28] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:29] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:29] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:29] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:29] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:33] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:33] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:33] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:33] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:35] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:35] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:35] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:35] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:35] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:35] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:35] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:35] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:35:37] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:35:37] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:35:37] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:35:37] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:43:34] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:43:34] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:43:34] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:43:34] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-23 23:43:34] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-23 23:43:34] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-23 23:43:34] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-23 23:43:34] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 00:38:56] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-24 00:38:56] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-24 00:38:56] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-24 00:38:56] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 00:38:56] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 00:38:56] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 00:38:56] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-24 00:39:27] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 00:39:27] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 00:39:27] [WARN] [AuthenticatedUserBl] - Contraseña incorrecta para el usuario: amirbellido@gmail.com
+[2025-05-24 00:39:31] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 00:39:31] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 00:39:32] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 00:39:32] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 00:39:32] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 00:39:32] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 00:39:32] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 00:43:27] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-24 00:43:27] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-24 00:43:27] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-24 00:43:27] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 00:43:27] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 00:43:27] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 00:43:27] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-24 17:39:38] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-24 17:39:39] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-24 17:39:39] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-24 17:39:39] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 17:39:39] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 17:39:39] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 17:39:39] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-24 17:41:49] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 17:41:49] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 17:41:49] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 17:41:49] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 17:41:49] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 17:41:49] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 17:41:49] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 18:00:04] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 18:00:04] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 18:00:04] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 18:00:04] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:00:04] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:00:04] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:00:04] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 18:14:08] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 18:14:08] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 18:14:08] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 18:14:08] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:08] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:14:08] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:14:08] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 18:14:25] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:14:25] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:25] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:14:25] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:25] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:14:25] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:14:25] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:14:27] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:14:27] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:27] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:14:27] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:27] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:14:27] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:14:27] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:14:31] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:14:31] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:31] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:14:31] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:31] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:14:31] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:14:31] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:14:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:14:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:14:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:14:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:14:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:14:42] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:14:42] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:42] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:14:42] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:42] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:14:42] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:14:42] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:14:44] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:14:44] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:45] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:14:45] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:14:45] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:14:45] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:14:45] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:16:16] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:16:16] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:16:16] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:16:16] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:16:16] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:16:16] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:16:16] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:16:18] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:16:18] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:16:18] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:16:18] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:16:18] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:16:18] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:16:18] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:16:21] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:16:21] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:16:21] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:16:21] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:16:21] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:16:21] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:16:21] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:16:26] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:16:26] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-24 18:16:26] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-24 18:16:26] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:16:26] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:16:26] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:16:26] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 18:18:17] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 18:31:29] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:31:29] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:31:29] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:31:29] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:31:35] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:31:35] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:31:35] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:31:35] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:31:40] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:31:40] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:31:40] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:31:40] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:31:46] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:31:46] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:31:46] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:31:46] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:31:52] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:31:52] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:31:52] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:31:52] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:31:57] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:31:57] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:31:57] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:31:57] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:03] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:03] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:03] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:03] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:08] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:08] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:08] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:08] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:14] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:14] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:14] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:14] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:20] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:20] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:20] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:20] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:25] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:25] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:25] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:25] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:31] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:31] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:31] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:31] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:37] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:37] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:37] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:37] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:42] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:42] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:42] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:42] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:48] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:48] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:48] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:48] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:32:59] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:32:59] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:32:59] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:32:59] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:33:05] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:33:05] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:33:05] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:33:05] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:33:11] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:33:11] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:33:11] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:33:11] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:33:16] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:33:16] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:33:16] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:33:16] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:33:22] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 18:33:22] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 18:33:22] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 18:33:22] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 18:34:11] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 18:34:11] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 18:34:11] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 18:34:11] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 18:34:11] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 18:34:11] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 18:34:11] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 18:34:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 19:19:03] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 19:19:03] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 19:19:04] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 19:19:04] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 19:19:04] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 19:19:04] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 19:19:04] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 19:19:10] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 19:28:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 19:35:09] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:09] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:09] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:09] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:10] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:10] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:10] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:10] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:10] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:10] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:10] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:10] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:11] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:11] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:11] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:11] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:12] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:12] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:13] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:13] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:13] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:13] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:14] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:14] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:14] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:14] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:14] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:14] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:14] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:14] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:15] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:15] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:15] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:15] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:16] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:16] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:16] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:16] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:17] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:17] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:17] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:17] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:18] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:18] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:18] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:18] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:18] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:18] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:18] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:18] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:19] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:19] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:19] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:19] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:20] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:20] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:20] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:20] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:21] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:21] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:21] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:21] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:21] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:21] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:21] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:21] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:22] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:22] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:22] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:22] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:31] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:31] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:31] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:31] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:32] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:32] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:32] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:32] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:33] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:33] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:33] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:33] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:34] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:34] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:34] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:34] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:34] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:34] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:34] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:34] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:35] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:35] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:35] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:35] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:36] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:36] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:36] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:36] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:37] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:37] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:37] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:37] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:38] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:38] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:38] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:38] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:38] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:38] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:38] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:38] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:48] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:48] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:48] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:48] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:51] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:51] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:51] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:51] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:52] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:52] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:52] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:52] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:53] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:53] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:53] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:53] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:54] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:54] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:54] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:54] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:55] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:55] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:55] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:55] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:56] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:56] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:56] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:56] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:57] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:57] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:57] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:57] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:58] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:58] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:58] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:58] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:58] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:58] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:58] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:58] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:35:59] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:35:59] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:35:59] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:35:59] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:00] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:00] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:00] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:00] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:01] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:01] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:01] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:01] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:01] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:01] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:01] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:01] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:02] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:02] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:02] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:02] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:02] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:02] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:02] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:02] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:03] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:03] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:03] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:03] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:04] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:04] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:04] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:04] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:04] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:04] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:04] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:04] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:36:05] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:36:05] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:36:05] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:36:05] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:54:43] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:54:43] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:54:43] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:54:43] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:54:44] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:54:44] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:54:44] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:54:44] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:54:45] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:54:45] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:54:45] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:54:45] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:54:45] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:54:45] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:54:45] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:54:45] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:54:47] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:54:47] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:54:47] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:54:47] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:54:48] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:54:48] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:54:48] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:54:48] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:54:48] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:54:48] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:54:48] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:54:48] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 19:54:53] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 19:54:53] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 19:54:53] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 19:54:53] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 20:01:12] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 20:01:12] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 20:01:12] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 20:01:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 20:01:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 20:01:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 20:01:12] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 20:01:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 20:01:38] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 20:01:59] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-24 20:01:59] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-24 20:01:59] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-24 20:01:59] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 20:01:59] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 20:01:59] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 20:01:59] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-24 20:25:09] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 20:25:09] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 20:25:09] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 20:25:09] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 20:25:09] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 20:25:09] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 20:25:09] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 20:25:18] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 20:35:41] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-24 20:35:41] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-24 20:35:42] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-24 20:35:42] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-24 20:35:42] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-24 20:35:42] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 20:35:42] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-24 20:35:46] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 20:43:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 20:47:19] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirbellido@gmail.com
+[2025-05-24 20:59:22] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 20:59:22] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 20:59:22] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 20:59:22] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 21:00:24] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-24 21:00:24] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-24 21:00:24] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-24 21:00:24] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 21:00:24] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 21:00:24] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 21:00:24] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-24 21:00:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@gmail.com
+[2025-05-24 21:09:01] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@gmail.com
+[2025-05-24 21:19:15] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 21:19:15] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-24 21:19:15] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-24 21:19:15] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-24 21:24:03] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-24 21:24:03] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-24 21:24:03] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-24 21:24:03] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 21:24:03] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 21:24:03] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 21:24:03] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-24 21:26:36] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: melany.kaune@gmail.com
+[2025-05-24 21:26:36] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: melany.kaune@gmail.com
+[2025-05-24 21:26:36] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para melany.kaune@gmail.com
+[2025-05-24 21:26:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 21:26:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 21:26:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 21:26:36] [INFO] [AuthController] - Login exitoso para: melany.kaune@gmail.com
+[2025-05-24 21:28:40] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 21:28:40] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-24 21:28:40] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-24 21:28:40] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 21:28:40] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 21:28:40] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 21:28:40] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-24 21:30:52] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-24 21:30:52] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@gmail.com
+[2025-05-24 21:30:52] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@gmail.com
+[2025-05-24 21:30:52] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@gmail.com
+[2025-05-24 21:30:52] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
+[2025-05-24 21:30:52] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-24 21:30:52] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.

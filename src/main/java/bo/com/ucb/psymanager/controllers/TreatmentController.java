@@ -1,10 +1,16 @@
 package bo.com.ucb.psymanager.controllers;
 
 import bo.com.ucb.psymanager.bl.TreatmentBl;
+
+import bo.com.ucb.psymanager.dao.UserDao;
+import bo.com.ucb.psymanager.dao.UserPatientDao;
 import bo.com.ucb.psymanager.dto.*;
+import bo.com.ucb.psymanager.entities.User;
+import bo.com.ucb.psymanager.entities.UserPatient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,6 +25,8 @@ import java.util.List;
 public class TreatmentController {
 
     private final TreatmentBl treatmentBl;
+    private final UserDao userDao;
+    private final UserPatientDao userPatientDao;
 
     /**
      * Crea un nuevo plan de tratamiento para un paciente.
@@ -124,4 +132,20 @@ public class TreatmentController {
         ClosedTreatmentDetailDto dto = treatmentBl.getClosedTreatmentDetail(treatmentId);
         return ResponseEntity.ok(dto);
     }
+
+    @GetMapping("/my/active-status")
+    public ResponseEntity<TreatmentStatusDto> hasActiveTreatment(@AuthenticationPrincipal String email) {
+        log.info("GET /api/treatments/my/active-status → verificar si el paciente tiene tratamiento activo");
+
+        User user = userDao.findByEmail(email)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
+
+        UserPatient userPatient = userPatientDao.findById(user.getUserId())
+                .orElseThrow(() -> new IllegalArgumentException("Paciente no encontrado"));
+
+        boolean hasTreatment = treatmentBl.hasActiveTreatment(userPatient.getUserPatientId());
+
+        return ResponseEntity.ok(new TreatmentStatusDto(hasTreatment));
+    }
+
 }

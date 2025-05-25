@@ -3,10 +3,7 @@ package bo.com.ucb.psymanager.controllers;
 import bo.com.ucb.psymanager.bl.ScheduledSessionBl;
 import bo.com.ucb.psymanager.bl.TreatmentSessionBl;
 import bo.com.ucb.psymanager.dao.UserDao;
-import bo.com.ucb.psymanager.dto.CreateSessionRequestDto;
-import bo.com.ucb.psymanager.dto.ScheduleAvailabilityDto;
-import bo.com.ucb.psymanager.dto.UpcomingAppointmentDto;
-import bo.com.ucb.psymanager.dto.UpdateSessionStateRequestDto;
+import bo.com.ucb.psymanager.dto.*;
 import bo.com.ucb.psymanager.entities.User;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -40,7 +37,7 @@ public class ScheduledSessionController {
      * @return mensaje de confirmación
      */
     @PostMapping
-    public ResponseEntity<String> createSession(
+    public ResponseEntity<ApiResponseDto> createSession(
             @RequestBody CreateSessionRequestDto request,
             @AuthenticationPrincipal String email
     ) {
@@ -53,7 +50,8 @@ public class ScheduledSessionController {
         scheduledSessionBl.createScheduledSession(request.getTherapistScheduledId(), userId, request.getReason());
 
 
-        return ResponseEntity.ok("Solicitud de cita registrada correctamente.");
+        return ResponseEntity.ok(new ApiResponseDto("Solicitud de cita registrada correctamente."));
+
     }
 
     /**
@@ -64,7 +62,7 @@ public class ScheduledSessionController {
      * @return mensaje de resultado
      */
     @PutMapping("/{sessionId}/state")
-    public ResponseEntity<String> updateSessionState(
+    public ResponseEntity<ApiResponseDto> updateSessionState(
             @PathVariable Long sessionId,
             @RequestBody UpdateSessionStateRequestDto request
     ) {
@@ -72,7 +70,7 @@ public class ScheduledSessionController {
 
         scheduledSessionBl.updateSessionState(sessionId, request.getNewState());
 
-        return ResponseEntity.ok("Estado de la sesión actualizado correctamente.");
+        return ResponseEntity.ok(new ApiResponseDto("Estado de la sesión actualizado correctamente."));
     }
 
     /**
