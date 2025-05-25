@@ -9,7 +9,8 @@ import bo.com.ucb.psymanager.exceptions.EmailAlreadyExistsException;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ManualUserRegistrationBl {
 
-    private static final Logger logger = Logger.getLogger(ManualUserRegistrationBl.class);
+    private static final Logger logger = LoggerFactory.getLogger(ManualUserRegistrationBl.class);
+
 
     private final UserDao userDao;
     private final UserPatientDao userPatientDao;
@@ -30,6 +32,7 @@ public class ManualUserRegistrationBl {
     private final UserRoleDao userRoleDao;
     private final PasswordEncoder passwordEncoder;
     private final CareerDepartmentDao careerDepartmentDao;
+    private final CareerDao careerDao;
 
     @PersistenceContext
     private EntityManager entityManager;
@@ -42,7 +45,8 @@ public class ManualUserRegistrationBl {
             RoleDao roleDao,
             UserRoleDao userRoleDao,
             PasswordEncoder passwordEncoder,
-            CareerDepartmentDao careerDepartmentDao
+            CareerDepartmentDao careerDepartmentDao,
+            CareerDao careerDao
     ) {
         this.userDao = userDao;
         this.userPatientDao = userPatientDao;
@@ -50,6 +54,7 @@ public class ManualUserRegistrationBl {
         this.userRoleDao = userRoleDao;
         this.passwordEncoder = passwordEncoder;
         this.careerDepartmentDao = careerDepartmentDao;
+        this.careerDao = careerDao;
     }
 
     /**
@@ -103,30 +108,32 @@ public class ManualUserRegistrationBl {
 
     /**
      * Completa el perfil del paciente autenticado.
-     * Guarda información personal y académica.
+     * Guarda información personal y asocia la carrera académica seleccionada.
      *
      * @param email Email del usuario autenticado (desde el token).
-     * @param dto DTO con los campos adicionales del perfil y carrera.
-     * @throws RuntimeException si no se encuentra el usuario o su entidad paciente.
+     * @param dto   DTO con los datos adicionales del perfil y el ID de carrera seleccionada.
+     * @throws RuntimeException si no se encuentra el usuario, paciente o carrera.
      */
     public void completePatientProfile(String email, CompleteProfileRequestDto dto) {
-        logger.info("Completando perfil del paciente con email: " + email);
+        logger.info("Completando perfil del paciente con email: {}", email);
 
+        // Buscar usuario por email
         User user = userDao.findByEmail(email)
                 .orElseThrow(() -> {
-                    logger.error("Usuario no encontrado al completar perfil: " + email);
+                    logger.error("Usuario no encontrado: {}", email);
                     return new RuntimeException("Usuario no encontrado");
                 });
 
-
+        // Validar CI duplicado
         if (user.getCiNumber() == null || !user.getCiNumber().equals(dto.getCiNumber())) {
             boolean exists = userDao.existsByCiNumber(dto.getCiNumber());
             if (exists) {
+                logger.warn("El CI ya está registrado: {}", dto.getCiNumber());
                 throw new CiNumberAlreadyExistsException("El número de carnet ya está registrado.");
             }
         }
 
-        // Actualizar datos del usuario
+        // Actualizar información personal
         user.setBirthDate(dto.getBirthDate());
         user.setBirthGender(dto.getBirthGender());
         user.setIdentityGender(dto.getIdentityGender());
@@ -136,22 +143,28 @@ public class ManualUserRegistrationBl {
         user.setCiComplement(dto.getCiComplement());
         user.setCiExtension(dto.getCiExtension());
         userDao.save(user);
-        logger.info("Datos personales completados para: " + email);
+        logger.info("Datos personales actualizados para el usuario: {}", email);
 
-        // Verificar que exista UserPatient
+        // Verificar que el usuario tenga una entidad UserPatient asociada
         UserPatient userPatient = userPatientDao.findById(user.getUserId())
                 .orElseThrow(() -> {
-                    logger.error("No se encontró UserPatient para usuario: " + email);
+                    logger.error("Entidad UserPatient no encontrada para: {}", email);
                     return new RuntimeException("Paciente no encontrado");
                 });
 
-        // Crear carrera académica
-        CareerDepartment career = new CareerDepartment();
-        career.setCareerName(dto.getCareerName());
-        career.setFaculty(dto.getFaculty());
-        career.setStatus(dto.getStatus());
-        career.setUserPatient(userPatient);
-        careerDepartmentDao.save(career);
-        logger.info("Carrera académica registrada para el paciente: " + email);
+        // Verificar que exista la carrera con el ID proporcionado
+        Career career = careerDao.findById(dto.getCareerId())
+                .orElseThrow(() -> {
+                    logger.error("Carrera no encontrada con ID: {}", dto.getCareerId());
+                    return new RuntimeException("Carrera académica no válida");
+                });
+
+        // Asociar carrera con el paciente
+        CareerDepartment academicLink = new CareerDepartment();
+        academicLink.setUserPatient(userPatient);
+        academicLink.setCareer(career);
+        careerDepartmentDao.save(academicLink);
+        logger.info("Carrera académica asociada correctamente para el paciente: {}", email);
     }
+
 }

@@ -6,13 +6,14 @@ import java.util.Date;
 
 /**
  * DTO para completar el perfil del paciente después del registro inicial.
- * Incluye información personal adicional y los datos académicos.
+ * Incluye información personal adicional y el ID de la carrera seleccionada.
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class CompleteProfileRequestDto {
 
+    // Datos personales
     private Date birthDate;
     private String birthGender;
     private String identityGender;
@@ -23,8 +24,6 @@ public class CompleteProfileRequestDto {
     private String ciComplement;
     private String ciExtension;
 
-    // Datos académicos
-    private String careerName;
-    private String faculty;
-    private String status;
+    // ID de carrera seleccionada
+    private Long careerId;
 }
