@@ -1,12 +1,15 @@
 package bo.com.ucb.psymanager.bl;
 
 import bo.com.ucb.psymanager.dao.CareerDao;
+import bo.com.ucb.psymanager.dto.CareerSimpleDto;
 import bo.com.ucb.psymanager.entities.Career;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Lógica de negocio para operaciones relacionadas con carreras universitarias.
@@ -37,7 +40,7 @@ public class CareerBl {
      * @param faculty Nombre de la facultad
      * @return Lista de nombres de carreras activas
      */
-    public List<String> getCareersByFaculty(String faculty) {
+    public List<CareerSimpleDto> getCareerDtosByFaculty(String faculty) {
         logger.info("Buscando carreras activas para la facultad: {}", faculty);
 
         if (faculty == null || faculty.trim().isEmpty()) {
@@ -45,16 +48,11 @@ public class CareerBl {
             throw new IllegalArgumentException("La facultad no puede estar vacía.");
         }
 
-        List<Career> careers = careerDao.findAllByFaculty(faculty.trim());
-        List<String> activeCareers = careers.stream()
+        return careerDao.findAllByFaculty(faculty.trim()).stream()
                 .filter(c -> "Activo".equalsIgnoreCase(c.getStatus()))
-                .map(Career::getCareerName)
-                .distinct()
-                .sorted()
+                .map(c -> new CareerSimpleDto(c.getCareerId(), c.getCareerName()))
                 .toList();
-
-        logger.info("Se encontraron {} carreras activas para la facultad '{}'", activeCareers.size(), faculty);
-        return activeCareers;
     }
+
 
 }

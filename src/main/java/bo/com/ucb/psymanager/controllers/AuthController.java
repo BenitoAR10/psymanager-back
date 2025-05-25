@@ -150,7 +150,7 @@ public class AuthController {
      * @return Respuesta 200 si se actualiza correctamente, 500 en caso de error.
      */
     @PutMapping("/complete-profile")
-    public ResponseEntity<String> completeProfile(
+    public ResponseEntity<Map<String, String>> completeProfile(
             Authentication authentication,
             @RequestBody CompleteProfileRequestDto profileDto
     ) {
@@ -159,11 +159,12 @@ public class AuthController {
             logger.info("Solicitud para completar perfil del usuario: " + email);
             manualUserRegistrationBl.completePatientProfile(email, profileDto);
             logger.info("Perfil completado correctamente para: " + email);
-            return ResponseEntity.ok("Perfil completado correctamente");
+            return ResponseEntity.ok(Map.of("message", "Perfil completado correctamente"));
         } catch (Exception e) {
             logger.error("Error al completar perfil para: " + email, e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error al completar el perfil");
+                    .body(Map.of("message", "Error al completar el perfil"));
         }
     }
+
 }

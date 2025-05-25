@@ -12320,3 +12320,101 @@ bo.com.ucb.psymanager.exceptions.CiNumberAlreadyExistsException: El número de c
 [2025-05-24 21:30:52] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@gmail.com
 [2025-05-24 21:30:52] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
 [2025-05-24 21:30:52] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-25 01:15:28] [INFO] [AuthController] - Solicitud de registro recibida para: mauricio@gmail.com
+[2025-05-25 01:15:28] [INFO] [AuthController] - Registro exitoso para: mauricio@gmail.com
+[2025-05-25 01:15:28] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: mauricio@gmail.com
+[2025-05-25 01:15:28] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: mauricio@gmail.com
+[2025-05-25 01:15:28] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para mauricio@gmail.com
+[2025-05-25 01:15:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: mauricio@gmail.com
+[2025-05-25 01:15:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: mauricio@gmail.com
+[2025-05-25 01:15:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 01:15:28] [INFO] [AuthController] - Login exitoso para: mauricio@gmail.com
+[2025-05-25 01:25:00] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-25 01:25:00] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: mauricio@gmail.com
+[2025-05-25 01:25:00] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: mauricio@gmail.com
+[2025-05-25 01:25:00] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: mauricio@gmail.com
+[2025-05-25 01:25:00] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: mauricio@gmail.com
+[2025-05-25 01:25:00] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 01:25:00] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-25 01:25:07] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: mauricio@gmail.com
+[2025-05-25 01:26:26] [INFO] [AuthController] - Solicitud de registro recibida para: mauricio@gmail.com
+[2025-05-25 01:26:26] [INFO] [AuthController] - Registro exitoso para: mauricio@gmail.com
+[2025-05-25 01:26:26] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: mauricio@gmail.com
+[2025-05-25 01:26:26] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: mauricio@gmail.com
+[2025-05-25 01:26:27] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para mauricio@gmail.com
+[2025-05-25 01:26:27] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: mauricio@gmail.com
+[2025-05-25 01:26:27] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: mauricio@gmail.com
+[2025-05-25 01:26:27] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 01:26:27] [INFO] [AuthController] - Login exitoso para: mauricio@gmail.com
+[2025-05-25 11:39:32] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-25 11:39:32] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-25 11:39:32] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-25 11:39:32] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-25 11:40:06] [INFO] [AuthController] - Solicitud de registro recibida para: mauricio@gmail.com
+[2025-05-25 11:40:06] [INFO] [AuthController] - Registro exitoso para: mauricio@gmail.com
+[2025-05-25 11:40:07] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: mauricio@gmail.com
+[2025-05-25 11:40:07] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: mauricio@gmail.com
+[2025-05-25 11:40:07] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para mauricio@gmail.com
+[2025-05-25 11:40:07] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: mauricio@gmail.com
+[2025-05-25 11:40:07] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: mauricio@gmail.com
+[2025-05-25 11:40:07] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 11:40:07] [INFO] [AuthController] - Login exitoso para: mauricio@gmail.com
+[2025-05-25 11:43:48] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-25 11:43:48] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: mauricio@gmail.com
+[2025-05-25 11:43:48] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: mauricio@gmail.com
+[2025-05-25 11:43:48] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: mauricio@gmail.com
+[2025-05-25 11:43:48] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: mauricio@gmail.com
+[2025-05-25 11:43:48] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 11:43:48] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-25 11:47:26] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-25 11:47:26] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: mauricio@gmail.com
+[2025-05-25 11:47:26] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: mauricio@gmail.com
+[2025-05-25 11:47:26] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: mauricio@gmail.com
+[2025-05-25 11:47:26] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: mauricio@gmail.com
+[2025-05-25 11:47:26] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 11:47:26] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-25 11:49:11] [INFO] [AuthController] - Solicitud de registro recibida para: mauricio@gmail.com
+[2025-05-25 11:49:11] [INFO] [AuthController] - Registro exitoso para: mauricio@gmail.com
+[2025-05-25 11:49:11] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: mauricio@gmail.com
+[2025-05-25 11:49:11] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: mauricio@gmail.com
+[2025-05-25 11:49:11] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para mauricio@gmail.com
+[2025-05-25 11:49:11] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: mauricio@gmail.com
+[2025-05-25 11:49:11] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: mauricio@gmail.com
+[2025-05-25 11:49:11] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 11:49:11] [INFO] [AuthController] - Login exitoso para: mauricio@gmail.com
+[2025-05-25 11:50:15] [INFO] [AuthController] - Solicitud para completar perfil del usuario: mauricio@gmail.com
+[2025-05-25 11:50:15] [INFO] [AuthController] - Perfil completado correctamente para: mauricio@gmail.com
+[2025-05-25 12:11:44] [INFO] [AuthController] - Solicitud de registro recibida para: mauricio@gmail.com
+[2025-05-25 12:11:44] [INFO] [AuthController] - Registro exitoso para: mauricio@gmail.com
+[2025-05-25 12:11:45] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: mauricio@gmail.com
+[2025-05-25 12:11:45] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: mauricio@gmail.com
+[2025-05-25 12:11:45] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para mauricio@gmail.com
+[2025-05-25 12:11:45] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: mauricio@gmail.com
+[2025-05-25 12:11:45] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: mauricio@gmail.com
+[2025-05-25 12:11:45] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 12:11:45] [INFO] [AuthController] - Login exitoso para: mauricio@gmail.com
+[2025-05-25 12:12:23] [INFO] [AuthController] - Solicitud para completar perfil del usuario: mauricio@gmail.com
+[2025-05-25 12:12:23] [INFO] [AuthController] - Perfil completado correctamente para: mauricio@gmail.com
+[2025-05-25 12:15:24] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: mauricio@gmail.com
+[2025-05-25 12:36:46] [INFO] [AuthController] - Solicitud de registro recibida para: camilo@gmail.com
+[2025-05-25 12:36:46] [INFO] [AuthController] - Registro exitoso para: camilo@gmail.com
+[2025-05-25 12:36:47] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: camilo@gmail.com
+[2025-05-25 12:36:47] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: camilo@gmail.com
+[2025-05-25 12:36:47] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para camilo@gmail.com
+[2025-05-25 12:36:47] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: camilo@gmail.com
+[2025-05-25 12:36:47] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: camilo@gmail.com
+[2025-05-25 12:36:47] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 12:36:47] [INFO] [AuthController] - Login exitoso para: camilo@gmail.com
+[2025-05-25 12:37:24] [INFO] [AuthController] - Solicitud para completar perfil del usuario: camilo@gmail.com
+[2025-05-25 12:37:24] [INFO] [AuthController] - Perfil completado correctamente para: camilo@gmail.com
+[2025-05-25 12:44:05] [INFO] [AuthController] - Solicitud de registro recibida para: juan@gmail.com
+[2025-05-25 12:44:06] [INFO] [AuthController] - Registro exitoso para: juan@gmail.com
+[2025-05-25 12:44:06] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan@gmail.com
+[2025-05-25 12:44:06] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan@gmail.com
+[2025-05-25 12:44:06] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan@gmail.com
+[2025-05-25 12:44:06] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan@gmail.com
+[2025-05-25 12:44:06] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan@gmail.com
+[2025-05-25 12:44:06] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 12:44:06] [INFO] [AuthController] - Login exitoso para: juan@gmail.com
+[2025-05-25 12:44:37] [INFO] [AuthController] - Solicitud para completar perfil del usuario: juan@gmail.com
+[2025-05-25 12:44:37] [INFO] [AuthController] - Perfil completado correctamente para: juan@gmail.com

@@ -2,6 +2,7 @@ package bo.com.ucb.psymanager.controllers;
 
 
 import bo.com.ucb.psymanager.bl.CareerBl;
+import bo.com.ucb.psymanager.dto.CareerSimpleDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Controlador para exponer operaciones relacionadas con carreras y facultades.
@@ -45,10 +47,11 @@ public class CareerController {
      * @return Lista de nombres de carreras
      */
     @GetMapping("/by-faculty")
-    public ResponseEntity<List<String>> getCareersByFaculty(@RequestParam String faculty) {
+    public ResponseEntity<List<CareerSimpleDto>> getCareersByFaculty(@RequestParam String faculty) {
         logger.info("Solicitud GET a /api/careers/by-faculty con facultad={}", faculty);
-        List<String> careers = careerBl.getCareersByFaculty(faculty);
+        List<CareerSimpleDto> careers = careerBl.getCareerDtosByFaculty(faculty);
         return ResponseEntity.ok(careers);
     }
+
 
 }
