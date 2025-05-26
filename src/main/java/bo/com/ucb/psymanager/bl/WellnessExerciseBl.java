@@ -7,6 +7,7 @@ import bo.com.ucb.psymanager.entities.WellnessExercise;
 import bo.com.ucb.psymanager.service.MinioService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,6 +22,10 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Slf4j
 public class WellnessExerciseBl {
+
+    @Value("${minio.public-host}")
+    private String minioPublicHost;
+
 
     private final WellnessExerciseDao wellnessExerciseDao;
     private final MinioService minioService;
@@ -72,7 +77,10 @@ public class WellnessExerciseBl {
                         ex.getTitle(),
                         ex.getCategory(),
                         ex.getPointsReward(),
-                        minioService.getPresignedUrl(ex.getAudioUrl()) // Generar URL temporal
+                        minioPublicHost + "/wellness-audios/" + ex.getAudioUrl()
+
+
+
                 ))
                 .collect(Collectors.toList());
     }
@@ -99,7 +107,9 @@ public class WellnessExerciseBl {
                         ex.getTitle(),
                         ex.getCategory(),
                         ex.getPointsReward(),
-                        minioService.getPresignedUrl(ex.getAudioUrl())
+                        minioPublicHost + "/wellness-audios/" + ex.getAudioUrl()
+
+
                 ))
                 .collect(Collectors.toList());
     }

@@ -12418,3 +12418,84 @@ bo.com.ucb.psymanager.exceptions.CiNumberAlreadyExistsException: El número de c
 [2025-05-25 12:44:06] [INFO] [AuthController] - Login exitoso para: juan@gmail.com
 [2025-05-25 12:44:37] [INFO] [AuthController] - Solicitud para completar perfil del usuario: juan@gmail.com
 [2025-05-25 12:44:37] [INFO] [AuthController] - Perfil completado correctamente para: juan@gmail.com
+[2025-05-25 13:33:20] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-25 13:33:20] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-25 13:33:21] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-25 13:33:21] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 13:33:21] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 13:33:21] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 13:33:21] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-25 13:33:25] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-25 13:33:25] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-25 13:33:25] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-25 13:33:25] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 13:33:25] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 13:33:25] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 13:33:25] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-25 13:34:33] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-25 13:34:33] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-25 13:34:33] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-25 13:34:33] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 13:34:33] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 13:34:33] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 13:34:33] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-25 13:34:44] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-25 13:34:44] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amirbellido@gmail.com
+[2025-05-25 13:34:44] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amirbellido@gmail.com
+[2025-05-25 13:34:44] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 13:34:44] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 13:34:44] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 13:34:44] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-05-25 13:39:22] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-25 13:39:22] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-25 13:39:22] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-25 13:39:22] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 13:39:22] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 13:39:22] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 13:39:22] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-25 13:59:28] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-25 13:59:28] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-25 13:59:28] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-25 13:59:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 13:59:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 13:59:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 13:59:28] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-25 14:14:37] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-25 14:14:37] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-25 14:14:37] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-25 14:14:37] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-25 14:14:53] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-25 14:14:53] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-25 14:14:53] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-25 14:14:53] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 14:14:53] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 14:14:53] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 14:14:53] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-25 16:45:16] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-25 16:45:16] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-25 16:45:16] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-25 16:45:16] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 16:45:16] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 16:45:16] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 16:45:16] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-25 16:48:23] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-25 16:48:23] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-25 16:48:23] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-25 16:48:23] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 16:48:23] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 16:48:23] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 16:48:23] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-25 16:59:28] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-25 16:59:28] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-25 16:59:28] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-25 16:59:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-25 16:59:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-25 16:59:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-25 16:59:28] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-26 00:03:19] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-26 00:03:19] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-26 00:03:19] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-26 00:03:19] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-26 00:03:19] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-26 00:03:19] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-26 00:03:19] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com

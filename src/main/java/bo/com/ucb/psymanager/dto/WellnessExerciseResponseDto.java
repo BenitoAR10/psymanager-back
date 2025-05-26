@@ -13,5 +13,9 @@ public class WellnessExerciseResponseDto {
     private String title;
     private String category;
     private Integer pointsReward;
-    private String audioUrl; // Este será la URL firmada generada con MinIO
+    /**
+     * URL pública del archivo de audio, accesible directamente desde frontend.
+     */
+    private String audioUrl;
+
 }

@@ -13,6 +13,7 @@ minio:
   secret-key: ${MINIO_SECRET_KEY}
   bucket: ${MINIO_BUCKET_NAME}
   region: ${MINIO_REGION}
+  public-host: ${MINIO_PUBLIC_HOST}
 
 
 spring:

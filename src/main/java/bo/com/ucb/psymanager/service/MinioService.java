@@ -58,6 +58,9 @@ public class MinioService {
     /**
      * Genera una URL temporal para acceder a un archivo almacenado en MinIO.
      *
+     * NOTA: En producción móvil se recomienda usar `MINIO_PUBLIC_HOST + objectName`
+     * para asegurar compatibilidad con dispositivos que no acceden a localhost.
+     *
      * @param objectName Nombre del objeto que se desea acceder
      * @return URL válida por 1 hora
      */
