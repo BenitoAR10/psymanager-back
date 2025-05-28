@@ -49,7 +49,7 @@ public class CareerBl {
         }
 
         return careerDao.findAllByFaculty(faculty.trim()).stream()
-                .filter(c -> "Activo".equalsIgnoreCase(c.getStatus()))
+                .filter(c -> "ACTIVO".equalsIgnoreCase(c.getStatus()))
                 .map(c -> new CareerSimpleDto(c.getCareerId(), c.getCareerName()))
                 .toList();
     }
