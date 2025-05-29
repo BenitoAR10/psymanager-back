@@ -196,6 +196,22 @@ public class ScheduledSessionBl {
         scheduledSessionDao.save(session);
         logger.info("Sesión ID={} marcada como COMPLETED exitosamente.", sessionId);
     }
+    /**
+     * Devuelve todas las sesiones individuales del terapeuta, sin filtros de fecha o estado.
+     *
+     * @param therapistUserId ID del terapeuta (userId)
+     * @return lista de todas las sesiones como DTOs
+     */
+    @Transactional(readOnly = true)
+    public List<UpcomingAppointmentDto> getAllAppointmentsForTherapist(Long therapistUserId) {
+        List<ScheduleSession> sessions = scheduledSessionDao
+                .findByTherapistScheduled_UserTherapistId(therapistUserId.intValue());
+
+        return sessions.stream()
+                .map(this::mapSessionToDto)
+                .sorted(Comparator.comparing(UpcomingAppointmentDto::getDateTime))
+                .toList();
+    }
 
     /**
      * Convierte una entidad ScheduleSession a DTO para vista de agenda.

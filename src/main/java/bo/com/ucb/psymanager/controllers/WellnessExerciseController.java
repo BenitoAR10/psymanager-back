@@ -1,14 +1,21 @@
 package bo.com.ucb.psymanager.controllers;
 
+import bo.com.ucb.psymanager.bl.AuthenticatedUserBl;
+import bo.com.ucb.psymanager.bl.PermissionBl;
 import bo.com.ucb.psymanager.bl.WellnessExerciseBl;
 import bo.com.ucb.psymanager.dto.CreateWellnessExerciseDto;
 import bo.com.ucb.psymanager.dto.WellnessExerciseResponseDto;
+import bo.com.ucb.psymanager.entities.User;
 import bo.com.ucb.psymanager.entities.WellnessExercise;
 import bo.com.ucb.psymanager.service.MinioService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -18,10 +25,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/wellness-exercises")
 @RequiredArgsConstructor
+@Slf4j
 public class WellnessExerciseController {
 
     private final MinioService minioService;
     private final WellnessExerciseBl wellnessExerciseBl;
+    private final AuthenticatedUserBl authenticatedUserBl;
+    private final PermissionBl permissionBl;
+
+
 
     /**
      * Endpoint para subir un archivo de audio al bucket de MinIO.
@@ -41,16 +53,55 @@ public class WellnessExerciseController {
 
     /**
      * Endpoint para registrar un nuevo ejercicio de bienestar emocional.
-     * Recibe el DTO con el archivo incluido.
+     * Solo accesible si el terapeuta tiene el permiso ADD_EXERCISE_RESOURCE.
      *
-     * @param dto DTO que contiene título, categoría, puntos y audio
-     * @return Ejercicio guardado
+     * @param dto DTO con datos del ejercicio (título, categoría, puntos, archivo)
+     * @param authHeader Encabezado Authorization con el token JWT
+     * @return DTO del ejercicio creado con URL firmada
      */
     @PostMapping
-    public ResponseEntity<WellnessExercise> createExercise(@ModelAttribute CreateWellnessExerciseDto dto) {
+    public ResponseEntity<WellnessExerciseResponseDto> createExercise(
+            @ModelAttribute CreateWellnessExerciseDto dto,
+            @RequestHeader(value = "Authorization", required = false) String authHeader
+    ) {
+        // 1. Validar encabezado y extraer token
+        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            log.warn("Intento de acceso sin token válido");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+        String token = authHeader.substring(7);
+
+        // 2. Autenticar usuario
+        User user = authenticatedUserBl.getAuthenticatedUser(token)
+                .orElseThrow(() -> {
+                    log.warn("Token inválido o usuario no encontrado");
+                    return new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Usuario no autenticado");
+                });
+
+        // 3. Validar permiso
+        if (!permissionBl.hasPermission(user, "ADD_EXERCISE_RESOURCE")) {
+            log.warn("Usuario {} sin permiso ADD_EXERCISE_RESOURCE", user.getUserId());
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
+        // 4. Crear ejercicio
         WellnessExercise created = wellnessExerciseBl.createExercise(dto);
-        return ResponseEntity.ok(created);
+        String publicUrl = minioService.getPresignedUrl(created.getAudioUrl());
+
+        // 5. Construir respuesta
+        WellnessExerciseResponseDto responseDto = new WellnessExerciseResponseDto(
+                created.getId(),
+                created.getTitle(),
+                created.getCategory(),
+                created.getPointsReward(),
+                publicUrl
+        );
+
+        log.info("Ejercicio creado por el usuario {}: {}", user.getUserId(), created.getId());
+        return ResponseEntity.ok(responseDto);
     }
+
+
 
     /**
      * Endpoint para obtener la lista de ejercicios filtrados por categoría.

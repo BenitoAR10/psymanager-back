@@ -6,6 +6,7 @@ import bo.com.ucb.psymanager.dao.UserRoleDao;
 import bo.com.ucb.psymanager.entities.User;
 import bo.com.ucb.psymanager.entities.UserPermission;
 import bo.com.ucb.psymanager.entities.UserRole;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import java.util.Set;
  * Lógica de negocio para verificar si un usuario tiene permisos específicos,
  * considerando tanto los asignados por roles como los permisos directos.
  */
+@Slf4j
 @Service
 public class PermissionBl {
 
@@ -41,23 +43,10 @@ public class PermissionBl {
      * @return true si el usuario tiene el permiso, false en caso contrario
      */
     public boolean hasPermission(User user, String permissionName) {
-        Set<String> effectivePermissions = new HashSet<>();
-
-        // 1. Permisos por rol
-        List<UserRole> userRoles = userRoleDao.findByUser(user);
-        userRoles.forEach(userRole -> {
-            rolePermissionDao.findByRole(userRole.getRole()).forEach(rp ->
-                    effectivePermissions.add(rp.getPermission().getPermissionName())
-            );
-        });
-
-        // 2. Permisos asignados directamente al usuario
-        List<UserPermission> userPermissions = userPermissionDao.findByUser(user);
-        userPermissions.forEach(up ->
-                effectivePermissions.add(up.getPermission().getPermissionName())
-        );
-
-        return effectivePermissions.contains(permissionName);
+        Set<String> permissions = collectEffectivePermissions(user);
+        boolean result = permissions.contains(permissionName);
+        log.info("Verificando permiso [{}] para usuario {}: {}", permissionName, user.getUserId(), result ? "PERMITIDO" : "DENEGADO");
+        return result;
     }
 
     /**
@@ -68,23 +57,38 @@ public class PermissionBl {
      * @return Lista de nombres de permisos (sin duplicados)
      */
     public List<String> getPermissionsByUser(User user) {
+        Set<String> permissions = collectEffectivePermissions(user);
+        log.info("Permisos efectivos del usuario {}: {}", user.getUserId(), permissions);
+        return new ArrayList<>(permissions);
+    }
+
+    /**
+     * Recolecta todos los permisos efectivos del usuario, uniendo
+     * permisos por rol y permisos asignados directamente.
+     *
+     * @param user Usuario autenticado
+     * @return Conjunto de permisos efectivos
+     */
+    private Set<String> collectEffectivePermissions(User user) {
         Set<String> effectivePermissions = new HashSet<>();
 
         // Permisos por rol
-        List<UserRole> userRoles = userRoleDao.findByUser(user);
-        userRoles.forEach(userRole -> {
-            rolePermissionDao.findByRole(userRole.getRole()).forEach(rp ->
+        List<UserRole> roles = userRoleDao.findByUser(user);
+        for (UserRole role : roles) {
+            rolePermissionDao.findByRole(role.getRole()).forEach(rp ->
                     effectivePermissions.add(rp.getPermission().getPermissionName())
             );
-        });
+        }
 
         // Permisos directos
-        List<UserPermission> userPermissions = userPermissionDao.findByUser(user);
-        userPermissions.forEach(up ->
-                effectivePermissions.add(up.getPermission().getPermissionName())
-        );
+        List<UserPermission> directPermissions = userPermissionDao.findByUser(user);
+        for (UserPermission permission : directPermissions) {
+            effectivePermissions.add(permission.getPermission().getPermissionName());
+        }
 
-        return new ArrayList<>(effectivePermissions);
+        return effectivePermissions;
     }
+
+
 
 }

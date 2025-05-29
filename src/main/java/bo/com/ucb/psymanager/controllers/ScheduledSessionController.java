@@ -89,6 +89,27 @@ public class ScheduledSessionController {
         return ResponseEntity.ok().build();
     }
 
+    /**
+     * Devuelve todas las sesiones individuales del terapeuta autenticado,
+     * sin importar el estado o la fecha (pasadas, futuras, aceptadas, rechazadas, completadas).
+     *
+     * @param email email del terapeuta autenticado
+     * @return lista completa de citas como DTOs
+     */
+    @GetMapping("/all")
+    public ResponseEntity<List<UpcomingAppointmentDto>> getAllAppointmentsForTherapist(
+            @AuthenticationPrincipal String email
+    ) {
+        User user = userDao.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+
+        List<UpcomingAppointmentDto> allAppointments =
+                scheduledSessionBl.getAllAppointmentsForTherapist(user.getUserId());
+
+        return ResponseEntity.ok(allAppointments);
+    }
+
+
 
     /**
      * Devuelve las próximas citas del terapeuta autenticado, ordenadas por fecha.

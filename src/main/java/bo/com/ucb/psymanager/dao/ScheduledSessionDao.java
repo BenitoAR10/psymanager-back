@@ -95,4 +95,12 @@ public interface ScheduledSessionDao extends JpaRepository<ScheduleSession, Long
 
     int countByUserPatient_UserPatientIdAndState(Long userPatientId, SessionState state);
 
+    /**
+     * Busca todas las sesiones asociadas a un terapeuta, sin importar su estado o fecha.
+     *
+     * @param therapistUserId ID del terapeuta
+     * @return lista de sesiones programadas
+     */
+    List<ScheduleSession> findByTherapistScheduled_UserTherapistId(Integer therapistUserId);
+
 }
