@@ -1,11 +1,13 @@
 package bo.com.ucb.psymanager.bl;
 
 import bo.com.ucb.psymanager.dao.UserDao;
+import bo.com.ucb.psymanager.dao.UserPatientDao;
 import bo.com.ucb.psymanager.dao.UserRoleDao;
 import bo.com.ucb.psymanager.dto.AuthResponseDto;
 import bo.com.ucb.psymanager.dto.CompleteProfileRequestDto;
 import bo.com.ucb.psymanager.dto.LoginRequestDto;
 import bo.com.ucb.psymanager.entities.User;
+import bo.com.ucb.psymanager.entities.UserPatient;
 import bo.com.ucb.psymanager.util.JwtUtil;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,15 +29,23 @@ public class AuthenticatedUserBl {
     private final UserRoleDao userRoleDao;
     private final JwtUtil jwtUtil;
     private final PasswordEncoder passwordEncoder;
-
+    private final UserPatientDao userPatientDao;
 
     @Autowired
-    public AuthenticatedUserBl(UserDao userDao, UserRoleDao userRoleDao, JwtUtil jwtUtil, PasswordEncoder passwordEncoder) {
+    public AuthenticatedUserBl(
+            UserDao userDao,
+            UserRoleDao userRoleDao,
+            JwtUtil jwtUtil,
+            PasswordEncoder passwordEncoder,
+            UserPatientDao userPatientDao
+    ) {
         this.userDao = userDao;
         this.userRoleDao = userRoleDao;
         this.jwtUtil = jwtUtil;
         this.passwordEncoder = passwordEncoder;
+        this.userPatientDao = userPatientDao;
     }
+
 
     /**
      * Obtiene el usuario autenticado basado en el token JWT.
@@ -209,6 +219,22 @@ public class AuthenticatedUserBl {
         logger.info("Autenticación exitosa para " + dto.getEmail());
         return generateTokens(dto.getEmail());
     }
+    /**
+     * Retorna el paciente autenticado a partir del token JWT proporcionado.
+     *
+     * @param token JWT del usuario autenticado.
+     * @return El objeto UserPatient correspondiente.
+     * @throws RuntimeException si no se encuentra el paciente.
+     */
+    public UserPatient getAuthenticatedUserPatient(String token) {
+        User user = getAuthenticatedUser(token)
+                .orElseThrow(() -> new RuntimeException("Usuario no autenticado"));
+
+        return userPatientDao.findByUser(user)
+                .orElseThrow(() -> new RuntimeException("El usuario no está registrado como paciente"));
+    }
+
+
 
 
 }

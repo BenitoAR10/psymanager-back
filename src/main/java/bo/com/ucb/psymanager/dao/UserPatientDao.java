@@ -1,5 +1,6 @@
 package bo.com.ucb.psymanager.dao;
 
+import bo.com.ucb.psymanager.entities.User;
 import bo.com.ucb.psymanager.entities.UserPatient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -19,5 +20,11 @@ public interface UserPatientDao extends JpaRepository<UserPatient, Long> {
      * @return UserPatient correspondiente (si existe)
      */
     Optional<UserPatient> findByUser_Email(String email);
+
+    /**
+     * Busca un UserPatient por el objeto User asociado.
+     *
+     */
+    Optional<UserPatient> findByUser(User user);
 
 }
