@@ -2,6 +2,7 @@ package bo.com.ucb.psymanager.bl;
 
 import bo.com.ucb.psymanager.dao.ScheduledSessionDao;
 import bo.com.ucb.psymanager.dao.TherapistScheduledDao;
+import bo.com.ucb.psymanager.dao.TherapistSpecialtyDao;
 import bo.com.ucb.psymanager.dao.UserDao;
 import bo.com.ucb.psymanager.dto.ScheduleAvailabilityDto;
 import bo.com.ucb.psymanager.dto.ScheduleAvailabilityWithContactDto;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -29,7 +31,7 @@ public class ScheduledAvailabilityBl {
     private final TherapistScheduledDao therapistScheduledDao;
     private final ScheduledSessionDao scheduledSessionDao;
     private final UserDao userDao;
-
+    private final TherapistSpecialtyDao therapistSpecialtyDao;
 
     private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
 
@@ -172,21 +174,33 @@ public class ScheduledAvailabilityBl {
                 .orElse(null);
 
         return userDao.findById((long) schedule.getUserTherapistId())
-                .map(user -> new ScheduleAvailabilityWithContactDto(
-                        schedule.getTherapistScheduledId(),
-                        schedule.getUserTherapistId(),
-                        schedule.getDate(),
-                        schedule.getStartTime().format(timeFormatter),
-                        schedule.getEndTime().format(timeFormatter),
-                        reservedByUserId != null ? "taken" : "available",
-                        user.getFirstName() + " " + user.getLastName(),
-                        reservedByUserId,
-                        sessionState,
-                        user.getPhoneNumber(),
-                        user.getEmail()
-                ))
+                .map(user -> {
+                    // 🔍 Buscar las especialidades del terapeuta
+                    List<String> specialties = therapistSpecialtyDao
+                            .findByUserTherapist_UserTherapistId((long) schedule.getUserTherapistId())
+                            .stream()
+                            .map(ts -> ts.getSpecialty().getSpecialtyName())
+                            .toList();
+
+
+                    return new ScheduleAvailabilityWithContactDto(
+                            schedule.getTherapistScheduledId(),
+                            schedule.getUserTherapistId(),
+                            schedule.getDate(),
+                            schedule.getStartTime().format(timeFormatter),
+                            schedule.getEndTime().format(timeFormatter),
+                            reservedByUserId != null ? "taken" : "available",
+                            user.getFirstName() + " " + user.getLastName(),
+                            reservedByUserId,
+                            sessionState,
+                            user.getPhoneNumber(),
+                            user.getEmail(),
+                            specialties
+                    );
+                })
                 .orElseThrow(() -> new RuntimeException("Usuario terapeuta no encontrado"));
     }
+
 
 
 

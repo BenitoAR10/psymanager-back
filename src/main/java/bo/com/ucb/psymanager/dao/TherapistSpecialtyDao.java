@@ -28,4 +28,7 @@ public interface TherapistSpecialtyDao extends JpaRepository<TherapistSpecialty,
      * @param userTherapist terapeuta del que se eliminarán las relaciones
      */
     void deleteByUserTherapist(UserTherapist userTherapist);
+
+    List<TherapistSpecialty> findByUserTherapist_UserTherapistId(Long userTherapistId);
+
 }

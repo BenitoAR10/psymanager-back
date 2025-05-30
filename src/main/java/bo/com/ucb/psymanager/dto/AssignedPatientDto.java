@@ -20,4 +20,5 @@ public class AssignedPatientDto {
     private int assignedSessions;
     private int completedSessions;
     private boolean active;
+    private String careerName;
 }

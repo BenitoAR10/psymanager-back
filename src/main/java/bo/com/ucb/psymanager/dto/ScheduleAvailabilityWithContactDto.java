@@ -4,6 +4,7 @@ import bo.com.ucb.psymanager.entities.SessionState;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -20,4 +21,5 @@ public class ScheduleAvailabilityWithContactDto {
     private SessionState sessionState;
     private String therapistPhoneNumber;
     private String therapistEmail;
+    private List<String> therapistSpecialties;
 }

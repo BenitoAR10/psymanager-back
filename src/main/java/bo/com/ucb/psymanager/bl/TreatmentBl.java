@@ -207,22 +207,31 @@ public class TreatmentBl {
         LocalDate today = LocalDate.now();
 
         return activePlans.stream().map(t -> {
-            String name = t.getUserPatient().getUser().getFirstName() + " " + t.getUserPatient().getUser().getLastName();
+            UserPatient userPatient = t.getUserPatient();
+            String name = userPatient.getUser().getFirstName() + " " + userPatient.getUser().getLastName();
             List<TreatmentSession> sessions = t.getSessions();
             int completed = (int) sessions.stream().filter(TreatmentSession::getCompleted).count();
 
+            // Buscar la carrera (puedes definir un método en el DAO si lo prefieres)
+            String careerName = userPatient.getCareerDepartments().stream()
+                    .findFirst()
+                    .map(cd -> cd.getCareer().getCareerName())
+                    .orElse("Sin carrera");
+
             return new AssignedPatientDto(
                     t.getTreatmentId(),
-                    t.getUserPatient().getUserPatientId(),
+                    userPatient.getUserPatientId(),
                     name,
                     t.getStartDate(),
                     t.getEndDate(),
                     sessions.size(),
                     completed,
-                    !t.getEndDate().isBefore(today)
+                    !t.getEndDate().isBefore(today),
+                    careerName
             );
         }).toList();
     }
+
 
     /**
      * Obtiene el detalle completo de un tratamiento activo.

@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Representa un paciente en el sistema. Extiende los datos básicos de la entidad User.
@@ -35,4 +37,8 @@ public class UserPatient {
     @MapsId
     @JoinColumn(name = "user_patient_id")
     private User user;
+
+    /** Carreras académicas asociadas al paciente */
+    @OneToMany(mappedBy = "userPatient", fetch = FetchType.LAZY)
+    private List<CareerDepartment> careerDepartments = new ArrayList<>();
 }
