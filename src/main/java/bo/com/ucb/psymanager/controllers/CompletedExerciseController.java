@@ -2,10 +2,10 @@ package bo.com.ucb.psymanager.controllers;
 
 import bo.com.ucb.psymanager.bl.CompletedExerciseBl;
 import bo.com.ucb.psymanager.dto.CompleteExerciseRequestDto;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,6 +23,7 @@ import java.util.Map;
 @RequestMapping("/api/exercises")
 @RequiredArgsConstructor
 @Slf4j
+@PreAuthorize("hasRole('PATIENT')")
 public class CompletedExerciseController {
 
     private final CompletedExerciseBl completedExerciseBl;
@@ -46,7 +47,4 @@ public class CompletedExerciseController {
         response.put("exerciseId", dto.getExerciseId());
         return ResponseEntity.ok(response);
     }
-
-
-
 }

@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
@@ -49,6 +50,7 @@ public class AuthController {
      * @param email Email del usuario autenticado, extraído del token JWT por Spring Security.
      * @return Un JSON con los datos básicos del usuario y el estado de su perfil.
      */
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/me")
     public ResponseEntity<?> getUserInfo(@AuthenticationPrincipal String email) {
         logger.info("Solicitud a /auth/me");

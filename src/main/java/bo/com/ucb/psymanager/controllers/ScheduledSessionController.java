@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,6 +22,7 @@ import java.util.List;
 @RequestMapping("/api/sessions")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:8081")
+@PreAuthorize("hasAnyRole('PATIENT', 'THERAPIST')")
 public class ScheduledSessionController {
 
     private static final Logger logger = LoggerFactory.getLogger(ScheduledSessionController.class);
@@ -36,6 +38,7 @@ public class ScheduledSessionController {
      * @param email email del usuario autenticado
      * @return mensaje de confirmación
      */
+    @PreAuthorize("hasRole('PATIENT')")
     @PostMapping
     public ResponseEntity<ApiResponseDto> createSession(
             @RequestBody CreateSessionRequestDto request,
@@ -49,9 +52,7 @@ public class ScheduledSessionController {
 
         scheduledSessionBl.createScheduledSession(request.getTherapistScheduledId(), userId, request.getReason());
 
-
         return ResponseEntity.ok(new ApiResponseDto("Solicitud de cita registrada correctamente."));
-
     }
 
     /**
@@ -61,6 +62,7 @@ public class ScheduledSessionController {
      * @param request DTO con el nuevo estado (ACCEPTED o REJECTED)
      * @return mensaje de resultado
      */
+    @PreAuthorize("hasRole('THERAPIST')")
     @PutMapping("/{sessionId}/state")
     public ResponseEntity<ApiResponseDto> updateSessionState(
             @PathVariable Long sessionId,
@@ -80,6 +82,7 @@ public class ScheduledSessionController {
      * @param sessionId ID de la sesión a marcar como completada
      * @return Respuesta 200 OK si se completó exitosamente
      */
+    @PreAuthorize("hasRole('THERAPIST')")
     @PutMapping("/{sessionId}/complete")
     public ResponseEntity<Void> markSessionAsCompleted(@PathVariable Long sessionId) {
         logger.info("Petición para marcar como COMPLETED la sesión ID={}", sessionId);
@@ -96,6 +99,7 @@ public class ScheduledSessionController {
      * @param email email del terapeuta autenticado
      * @return lista completa de citas como DTOs
      */
+    @PreAuthorize("hasRole('THERAPIST')")
     @GetMapping("/all")
     public ResponseEntity<List<UpcomingAppointmentDto>> getAllAppointmentsForTherapist(
             @AuthenticationPrincipal String email
@@ -118,6 +122,7 @@ public class ScheduledSessionController {
      * @param limit número máximo de resultados (por defecto 5)
      * @return lista de próximas citas
      */
+    @PreAuthorize("hasRole('THERAPIST')")
     @GetMapping("/upcoming")
     public ResponseEntity<List<UpcomingAppointmentDto>> getUpcomingAppointments(
             @AuthenticationPrincipal String email,
@@ -138,6 +143,7 @@ public class ScheduledSessionController {
      * @param email email del terapeuta autenticado
      * @return lista de solicitudes pendientes
      */
+    @PreAuthorize("hasRole('THERAPIST')")
     @GetMapping(params = "state=PENDING")
     public ResponseEntity<List<UpcomingAppointmentDto>> getPendingAppointments(
             @AuthenticationPrincipal String email
@@ -157,6 +163,7 @@ public class ScheduledSessionController {
      * @param email email del paciente autenticado
      * @return lista de sesiones agendadas como parte de tratamiento
      */
+    @PreAuthorize("hasRole('PATIENT')")
     @GetMapping("/my/treatment-sessions")
     public ResponseEntity<List<ScheduleAvailabilityDto>> getSessionsFromActiveTreatment(
             @AuthenticationPrincipal String email

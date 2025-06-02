@@ -7,9 +7,9 @@ import bo.com.ucb.psymanager.dto.CreateOrUpdateCaseFileRequestDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 /**
  * Controlador REST para la gestion de expendiente final (case file) de un tratamiento cerrado
@@ -19,6 +19,7 @@ import java.util.List;
 @RequestMapping("/api/case-files")
 @RequiredArgsConstructor
 @Slf4j
+@PreAuthorize("hasRole('THERAPIST')")
 public class CaseFileController {
 
     private final CaseFileBl caseFileBl;

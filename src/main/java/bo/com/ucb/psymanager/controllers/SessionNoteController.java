@@ -6,6 +6,7 @@ import bo.com.ucb.psymanager.dto.SessionNoteDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -26,6 +27,7 @@ public class SessionNoteController {
      * @return nota registrada
      */
     @PostMapping
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<SessionNoteDto> saveOrUpdateNote(@RequestBody CreateOrUpdateSessionNoteDto dto) {
         log.info("POST /api/notes → sesión ID={}", dto.getTreatmentSessionId());
         SessionNoteDto result = sessionNoteBl.saveOrUpdateSessionNote(dto);
@@ -39,6 +41,7 @@ public class SessionNoteController {
      * @return nota encontrada, o 404 si no existe
      */
     @GetMapping("/session/{sessionId}")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<SessionNoteDto> getNoteBySession(@PathVariable Long sessionId) {
         log.info("GET /api/notes/session/{}", sessionId);
         return sessionNoteBl.getNoteBySessionId(sessionId)

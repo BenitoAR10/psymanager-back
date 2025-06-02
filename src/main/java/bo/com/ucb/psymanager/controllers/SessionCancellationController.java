@@ -34,8 +34,10 @@ public class SessionCancellationController {
      */
     @PostMapping("/cancel")
     @PreAuthorize("hasRole('PATIENT')")
-    public ResponseEntity<Void> cancelSession(Principal principal,
-                                              @RequestBody CancelSessionRequestDto dto) {
+    public ResponseEntity<Void> cancelSession(
+            Principal principal,
+            @RequestBody CancelSessionRequestDto dto
+    ) {
         String email = principal.getName(); // Extraído desde JWT por el filtro de autenticación
         logger.info("Solicitud de cancelación recibida para el paciente '{}'", email);
 

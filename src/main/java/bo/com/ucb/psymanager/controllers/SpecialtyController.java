@@ -3,6 +3,7 @@ package bo.com.ucb.psymanager.controllers;
 import bo.com.ucb.psymanager.dao.SpecialtyDao;
 import bo.com.ucb.psymanager.dto.SpecialtyDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,9 +28,11 @@ public class SpecialtyController {
      * @return lista de especialidades
      */
     @GetMapping
+    @PreAuthorize("isAuthenticated()")
     public List<SpecialtyDto> getAllSpecialties() {
         return specialtyDao.findAll().stream()
                 .map(s -> new SpecialtyDto(s.getSpecialtyId(), s.getSpecialtyName()))
                 .collect(Collectors.toList());
     }
+
 }

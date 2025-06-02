@@ -5,6 +5,7 @@ import bo.com.ucb.psymanager.dto.CreateScheduleRequestDto;
 import bo.com.ucb.psymanager.dto.ScheduleResponseDto;
 import org.apache.log4j.Logger;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,6 +33,7 @@ public class TherapistScheduleController {
      * @return horario registrado como DTO
      */
     @PostMapping
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<ScheduleResponseDto> createSchedule(@RequestBody CreateScheduleRequestDto requestDto) {
         logger.info("POST /api/schedules → terapeutaId=" + requestDto.getUserTherapistId()
                 + ", fecha=" + requestDto.getDate()
@@ -50,6 +52,7 @@ public class TherapistScheduleController {
      * @return horario actualizado
      */
     @PutMapping("/{scheduleId}")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<ScheduleResponseDto> updateSchedule(
             @PathVariable Long scheduleId,
             @RequestBody CreateScheduleRequestDto requestDto
@@ -66,6 +69,7 @@ public class TherapistScheduleController {
      * @return lista de horarios
      */
     @GetMapping
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<List<ScheduleResponseDto>> getSchedules(
             @RequestParam(name = "therapistId", required = false) Integer therapistId
     ) {

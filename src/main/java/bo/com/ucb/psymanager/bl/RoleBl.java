@@ -30,6 +30,12 @@ public class RoleBl {
         this.userTherapistDao = userTherapistDao;
     }
 
+    public static class Roles {
+        public static final String PATIENT = "PATIENT";
+        public static final String THERAPIST = "THERAPIST";
+        public static final String ADMIN = "ADMIN";
+    }
+
     /**
      * Asigna un rol a un usuario si no lo tiene ya asignado.
      *
@@ -62,7 +68,7 @@ public class RoleBl {
         userRoleDao.save(new UserRole(user, role));
         logger.info("Rol '" + roleName + "' asignado exitosamente al usuario " + email);
 
-        if ("THERAPIST".equalsIgnoreCase(roleName)) {
+        if (Roles.THERAPIST.equalsIgnoreCase(roleName)) {
             if (!userTherapistDao.existsById(user.getUserId())) {
                 UserTherapist userTherapist = new UserTherapist();
                 userTherapist.setUser(user);

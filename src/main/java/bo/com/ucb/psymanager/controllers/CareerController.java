@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
+
 
 /**
  * Controlador para exponer operaciones relacionadas con carreras y facultades.
@@ -33,6 +33,7 @@ public class CareerController {
      *
      * @return Lista de nombres de facultades en formato JSON.
      */
+    // Público: usado para autocompletar campos en el registro o edición de perfil
     @GetMapping("/faculties")
     public ResponseEntity<List<String>> getFaculties() {
         logger.info("Solicitud GET a /api/careers/faculties");
@@ -52,6 +53,4 @@ public class CareerController {
         List<CareerSimpleDto> careers = careerBl.getCareerDtosByFaculty(faculty);
         return ResponseEntity.ok(careers);
     }
-
-
 }

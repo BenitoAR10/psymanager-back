@@ -131,3 +131,26 @@ twilio:
 ```bash
 ./mvnw spring-boot:run
 ```
+
+| Controlador                       | Ruta base                        | Roles con acceso           | Justificación                                        |
+| --------------------------------- | -------------------------------- | -------------------------- | ---------------------------------------------------- |
+| `AuthController`                  | `/api/auth/**`                   | Público + Autenticado      | Registro, login, refresh token; `/me` requiere login |
+| `PermissionController`            | `/api/auth/me/permissions`       | Autenticado                | Ver permisos personales                              |
+| `UserController`                  | `/api/user/**`                   | `PATIENT`, `THERAPIST`     | Acceso a datos del perfil personal                   |
+| `TherapistProfileController`      | `/api/therapist-profile/**`      | `THERAPIST`                | Consultar/actualizar su propio perfil                |
+| `TherapistController`             | `/api/therapists/**`             | `THERAPIST`                | Ver información de otros terapeutas                  |
+| `TherapistScheduleController`     | `/api/therapist-schedule/**`     | `THERAPIST`                | Gestionar disponibilidad personal                    |
+| `ScheduledAvailabilityController` | `/api/scheduled-availability/**` | `THERAPIST`, `PATIENT`     | Consultar horarios disponibles                       |
+| `ScheduledSessionController`      | `/api/scheduled-session/**`      | `THERAPIST`, `PATIENT`     | Crear, aceptar, rechazar o ver sesiones según el rol |
+| `SessionCancellationController`   | `/api/session-cancellation/**`   | `THERAPIST`, `PATIENT`     | Cancelar sesiones agendadas                          |
+| `UserAppointmentController`       | `/api/user-appointment/**`       | `PATIENT`                  | Gestionar sus propias citas                          |
+| `TreatmentController`             | `/api/treatments/**`             | `THERAPIST`, `PATIENT`     | Crear y consultar tratamientos                       |
+| `TreatmentSessionController`      | `/api/treatment-sessions/**`     | `THERAPIST`                | Asignar y controlar sesiones dentro del tratamiento  |
+| `CompletedExerciseController`     | `/api/completed-exercise/**`     | `PATIENT`                  | Registrar ejercicios realizados                      |
+| `WellnessExerciseController`      | `/api/wellness-exercises/**`     | Público (GET), `THERAPIST` | Ver: público; Crear: terapeutas                      |
+| `SpecialtyController`             | `/api/specialties/**`            | `THERAPIST`, `ADMIN`       | Ver: terapeutas; Gestionar: administradores          |
+| `CareerController`                | `/api/careers/**`                | `PATIENT`, `ADMIN`         | Ver: pacientes; Gestionar: administradores           |
+| `CaseFileController`              | `/api/case-files/**`             | `THERAPIST`                | Acceso y gestión de historiales clínicos             |
+| `SessionNoteController`           | `/api/session-notes/**`          | `THERAPIST`                | Notas internas de sesiones                           |
+| `CloseTreatmentController`        | `/api/close-treatment/**`        | `THERAPIST`                | Cierre formal de un tratamiento                      |
+| `RoleController`                  | `/api/roles/**`                  | `ADMIN`                    | Gestión de roles en el sistema                       |

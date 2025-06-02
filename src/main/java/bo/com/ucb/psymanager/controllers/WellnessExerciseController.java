@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
@@ -43,6 +44,7 @@ public class WellnessExerciseController {
      * @return Mensaje de éxito o error
      */
     @PostMapping("/upload-audio")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<String> uploadAudio(
             @RequestParam("file") MultipartFile file,
             @RequestParam("objectName") String objectName
@@ -111,6 +113,7 @@ public class WellnessExerciseController {
      * @return Lista de ejercicios con sus respectivos datos y URL firmada de audio.
      */
     @GetMapping
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<List<WellnessExerciseResponseDto>> getExercises(
             @RequestParam(value = "category", required = false) String category
     ) {

@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,6 +33,7 @@ public class UserAppointmentController {
      * @return Lista de citas agendadas
      */
     @GetMapping
+    @PreAuthorize("hasRole('PATIENT')")
     public ResponseEntity<List<UserAppointmentDto>> getMyAppointments(
             @AuthenticationPrincipal String email
     ) {
@@ -54,6 +56,7 @@ public class UserAppointmentController {
      * @return Detalles de la cita si pertenece al usuario
      */
     @GetMapping("/{sessionId}")
+    @PreAuthorize("hasRole('PATIENT')")
     public ResponseEntity<UserAppointmentDetailDto> getMyAppointmentDetail(
             @PathVariable Long sessionId,
             @AuthenticationPrincipal String email

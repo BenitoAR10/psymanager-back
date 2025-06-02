@@ -14511,3 +14511,72 @@ Caused by: java.lang.IllegalArgumentException: The given id must not be null
 [2025-05-30 01:57:06] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
 [2025-05-30 01:57:06] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
 [2025-05-30 01:57:06] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-30 10:27:46] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-30 10:27:46] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-30 10:27:46] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-30 10:27:46] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-30 10:27:46] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-30 10:27:46] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-30 10:27:46] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-30 10:46:52] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-30 10:46:52] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-30 10:46:52] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-30 10:46:52] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-30 10:47:11] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-30 10:47:11] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-30 10:47:11] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-30 10:47:11] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-30 10:47:11] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-30 10:47:11] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-30 10:47:11] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-30 11:33:45] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-30 11:33:45] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-30 11:33:45] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-30 11:33:45] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-30 11:34:01] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-30 11:34:01] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-30 11:34:01] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-30 11:34:01] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-30 11:34:01] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-30 11:34:01] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-30 11:34:01] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-30 11:51:32] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-30 11:51:32] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-30 11:51:32] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-30 11:51:32] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-30 11:51:59] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-30 11:51:59] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-30 11:51:59] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-30 11:51:59] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-30 11:51:59] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-30 11:51:59] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-30 11:51:59] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-30 14:17:11] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-05-30 14:17:11] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-05-30 14:17:11] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-05-30 14:17:11] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-05-30 14:17:26] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-30 14:17:26] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-30 14:17:27] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-30 14:17:27] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-30 14:17:27] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-30 14:17:27] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-30 14:17:27] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-05-30 14:48:36] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-05-30 14:48:36] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-05-30 14:48:37] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-05-30 14:48:37] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-05-30 14:48:37] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-05-30 14:48:37] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-05-30 14:48:37] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com
+[2025-06-01 14:16:20] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-01 14:16:20] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-06-01 14:16:20] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-06-01 14:16:20] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-06-01 14:16:44] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirbellido@gmail.com
+[2025-06-01 14:16:44] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirbellido@gmail.com
+[2025-06-01 14:16:45] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirbellido@gmail.com
+[2025-06-01 14:16:45] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirbellido@gmail.com
+[2025-06-01 14:16:45] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirbellido@gmail.com
+[2025-06-01 14:16:45] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-01 14:16:45] [INFO] [AuthController] - Login exitoso para: amirbellido@gmail.com

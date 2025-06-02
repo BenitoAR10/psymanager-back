@@ -6,6 +6,7 @@ import bo.com.ucb.psymanager.dto.TherapistResponseDto;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,10 +34,12 @@ public class TherapistController {
      * @return Lista de terapeutas.
      */
     @GetMapping
-    public ResponseEntity<List<TherapistResponseDto>> getAllTherapists(){
+    @PreAuthorize("isAuthenticated()")
+    public ResponseEntity<List<TherapistResponseDto>> getAllTherapists() {
         logger.info("Solicitud GET a /api/therapists");
         List<TherapistResponseDto> therapist = userTherapistBl.getAllTherapists();
         logger.debug("Cantidad de terapeutas encontrados: " + therapist.size());
         return ResponseEntity.ok(therapist);
     }
+
 }

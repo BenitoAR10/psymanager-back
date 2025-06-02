@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,6 +31,7 @@ public class UserController {
      * @return Un JSON con los datos del perfil del usuario.
      */
     @GetMapping("/me/profile")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<UserProfileDto> getPersonalProfile(@AuthenticationPrincipal String email) {
         if (email == null) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
@@ -65,6 +67,7 @@ public class UserController {
      * @return 200 OK si fue exitoso, o 400/500 si hubo errores.
      */
     @PutMapping("/me")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<?> updateMyProfile(
             @AuthenticationPrincipal String email,
             @RequestBody UserProfileUpdateDto dto

@@ -6,6 +6,7 @@ import bo.com.ucb.psymanager.dto.TreatmentSessionDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,6 +31,7 @@ public class TreatmentSessionController {
      * @return lista de sesiones creadas como DTOs
      */
     @PostMapping("/{planId}/sessions")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<List<TreatmentSessionDto>> addSessionsToPlan(
             @PathVariable Long planId,
             @RequestBody CreateTreatmentSessionsRequestDto dto
@@ -47,6 +49,7 @@ public class TreatmentSessionController {
      * @return respuesta sin contenido
      */
     @DeleteMapping("/{treatmentId}/sessions/{sessionId}")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<Void> cancelTreatmentSession(
             @PathVariable Long treatmentId,
             @PathVariable Long sessionId
@@ -63,6 +66,7 @@ public class TreatmentSessionController {
      * @return respuesta sin contenido
      */
     @PutMapping("/sessions/{sessionId}/complete")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<Void> completeSession(@PathVariable Long sessionId) {
         log.info("PUT /api/treatments/sessions/{}/complete → marcar como completada", sessionId);
         treatmentSessionBl.markSessionAsCompleted(sessionId);

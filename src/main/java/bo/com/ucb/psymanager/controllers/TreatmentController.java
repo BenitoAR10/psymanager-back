@@ -10,6 +10,7 @@ import bo.com.ucb.psymanager.entities.UserPatient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,6 +36,7 @@ public class TreatmentController {
      * @return DTO del tratamiento creado
      */
     @PostMapping
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<TreatmentPlanDto> createTreatmentPlan(@RequestBody CreateTreatmentPlanRequestDto dto) {
         log.info("POST /api/treatments → crear tratamiento para paciente={} terapeuta={}", dto.getPatientId(), dto.getTherapistId());
         TreatmentPlanDto created = treatmentBl.createTreatmentPlan(dto);
@@ -48,6 +50,7 @@ public class TreatmentController {
      * @return tratamiento activo o 204 si no existe
      */
     @GetMapping("/patient/{patientId}/active")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<TreatmentPlanDto> getActivePlanByPatient(@PathVariable Long patientId) {
         log.info("GET /api/treatments/patient/{}/active → tratamiento activo", patientId);
         return treatmentBl.getActivePlanByPatient(patientId)
@@ -62,6 +65,7 @@ public class TreatmentController {
      * @return lista de planes de tratamiento
      */
     @GetMapping("/therapist/{therapistId}")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<List<TreatmentPlanDto>> getPlansByTherapist(@PathVariable Long therapistId) {
         log.info("GET /api/treatments/therapist/{} → todos los planes", therapistId);
         List<TreatmentPlanDto> plans = treatmentBl.getPlansByTherapist(therapistId);
@@ -75,6 +79,7 @@ public class TreatmentController {
      * @return lista de pacientes con tratamiento activo
      */
     @GetMapping("/therapist/{therapistId}/active")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<List<ActiveTreatmentStudentDto>> getActivePatientsByTherapist(@PathVariable Long therapistId) {
         log.info("GET /api/treatments/therapist/{}/active → estudiantes activos", therapistId);
         List<ActiveTreatmentStudentDto> students = treatmentBl.getActivePatientsByTherapist(therapistId);
@@ -88,6 +93,7 @@ public class TreatmentController {
      * @return lista de pacientes asignados
      */
     @GetMapping("/therapist/{therapistId}/patients")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<List<AssignedPatientDto>> getAllPatientsByTherapist(@PathVariable Long therapistId) {
         log.info("GET /api/treatments/therapist/{}/patients → tratamientos activos", therapistId);
         List<AssignedPatientDto> students = treatmentBl.getAllPatientsByTherapist(therapistId);
@@ -101,6 +107,7 @@ public class TreatmentController {
      * @return DTO con sesiones y metadata
      */
     @GetMapping("/{treatmentId}")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<TreatmentDetailDto> getTreatmentDetail(@PathVariable Long treatmentId) {
         log.info("GET /api/treatments/{} → detalle de tratamiento", treatmentId);
         TreatmentDetailDto dto = treatmentBl.getTreatmentDetail(treatmentId);
@@ -114,6 +121,7 @@ public class TreatmentController {
      * @return lista de tratamientos cerrados
      */
     @GetMapping("/therapist/{therapistId}/closed")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<List<ClosedTreatmentSummaryDto>> getClosedTreatmentsByTherapist(@PathVariable Long therapistId) {
         log.info("GET /api/treatments/therapist/{}/closed → resumen de tratamientos cerrados", therapistId);
         List<ClosedTreatmentSummaryDto> summaries = treatmentBl.getClosedTreatmentsByTherapist(therapistId);
@@ -127,15 +135,20 @@ public class TreatmentController {
      * @return historial detallado con notas y ficha clínica
      */
     @GetMapping("/closed/{treatmentId}/history")
+    @PreAuthorize("hasRole('THERAPIST')")
     public ResponseEntity<ClosedTreatmentDetailDto> getClosedTreatmentDetail(@PathVariable Long treatmentId) {
         log.info("GET /api/treatments/closed/{}/history → detalle histórico", treatmentId);
         ClosedTreatmentDetailDto dto = treatmentBl.getClosedTreatmentDetail(treatmentId);
         return ResponseEntity.ok(dto);
     }
 
+    /**
+     * Verifica si el paciente autenticado tiene un tratamiento activo.
+     */
     @GetMapping("/my/active-status")
+    @PreAuthorize("hasRole('PATIENT')")
     public ResponseEntity<TreatmentStatusDto> hasActiveTreatment(@AuthenticationPrincipal String email) {
-        log.info("GET /api/treatments/my/active-status → verificar si el paciente tiene tratamiento activo");
+        log.info("Verificar si el paciente tiene tratamiento activo");
 
         User user = userDao.findByEmail(email)
                 .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));

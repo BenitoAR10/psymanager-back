@@ -77,18 +77,6 @@ public class AuthenticatedUserBl {
                 });
     }
 
-    /**
-     * Verifica si el usuario tiene un rol específico.
-     *
-     * @param email    Email del usuario.
-     * @param roleName Nombre del rol a verificar.
-     * @return `true` si tiene el rol, `false` en caso contrario.
-     */
-    public boolean hasRole(String email, String roleName) {
-        boolean result = getUserRoles(email).contains(roleName);
-        logger.debug("Verificando si el usuario " + email + " tiene el rol '" + roleName + "': " + result);
-        return result;
-    }
 
     /**
      * Genera un nuevo par de tokens JWT (accessToken y refreshToken) para el usuario.
@@ -219,22 +207,5 @@ public class AuthenticatedUserBl {
         logger.info("Autenticación exitosa para " + dto.getEmail());
         return generateTokens(dto.getEmail());
     }
-    /**
-     * Retorna el paciente autenticado a partir del token JWT proporcionado.
-     *
-     * @param token JWT del usuario autenticado.
-     * @return El objeto UserPatient correspondiente.
-     * @throws RuntimeException si no se encuentra el paciente.
-     */
-    public UserPatient getAuthenticatedUserPatient(String token) {
-        User user = getAuthenticatedUser(token)
-                .orElseThrow(() -> new RuntimeException("Usuario no autenticado"));
-
-        return userPatientDao.findByUser(user)
-                .orElseThrow(() -> new RuntimeException("El usuario no está registrado como paciente"));
-    }
-
-
-
 
 }
