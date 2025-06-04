@@ -70,7 +70,7 @@ public class CompletedExerciseBl {
         } else {
             log.info("No existen estadísticas previas para el paciente. Se crearán nuevas.");
             UserWellnessStats newStats = new UserWellnessStats();
-            newStats.setUserId(patient.getUserPatientId());
+            newStats.setUserPatientId(patient.getUserPatientId());
             newStats.setUserPatient(patient);
             newStats.setTotalPoints(exercise.getPointsReward());
 

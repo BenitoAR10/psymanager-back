@@ -2,14 +2,12 @@ package bo.com.ucb.psymanager.bl;
 
 import bo.com.ucb.psymanager.dao.CareerDao;
 import bo.com.ucb.psymanager.dto.CareerSimpleDto;
-import bo.com.ucb.psymanager.entities.Career;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 /**
  * Lógica de negocio para operaciones relacionadas con carreras universitarias.

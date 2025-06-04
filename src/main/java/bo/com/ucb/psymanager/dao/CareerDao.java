@@ -34,7 +34,7 @@ public interface CareerDao extends JpaRepository<Career, Long> {
      *
      * @return Lista de nombres únicos de facultades.
      */
-    @Query("SELECT DISTINCT c.faculty FROM Career c WHERE c.status = 'ACTIVO'")
+    @Query("SELECT DISTINCT c.faculty FROM Career c WHERE c.status = 'Activo'")
     List<String> findDistinctFaculties();
 
 }

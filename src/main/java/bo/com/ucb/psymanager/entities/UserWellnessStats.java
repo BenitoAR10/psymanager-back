@@ -11,7 +11,7 @@ import lombok.*;
 public class UserWellnessStats {
 
     @Id
-    private Long userId;
+    private Long userPatientId;
 
     @OneToOne
     @MapsId
