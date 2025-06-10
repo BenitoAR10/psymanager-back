@@ -197,7 +197,7 @@ public class AuthenticatedUserBl {
             throw new RuntimeException("Este usuario no tiene acceso por contraseña.");
         }
 
-        // Verificar contraseña (en producción deberías usar BCrypt)
+        // Verificar contraseña
         if (!passwordEncoder.matches(dto.getPassword(), user.getPassword())) {
             logger.warn("Contraseña incorrecta para el usuario: " + dto.getEmail());
             throw new RuntimeException("Credenciales inválidas");
