@@ -1,9 +1,10 @@
 package bo.com.ucb.psymanager.bl;
 
 import bo.com.ucb.psymanager.dao.*;
-import bo.com.ucb.psymanager.dto.CompleteExerciseRequestDto;
+import bo.com.ucb.psymanager.dto.*;
 import bo.com.ucb.psymanager.entities.*;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +12,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Lógica de negocio para registrar la finalización de ejercicios de bienestar.
@@ -78,6 +81,87 @@ public class CompletedExerciseBl {
             log.info("Estadísticas creadas con puntaje inicial: {}", newStats.getTotalPoints());
         }
     }
+    /**
+     * Obtiene las estadísticas semanales y por categoría para un paciente
+     * en un período dado.
+     *
+     * @param patientId ID del paciente
+     * @param start     Fecha de inicio (inclusive)
+     * @param end       Fecha de fin   (inclusive)
+     * @return DTO con total, serie semanal y distribución por categoría
+     */
+    @Transactional
+    public StatisticsResponseDto getWeeklyStatistics(
+            Long patientId,
+            LocalDateTime start,
+            LocalDateTime end
+    ) {
+        // 1. Validaciones básicas
+        if (start.isAfter(end)) {
+            throw new IllegalArgumentException("La fecha de inicio debe ser anterior o igual a la fecha de fin");
+        }
 
+        // 2. Validar que el paciente existe
+        UserPatient patient = userPatientDao.findById(patientId)
+                .orElseThrow(() -> new EntityNotFoundException("Paciente no encontrado: " + patientId));
+
+        // 3. Total de ejercicios completados
+        Long total = completedExerciseDao.countTotalByPatientAndPeriod(patientId, start, end);
+        TotalCountResponseDto totalDto = new TotalCountResponseDto(total);
+
+        // 4. Serie semanal (mapea la proyección a tu DTO)
+        List<WeeklyCountResponseDto> series = completedExerciseDao
+                .findWeeklyCountsByPatientAndPeriod(patientId, start, end)
+                .stream()
+                .map(p -> new WeeklyCountResponseDto(p.getYear(), p.getWeek(), p.getCount()))
+                .collect(Collectors.toList());
+
+        // 5. Distribución por categoría
+        List<CategoryCountResponseDto> byCategory = completedExerciseDao
+                .findCategoryCountsByPatientAndPeriod(patientId, start, end);
+
+        // 6. Armar y devolver el DTO final
+        return new StatisticsResponseDto(totalDto, series, byCategory);
+    }
+
+    @Transactional
+    public DailySeriesResponseDto getDailyStatistics(
+            Long patientId,
+            LocalDateTime start,
+            LocalDateTime end
+    ) {
+        // validaciones como antes...
+        userPatientDao.findById(patientId)
+                .orElseThrow(() -> new EntityNotFoundException("Paciente no encontrado"));
+
+        List<DailyCountResponseDto> daily = completedExerciseDao
+                .findDailyCountsByPatientAndPeriod(patientId, start, end)
+                .stream()
+                .map(p -> new DailyCountResponseDto(p.getDay(), p.getCount()))
+                .collect(Collectors.toList());
+
+        Long total = daily.stream().mapToLong(DailyCountResponseDto::getCount).sum();
+        return new DailySeriesResponseDto(total, daily);
+    }
+
+    @Transactional
+    public HourlySeriesResponseDto getHourlyStatistics(
+            Long patientId,
+            LocalDateTime start,
+            LocalDateTime end
+    ) {
+        // Validaciones...
+        userPatientDao.findById(patientId)
+                .orElseThrow(() -> new EntityNotFoundException("Paciente no encontrado"));
+
+        List<HourlyCountResponseDto> series = completedExerciseDao
+                .findHourlyCountsByPatientAndPeriod(patientId, start, end)
+                .stream()
+                .map(p -> new HourlyCountResponseDto(p.getHour(), p.getCount()))
+                .collect(Collectors.toList());
+
+        Long total = series.stream().mapToLong(HourlyCountResponseDto::getCount).sum();
+        return new HourlySeriesResponseDto(total, series);
+    }
 
 }

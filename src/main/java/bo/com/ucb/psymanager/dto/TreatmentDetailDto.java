@@ -12,8 +12,9 @@ import java.util.List;
 @NoArgsConstructor
 public class TreatmentDetailDto {
     private Long treatmentId;
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private Long patientId;
+    private String startDate;
+    private String endDate;
     private String reason;
     private String semester;
     private List<TreatmentSessionDetailDto> sessions;

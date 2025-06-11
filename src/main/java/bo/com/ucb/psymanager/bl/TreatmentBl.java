@@ -250,12 +250,12 @@ public class TreatmentBl {
             throw new IllegalStateException("El tratamiento ya fue cerrado y no puede ser modificado.");
         }
 
+        // Preparamos los DTOs de sesión (igual que antes)…
         List<TreatmentSessionDetailDto> sessionDtos = treatment.getSessions().stream()
                 .sorted(Comparator.comparing(TreatmentSession::getSessionOrder))
                 .map(session -> {
                     ScheduleSession schedule = session.getScheduleSession();
                     TherapistScheduled scheduled = schedule.getTherapistScheduled();
-
                     return new TreatmentSessionDetailDto(
                             session.getTreatmentSessionId(),
                             scheduled.getDate(),
@@ -271,15 +271,20 @@ public class TreatmentBl {
                 })
                 .toList();
 
+        // Ahora incluimos patientId sacándolo de la entidad Treatment
+        Long patientId = treatment.getUserPatient().getUserPatientId();
+
         return new TreatmentDetailDto(
                 treatment.getTreatmentId(),
-                treatment.getStartDate(),
-                treatment.getEndDate(),
+                patientId,
+                treatment.getStartDate().toString(),
+                treatment.getEndDate().toString(),
                 treatment.getReason(),
                 treatment.getSemester(),
                 sessionDtos
         );
     }
+
 
     /**
      * Lista todos los tratamientos cerrados para un terapeuta.
