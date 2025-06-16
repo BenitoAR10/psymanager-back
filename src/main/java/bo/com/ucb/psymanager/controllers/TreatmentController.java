@@ -42,6 +42,22 @@ public class TreatmentController {
         TreatmentPlanDto created = treatmentBl.createTreatmentPlan(dto);
         return ResponseEntity.ok(created);
     }
+    /**
+     * Reabre un tratamiento previamente cerrado creando uno nuevo vinculado al anterior.
+     *
+     * @param dto datos para la reapertura del tratamiento
+     * @return DTO del nuevo tratamiento creado
+     */
+    @PostMapping("/reopen")
+    @PreAuthorize("hasRole('THERAPIST')")
+    public ResponseEntity<TreatmentPlanDto> reopenTreatment(@RequestBody ReopenTreatmentRequestDto dto) {
+        log.info("POST /api/treatments/reopen → reapertura de tratamiento cerrado ID={} por terapeuta ID={}",
+                dto.getPreviousTreatmentId(), dto.getTherapistId());
+
+        TreatmentPlanDto nuevoTratamiento = treatmentBl.reopenTreatment(dto);
+        return ResponseEntity.ok(nuevoTratamiento);
+    }
+
 
     /**
      * Obtiene el plan de tratamiento activo de un paciente, si existe.

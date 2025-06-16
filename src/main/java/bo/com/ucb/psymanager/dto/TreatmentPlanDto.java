@@ -37,4 +37,8 @@ public class TreatmentPlanDto {
     private String semester;
 
     private List<TreatmentSessionDto> sessions; // opcional, para brindar todas las citas del plan
+
+    private Long previousTreatmentId;
+    private LocalDate previousEndDate;
+    private String previousClosureReason;
 }

@@ -30,9 +30,10 @@ public class Treatment {
     private Long treatmentId;
 
     /** Enlace opcional a un tratamiento anterior (histórico o previo) */
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "previous_treatment_id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "previous_treatment_id", unique = true)
     private Treatment previousTreatment;
+
 
     /** Terapeuta responsable de este tratamiento */
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -67,4 +68,7 @@ public class Treatment {
             orphanRemoval = true
     )
     private List<TreatmentSession> sessions = new ArrayList<>();
+
+    @OneToOne(mappedBy = "previousTreatment")
+    private Treatment reopenedTreatment;
 }

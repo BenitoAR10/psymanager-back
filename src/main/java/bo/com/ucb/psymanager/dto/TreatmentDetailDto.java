@@ -18,4 +18,5 @@ public class TreatmentDetailDto {
     private String reason;
     private String semester;
     private List<TreatmentSessionDetailDto> sessions;
+    private boolean isReopened;
 }

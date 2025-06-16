@@ -19,4 +19,7 @@ public class ClosedTreatmentSummaryDto {
     private LocalDate closingDate;
     private String reason;
     private Integer completedSessions;
+
+    private Boolean wasReopened;
+    private LocalDate reopeningDate;
 }

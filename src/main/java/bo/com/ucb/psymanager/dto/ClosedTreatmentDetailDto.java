@@ -12,6 +12,8 @@ import java.util.List;
 public class ClosedTreatmentDetailDto {
 
     private Long treatmentId;
+    private Long therapistId;
+
     private String studentName;
     private String semester;
     private String reason;
@@ -21,4 +23,8 @@ public class ClosedTreatmentDetailDto {
     private LocalDate closingDate;
     private CaseFileDto caseFile;
     private List<SessionNoteSummaryDto> sessionNotes;
+
+    private Boolean wasReopened;
+    private LocalDate reopeningDate;
+    private Long reopenedTreatmentId;
 }

@@ -250,7 +250,10 @@ public class TreatmentBl {
             throw new IllegalStateException("El tratamiento ya fue cerrado y no puede ser modificado.");
         }
 
-        // Preparamos los DTOs de sesión (igual que antes)…
+        // Comprobar si es un tratamiento reabierto
+        boolean isReopened = treatment.getPreviousTreatment() != null;
+
+        // Sesiones
         List<TreatmentSessionDetailDto> sessionDtos = treatment.getSessions().stream()
                 .sorted(Comparator.comparing(TreatmentSession::getSessionOrder))
                 .map(session -> {
@@ -271,27 +274,19 @@ public class TreatmentBl {
                 })
                 .toList();
 
-        // Ahora incluimos patientId sacándolo de la entidad Treatment
-        Long patientId = treatment.getUserPatient().getUserPatientId();
-
         return new TreatmentDetailDto(
                 treatment.getTreatmentId(),
-                patientId,
+                treatment.getUserPatient().getUserPatientId(),
                 treatment.getStartDate().toString(),
                 treatment.getEndDate().toString(),
                 treatment.getReason(),
                 treatment.getSemester(),
-                sessionDtos
+                sessionDtos,
+                isReopened
         );
     }
 
 
-    /**
-     * Lista todos los tratamientos cerrados para un terapeuta.
-     *
-     * @param therapistId ID del terapeuta
-     * @return lista de resúmenes de tratamientos cerrados
-     */
     @Transactional
     public List<ClosedTreatmentSummaryDto> getClosedTreatmentsByTherapist(Long therapistId) {
         log.info("Listando tratamientos cerrados para terapeuta ID={}", therapistId);
@@ -305,8 +300,20 @@ public class TreatmentBl {
                     UserPatient patient = treatment.getUserPatient();
                     String fullName = patient.getUser().getFirstName() + " " + patient.getUser().getLastName();
 
-                    int completed = (int) treatment.getSessions().stream()
+                    Integer completed = (int) treatment.getSessions().stream()
                             .filter(TreatmentSession::getCompleted).count();
+
+                    // Verificar si existe un tratamiento posterior que tenga como previousTreatment este
+                    Optional<Treatment> reopened = treatmentDao.findByUserPatient_UserPatientId(patient.getUserPatientId())
+                            .stream()
+                            .filter(t -> {
+                                Treatment previous = t.getPreviousTreatment();
+                                return previous != null && previous.getTreatmentId().equals(treatment.getTreatmentId());
+                            })
+                            .findFirst();
+
+                    boolean wasReopened = reopened.isPresent();
+                    LocalDate reopeningDate = reopened.map(Treatment::getStartDate).orElse(null);
 
                     return new ClosedTreatmentSummaryDto(
                             treatment.getTreatmentId(),
@@ -314,11 +321,14 @@ public class TreatmentBl {
                             treatment.getStartDate(),
                             cierre.getClosingDate(),
                             cierre.getReasonForClosure(),
-                            completed
+                            completed,
+                            wasReopened,
+                            reopeningDate
                     );
                 })
                 .toList();
     }
+
 
     /**
      * Retorna el historial completo de un tratamiento cerrado, incluyendo notas y ficha clínica.
@@ -341,6 +351,7 @@ public class TreatmentBl {
 
         ClosedTreatmentDetailDto dto = new ClosedTreatmentDetailDto();
         dto.setTreatmentId(treatmentId);
+        dto.setTherapistId(treatment.getUserTherapist().getUserTherapistId());
         dto.setStudentName(studentName);
         dto.setSemester(treatment.getSemester());
         dto.setReason(treatment.getReason());
@@ -375,12 +386,22 @@ public class TreatmentBl {
                     );
                 })
                 .toList();
-
         dto.setSessionNotes(notes);
+
+        // Verificar si fue reabierto
+        Treatment reopened = treatment.getReopenedTreatment();
+        if (reopened != null) {
+            dto.setWasReopened(true);
+            dto.setReopeningDate(reopened.getStartDate());
+            dto.setReopenedTreatmentId(reopened.getTreatmentId());
+        } else {
+            dto.setWasReopened(false);
+        }
 
         log.info("Historial de tratamiento ID={} cargado correctamente con {} notas", treatmentId, notes.size());
         return dto;
     }
+
 
     @Transactional
     public boolean hasActiveTreatment(Long patientId) {
@@ -389,6 +410,73 @@ public class TreatmentBl {
                 .anyMatch(t -> !closeTreatmentDao.existsByTreatment_TreatmentId(t.getTreatmentId()));
     }
 
+    /**
+     * Reabre un tratamiento previamente cerrado, creando un nuevo plan vinculado al anterior.
+     *
+     * Este método verifica que el tratamiento original esté cerrado y que el paciente
+     * no tenga un tratamiento activo. Luego crea un nuevo tratamiento que hereda al anterior
+     * como `previousTreatment`, manteniendo la trazabilidad del historial clínico.
+     *
+     * @param dto Datos para la reapertura del tratamiento
+     * @return DTO con los datos del nuevo plan creado
+     */
+    @Transactional
+    public TreatmentPlanDto reopenTreatment(ReopenTreatmentRequestDto dto) {
+        log.info("Solicitando reapertura del tratamiento cerrado ID={} por terapeuta ID={}",
+                dto.getPreviousTreatmentId(), dto.getTherapistId());
+
+        // 1. Verificar que el tratamiento anterior existe
+        Treatment previous = treatmentDao.findById(dto.getPreviousTreatmentId())
+                .orElseThrow(() -> new IllegalArgumentException("Tratamiento anterior no encontrado: " + dto.getPreviousTreatmentId()));
+
+        // 2. Verificar que esté cerrado
+        if (!closeTreatmentDao.existsByTreatment_TreatmentId(previous.getTreatmentId())) {
+            throw new IllegalStateException("El tratamiento ID=" + previous.getTreatmentId() + " no está cerrado y no puede ser reabierto.");
+        }
+
+        // 3. Verificar que el paciente no tenga un tratamiento activo actual
+        boolean hasActive = treatmentDao.findByUserPatient_UserPatientId(previous.getUserPatient().getUserPatientId()).stream()
+                .anyMatch(t -> !closeTreatmentDao.existsByTreatment_TreatmentId(t.getTreatmentId()));
+        if (hasActive) {
+            throw new IllegalStateException("El paciente ya tiene un tratamiento activo y no puede reabrirse otro.");
+        }
+
+        // 4. Obtener entidades necesarias
+        UserPatient paciente = previous.getUserPatient();
+        UserTherapist terapeuta = userTherapistDao.findById(dto.getTherapistId())
+                .orElseThrow(() -> new IllegalArgumentException("Terapeuta no encontrado: " + dto.getTherapistId()));
+
+        // 5. Crear nuevo tratamiento vinculado
+        Treatment nuevoPlan = new Treatment();
+        nuevoPlan.setUserPatient(paciente);
+        nuevoPlan.setUserTherapist(terapeuta);
+        nuevoPlan.setReason(dto.getReason());
+        nuevoPlan.setSemester(dto.getSemester());
+        nuevoPlan.setStartDate(dto.getNewStartDate());
+        nuevoPlan.setEndDate(dto.getNewEndDate());
+        nuevoPlan.setPreviousTreatment(previous);
+
+        treatmentDao.save(nuevoPlan);
+
+        log.info("Reapertura exitosa. Nuevo tratamiento ID={} vinculado al anterior ID={}",
+                nuevoPlan.getTreatmentId(), previous.getTreatmentId());
+
+        // 6. Retornar DTO
+        TreatmentPlanDto result = new TreatmentPlanDto();
+        result.setId(nuevoPlan.getTreatmentId());
+        result.setPatientId(paciente.getUserPatientId());
+        result.setTherapistId(terapeuta.getUserTherapistId());
+        result.setFirstSessionDateTime(dto.getNewStartDate().atStartOfDay());
+        result.setRecurrent(false);
+        result.setStartDate(dto.getNewStartDate());
+        result.setEndDate(dto.getNewEndDate());
+        result.setReason(dto.getReason());
+        result.setSemester(dto.getSemester());
+        result.setNumberOfSessions(0);
+        result.setIntervalWeeks(0);
+
+        return result;
+    }
 
 }
 

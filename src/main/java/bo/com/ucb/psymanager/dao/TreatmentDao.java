@@ -68,4 +68,8 @@ public interface TreatmentDao extends JpaRepository<Treatment, Long> {
      * @return true si existe tratamiento vigente.
      */
     boolean existsByUserPatient_UserPatientIdAndEndDateGreaterThanEqual(Long patientId, LocalDate date);
+
+
+    Optional<Treatment> findByPreviousTreatment_TreatmentId(Long previousTreatmentId);
+
 }
