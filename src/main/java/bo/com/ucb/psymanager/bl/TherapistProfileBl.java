@@ -15,7 +15,6 @@ import jakarta.transaction.Transactional;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -53,15 +52,18 @@ public class TherapistProfileBl {
     public void updateTherapistProfile(String email, TherapistProfileUpdateDto dto) {
         logger.info("Actualizando perfil del terapeuta con email: " + email);
 
-        User user = userDao.findByEmail(email).orElseThrow(() -> {
-            logger.error("No se encontró el usuario con email: " + email);
-            return new RuntimeException("Usuario no encontrado");
-        });
+        // Buscar usuario y entidad de terapeuta
+        User user = userDao.findByEmail(email)
+                .orElseThrow(() -> {
+                    logger.error("No se encontró el usuario con email: {}"+ email);
+                    return new RuntimeException("Usuario no encontrado");
+                });
 
-        UserTherapist userTherapist = userTherapistDao.findById(user.getUserId()).orElseThrow(() -> {
-            logger.error("No se encontró entidad UserTherapist para userId: " + user.getUserId());
-            return new RuntimeException("Usuario no es terapeuta");
-        });
+        UserTherapist userTherapist = userTherapistDao.findById(user.getUserId())
+                .orElseThrow(() -> {
+                    logger.error("No se encontró entidad UserTherapist para userId: {}"+ user.getUserId());
+                    return new RuntimeException("Usuario no es terapeuta");
+                });
 
         // Actualizar datos personales
         user.setPhoneNumber(dto.getPhoneNumber());
@@ -70,25 +72,25 @@ public class TherapistProfileBl {
         user.setCiComplement(dto.getCiComplement());
         user.setCiExtension(dto.getCiExtension());
         userDao.save(user);
-        logger.info("Datos personales actualizados para terapeuta: " + email);
+        logger.info("Datos personales actualizados para terapeuta: {}"+ email);
 
         // Reemplazar especialidades
         therapistSpecialtyDao.deleteByUserTherapist(userTherapist);
-
         for (Integer specialtyId : dto.getSpecialtyIds()) {
-            Specialty specialty = specialtyDao.findById(specialtyId).orElseThrow(() -> {
-                logger.error("Especialidad no encontrada con ID: " + specialtyId);
-                return new RuntimeException("Especialidad no válida: " + specialtyId);
-            });
-
-            TherapistSpecialty therapistSpecialty = new TherapistSpecialty();
-            therapistSpecialty.setUserTherapist(userTherapist);
-            therapistSpecialty.setSpecialty(specialty);
-            therapistSpecialtyDao.save(therapistSpecialty);
+            Specialty specialty = specialtyDao.findById(specialtyId)
+                    .orElseThrow(() -> {
+                        logger.error("Especialidad no encontrada con ID: {}"+ specialtyId);
+                        return new RuntimeException("Especialidad no válida: " + specialtyId);
+                    });
+            TherapistSpecialty ts = new TherapistSpecialty();
+            ts.setUserTherapist(userTherapist);
+            ts.setSpecialty(specialty);
+            therapistSpecialtyDao.save(ts);
         }
-
-        logger.info("Especialidades asignadas para terapeuta con ID: " + user.getUserId());
+        logger.info("Especialidades asignadas para terapeuta con ID: {}"+ user.getUserId());
     }
+
+
 
     /**
      * Obtiene los datos del perfil del terapeuta autenticado.

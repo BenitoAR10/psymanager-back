@@ -3,8 +3,10 @@ package bo.com.ucb.psymanager.controllers;
 import bo.com.ucb.psymanager.bl.TherapistProfileBl;
 import bo.com.ucb.psymanager.dto.TherapistProfileUpdateDto;
 import bo.com.ucb.psymanager.dto.TherapistProfileViewDto;
+import bo.com.ucb.psymanager.exceptions.CiNumberAlreadyExistsException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -33,13 +35,27 @@ public class TherapistProfileController {
      */
     @PutMapping("/profile")
     @PreAuthorize("hasRole('THERAPIST')")
-    public ResponseEntity<Void> updateProfile(Principal principal,
-                                              @RequestBody TherapistProfileUpdateDto dto) {
+    public ResponseEntity<?> updateProfile(Principal principal,
+                                           @RequestBody TherapistProfileUpdateDto dto) {
         String email = principal.getName();
-        logger.info("Solicitud para actualizar perfil del terapeuta autenticado: " + email);
+        logger.info("Solicitud para actualizar perfil del terapeuta autenticado: {}" + email);
 
-        therapistProfileBl.updateTherapistProfile(email, dto);
-        return ResponseEntity.noContent().build(); // 204 No Content
+        try {
+            therapistProfileBl.updateTherapistProfile(email, dto);
+            return ResponseEntity.noContent().build(); // 204 No Content
+        } catch (DataIntegrityViolationException ex) {
+            // extraer mensaje de Postgres
+            String rootMsg = ex.getRootCause() != null
+                    ? ex.getRootCause().getMessage()
+                    : ex.getMessage();
+
+            if (rootMsg.contains("(ci_number)=")) {
+                // lanzamos tu excepción para que el GlobalExceptionHandler la traduzca
+                throw new CiNumberAlreadyExistsException("Ya existe un terapeuta con ese CI");
+            }
+            // si no es duplicado de CI, relanzamos para manejo genérico
+            throw ex;
+        }
     }
 
     /**

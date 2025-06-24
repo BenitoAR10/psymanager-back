@@ -16679,3 +16679,652 @@ Caused by: java.lang.IllegalArgumentException: The given id must not be null
 [2025-06-13 21:41:51] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
 [2025-06-13 21:41:51] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
 [2025-06-13 21:42:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 16:23:35] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-19 16:23:36] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-19 16:23:36] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-19 16:23:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-19 16:23:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 16:23:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-19 16:23:36] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-19 17:42:20] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-06-19 17:42:21] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-06-19 17:42:21] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-06-19 17:42:21] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 17:42:21] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 17:42:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 17:42:26] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 17:48:15] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 17:48:21] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 17:52:14] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 17:52:32] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 17:53:15] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 17:53:15] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 17:53:19] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 17:53:19] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 17:53:23] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 17:53:23] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 17:56:21] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-19 17:56:21] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-19 17:56:21] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-19 17:56:21] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-19 17:56:21] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 17:56:21] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-19 17:56:21] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-19 17:56:21] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 17:56:21] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 17:56:32] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 17:56:32] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 17:57:48] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 17:57:48] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 17:58:22] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-06-19 17:58:22] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [THERAPIST]
+[2025-06-19 17:58:22] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-06-19 17:58:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-19 17:58:22] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-19 17:58:23] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-19 17:58:25] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 17:58:25] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 17:58:29] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-19 17:58:53] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-19 17:59:21] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-19 17:59:21] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: melany.kaune@ucb.edu.bo
+[2025-06-19 17:59:21] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: melany.kaune@ucb.edu.bo
+[2025-06-19 17:59:21] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: 2
+[2025-06-19 17:59:22] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-19 17:59:32] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 17:59:32] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:08:04] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-06-19 18:08:04] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-06-19 18:08:04] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-06-19 18:08:04] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 18:08:04] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 18:08:05] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 18:08:06] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:08:06] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:09:05] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:09:05] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:09:25] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:09:25] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:09:45] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-06-19 18:09:45] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [THERAPIST]
+[2025-06-19 18:09:45] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-06-19 18:09:45] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-19 18:09:45] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-19 18:09:46] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-19 18:09:48] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:09:48] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:10:12] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-06-17, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:10:12] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:10:12] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=116
+[2025-06-19 18:10:12] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:10:12] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:10:18] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-06-19, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:10:18] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:10:18] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=117
+[2025-06-19 18:10:18] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:10:18] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:10:29] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-06-17, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:10:29] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:10:29] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=118
+[2025-06-19 18:10:29] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:10:29] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:10:35] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-06-19, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:10:35] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:10:35] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=119
+[2025-06-19 18:10:36] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:10:36] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:10:46] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:10:46] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:10:59] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-06-24, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:10:59] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:10:59] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=120
+[2025-06-19 18:10:59] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:10:59] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:06] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-06-26, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:11:06] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:06] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=121
+[2025-06-19 18:11:06] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:06] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:11] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-06-24, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:11:11] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:11] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=122
+[2025-06-19 18:11:11] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:11] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:18] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-06-26, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:11:18] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:18] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=123
+[2025-06-19 18:11:18] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:18] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:23] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-01, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:11:23] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:23] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=124
+[2025-06-19 18:11:24] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:24] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:29] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-03, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:11:29] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:29] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=125
+[2025-06-19 18:11:29] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:29] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:35] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-01, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:11:35] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:35] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=126
+[2025-06-19 18:11:35] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:35] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:41] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-03, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:11:41] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:41] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=127
+[2025-06-19 18:11:41] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:41] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:53] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-08, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:11:53] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:53] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=128
+[2025-06-19 18:11:53] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:53] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:11:58] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-15, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:11:58] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:11:58] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=129
+[2025-06-19 18:11:58] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:11:58] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:12:03] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-10, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:12:03] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:12:03] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=130
+[2025-06-19 18:12:03] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:12:03] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:12:07] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-17, horaInicio=09:00, horaFin=10:00
+[2025-06-19 18:12:07] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:12:07] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=131
+[2025-06-19 18:12:07] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:12:07] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:12:11] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-08, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:12:11] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:12:11] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=132
+[2025-06-19 18:12:11] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:12:11] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:12:15] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-15, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:12:15] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:12:15] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=133
+[2025-06-19 18:12:15] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:12:15] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:12:18] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-10, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:12:18] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:12:19] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=134
+[2025-06-19 18:12:19] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:12:19] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:12:23] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=2, fecha=2025-07-17, horaInicio=14:00, horaFin=15:00
+[2025-06-19 18:12:23] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=2
+[2025-06-19 18:12:23] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=135
+[2025-06-19 18:12:23] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:12:23] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:13:16] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-06-19 18:13:16] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-06-19 18:13:16] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-06-19 18:13:16] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 18:13:16] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 18:13:16] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 18:13:18] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:13:18] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:14:08] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:14:08] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:14:09] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:14:09] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:17:02] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:17:02] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:17:09] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:17:09] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:17:19] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:17:19] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:17:35] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:17:35] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:17:37] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:17:37] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:17:39] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:17:39] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:18:04] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:18:04] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:19:04] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:19:04] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:19:08] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:19:08] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:19:08] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:19:08] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:20:47] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:20:47] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:20:47] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-19 18:20:47] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-19 18:27:16] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-19 18:27:16] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-19 18:27:16] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-19 18:27:16] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-19 18:27:16] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 18:27:16] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-19 18:27:16] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-19 18:27:16] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 18:27:16] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 18:41:16] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-19 18:41:16] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-19 18:41:16] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-19 18:41:16] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-19 18:41:16] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 18:41:16] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-19 18:41:16] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-19 18:41:16] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-19 18:41:16] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-19 18:56:37] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-19 18:56:37] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-06-19 18:56:37] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-06-19 18:56:37] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-06-19 18:59:00] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-19 18:59:00] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-19 18:59:00] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-19 18:59:00] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-19 18:59:00] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 18:59:00] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-19 18:59:00] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-19 19:08:42] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-19 19:08:42] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-19 19:08:42] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-19 19:08:42] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-19 19:08:42] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 19:08:42] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-19 19:08:42] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-19 19:31:07] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-19 19:31:07] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-19 19:31:07] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-19 19:31:07] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-19 19:31:07] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 19:31:07] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-19 19:31:07] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-19 19:46:08] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-19 19:46:08] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-06-19 19:46:08] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-06-19 19:46:08] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-06-19 19:46:19] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-19 19:46:19] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-19 19:46:19] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-19 19:46:19] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-19 19:46:19] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 19:46:19] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-19 19:46:19] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-19 19:46:53] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 19:54:07] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-19 19:54:07] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-19 19:54:07] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-19 19:54:07] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-19 19:54:07] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 19:54:07] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-19 19:54:07] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-19 21:03:12] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-19 21:03:12] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-19 21:03:12] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-19 21:03:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-19 21:03:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-19 21:03:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-19 21:03:12] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 08:10:12] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-06-24 08:10:12] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-06-24 08:10:12] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-06-24 08:10:13] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:10:13] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:10:13] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:10:35] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:10:35] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:13:32] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:13:59] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:13:59] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:13:59] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: amir.rojas@ucb.edu.bo
+[2025-06-24 08:13:59] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: 1
+[2025-06-24 08:13:59] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:21:27] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-24 08:21:27] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-24 08:21:28] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-24 08:21:28] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-24 08:21:28] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 08:21:28] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 08:21:28] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 08:23:31] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:23:31] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:24:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 08:24:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:24:12] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 08:24:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:24:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:24:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 08:24:12] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 08:24:12] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:24:12] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:24:23] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=1, fecha=2025-07-02, horaInicio=10:00, horaFin=08:00
+[2025-06-24 08:24:23] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=1
+[2025-06-24 08:24:23] [WARN] [TherapistScheduledBl] - Hora inválida: start=10:00, end=08:00
+[2025-06-24 08:25:07] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=1, fecha=2025-07-16, horaInicio=09:00, horaFin=10:30
+[2025-06-24 08:25:07] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=1
+[2025-06-24 08:25:07] [WARN] [TherapistScheduledBl] - Conflicto detectado para terapeuta ID=1
+[2025-06-24 08:25:42] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:25:42] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:26:01] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=1, fecha=2025-06-24, horaInicio=10:00, horaFin=11:00
+[2025-06-24 08:26:01] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=1
+[2025-06-24 08:26:01] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=136
+[2025-06-24 08:26:01] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:26:01] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:26:17] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:26:17] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:26:21] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:26:21] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:26:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:26:22] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:26:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:26:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:26:29] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:26:29] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:26:46] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=1, fecha=2025-06-25, horaInicio=10:00, horaFin=11:00
+[2025-06-24 08:26:46] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=1
+[2025-06-24 08:26:46] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=137
+[2025-06-24 08:26:46] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:26:46] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:27:29] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:27:29] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:28:30] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.perez@ucb.edu.bo
+[2025-06-24 08:28:30] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.perez@ucb.edu.bo
+[2025-06-24 08:28:30] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.perez@ucb.edu.bo
+[2025-06-24 08:28:30] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.perez@ucb.edu.bo
+[2025-06-24 08:28:30] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.perez@ucb.edu.bo
+[2025-06-24 08:28:30] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 08:28:30] [INFO] [AuthController] - Login exitoso para: juan.perez@ucb.edu.bo
+[2025-06-24 08:29:10] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:29:10] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:29:19] [INFO] [TherapistScheduleController] - POST /api/schedules → terapeutaId=1, fecha=2025-06-26, horaInicio=10:00, horaFin=11:00
+[2025-06-24 08:29:19] [INFO] [TherapistScheduledBl] - Intentando crear nuevo horario para terapeuta ID=1
+[2025-06-24 08:29:19] [INFO] [TherapistScheduledBl] - Horario creado con éxito. ID=138
+[2025-06-24 08:29:19] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 08:29:19] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 08:32:41] [DEBUG] [AuthenticatedUserBl] - Extrayendo usuario autenticado desde token: amir.rojas@ucb.edu.bo
+[2025-06-24 08:33:08] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-24 08:33:08] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-24 08:33:08] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-24 08:33:08] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-24 08:33:08] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 08:33:08] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 08:33:08] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 08:38:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 08:38:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 08:38:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 08:38:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 08:38:12] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 08:38:12] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 08:38:12] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:38:12] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:43:45] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:48:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 08:48:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-06-24 08:48:12] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-06-24 08:48:12] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-06-24 08:52:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 08:52:12] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 08:52:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 08:52:12] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 08:52:12] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 08:52:12] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 08:52:12] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 08:52:12] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:50:18] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-06-24 13:50:18] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-06-24 13:50:18] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-06-24 13:50:18] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:50:18] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 13:50:19] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 13:50:22] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:50:49] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:51:55] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:53:55] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:55:12] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:56:59] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:57:01] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 13:59:47] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:02:01] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:04:18] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 14:04:18] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:04:18] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 14:04:18] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:04:18] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:04:18] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 14:04:18] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 14:04:18] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:04:18] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:06:34] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:06:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:06:35] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:06:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:06:35] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:06:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:06:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:06:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:22] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:22] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:22] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:22] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: 1
+[2025-06-24 14:07:22] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:42] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:46] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:46] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:46] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: amir.rojas@ucb.edu.bo
+[2025-06-24 14:07:46] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: 1
+[2025-06-24 14:07:53] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 14:07:53] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 14:07:56] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:08:24] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:08:40] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:08:40] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:08:40] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: amir.rojas@ucb.edu.bo
+[2025-06-24 14:08:40] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: 1
+[2025-06-24 14:08:40] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:09:27] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:12:25] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:12:26] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:12:27] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:12:27] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:12:27] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:12:27] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:12:27] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:12:27] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:14:42] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:14:42] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:14:42] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: amir.rojas@ucb.edu.bo
+[2025-06-24 14:14:42] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: 1
+[2025-06-24 14:14:50] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:27:36] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-06-24 14:27:36] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-06-24 14:27:36] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-06-24 14:27:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:27:37] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:27:37] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:28:22] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:28:28] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:28:28] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:28:28] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: {}amir.rojas@ucb.edu.bo
+[2025-06-24 14:28:28] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: {}1
+[2025-06-24 14:28:58] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:30] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:31] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:31] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:31] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:31] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:31] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:31] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:31] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:39] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: {}amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:39] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:39] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: {}amir.rojas@ucb.edu.bo
+[2025-06-24 14:33:39] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: {}1
+[2025-06-24 14:33:44] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:37:21] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:37:33] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:40:04] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 14:41:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 14:41:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 14:41:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 14:41:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 14:41:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 14:41:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:41:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:40] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:42] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:42] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:42] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:43] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:43] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:43] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:43] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:49] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: {}amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:49] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:49] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: {}amir.rojas@ucb.edu.bo
+[2025-06-24 14:45:49] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: {}1
+[2025-06-24 14:45:59] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:06] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:07] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:08] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:08] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:08] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:08] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:08] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:08] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:13] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: {}amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:13] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:13] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: {}amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:13] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: {}1
+[2025-06-24 14:48:17] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:48:19] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 14:55:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 14:55:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 14:55:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 14:55:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 14:55:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 14:55:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 14:55:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:57:11] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:57:33] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 14:57:35] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 15:09:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 15:09:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 15:09:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 15:09:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 15:09:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 15:09:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:09:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:22:52] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:06] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 15:23:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 15:23:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 15:23:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 15:23:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 15:23:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 15:23:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:23:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:29] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:31] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:31] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:32] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:32] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:32] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:32] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:32] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:36] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: {}amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:36] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:36] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: {}amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:36] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: {}1
+[2025-06-24 15:24:48] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: {}amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:48] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:48] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: {}amir.rojas@ucb.edu.bo
+[2025-06-24 15:24:48] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: {}1
+[2025-06-24 15:24:48] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:33:39] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:35:12] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:35:19] [INFO] [TherapistProfileController] - Solicitud para actualizar perfil del terapeuta autenticado: {}amir.rojas@ucb.edu.bo
+[2025-06-24 15:35:19] [INFO] [TherapistProfileBl] - Actualizando perfil del terapeuta con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:35:19] [INFO] [TherapistProfileBl] - Datos personales actualizados para terapeuta: {}amir.rojas@ucb.edu.bo
+[2025-06-24 15:35:19] [INFO] [TherapistProfileBl] - Especialidades asignadas para terapeuta con ID: {}1
+[2025-06-24 15:35:19] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:36:01] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 15:36:01] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 15:36:56] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 15:37:36] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 15:37:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 15:37:36] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 15:37:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 15:37:36] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 15:37:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 15:37:46] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo

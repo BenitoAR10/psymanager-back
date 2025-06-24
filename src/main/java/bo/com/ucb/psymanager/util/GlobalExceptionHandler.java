@@ -1,6 +1,7 @@
 package bo.com.ucb.psymanager.util;
 
 import bo.com.ucb.psymanager.dto.ErrorResponseDto;
+import bo.com.ucb.psymanager.dto.FieldErrorResponse;
 import bo.com.ucb.psymanager.exceptions.*;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -108,11 +109,19 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * Maneja excepciones de número de CI ya registrado.
+     * Captura cuando el CI ya existe en la base de datos
+     * y devuelve un error de campo para que el frontend lo muestre.
      */
     @ExceptionHandler(CiNumberAlreadyExistsException.class)
-    public ResponseEntity<ErrorResponseDto> handleCiExists(CiNumberAlreadyExistsException ex, HttpServletRequest request) {
-        log.warn("CI ya registrado: {}", ex.getMessage());
-        return buildErrorResponse(HttpStatus.CONFLICT, ex.getMessage(), request);
+    public ResponseEntity<FieldErrorResponse> handleCiDuplicate(
+            CiNumberAlreadyExistsException ex) {
+
+        FieldErrorResponse error = new FieldErrorResponse(
+                "ciNumber",                  // nombre del campo en el front
+                ex.getMessage()              // mensaje descriptivo
+        );
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(error);
     }
 }
