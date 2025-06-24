@@ -17328,3 +17328,325 @@ Caused by: java.lang.IllegalArgumentException: The given id must not be null
 [2025-06-24 15:37:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
 [2025-06-24 15:37:36] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
 [2025-06-24 15:37:46] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 16:08:40] [INFO] [AuthController] - Solicitud de registro recibida para: maria.perez@ucb.edu.bo
+[2025-06-24 16:08:40] [INFO] [AuthController] - Registro exitoso para: maria.perez@ucb.edu.bo
+[2025-06-24 16:08:41] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: maria.perez@ucb.edu.bo
+[2025-06-24 16:08:41] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: maria.perez@ucb.edu.bo
+[2025-06-24 16:08:41] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para maria.perez@ucb.edu.bo
+[2025-06-24 16:08:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: maria.perez@ucb.edu.bo
+[2025-06-24 16:08:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: maria.perez@ucb.edu.bo
+[2025-06-24 16:08:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 16:08:41] [INFO] [AuthController] - Login exitoso para: maria.perez@ucb.edu.bo
+[2025-06-24 16:10:24] [INFO] [AuthController] - Solicitud para completar perfil del usuario: maria.perez@ucb.edu.bo
+[2025-06-24 16:10:24] [INFO] [AuthController] - Perfil completado correctamente para: maria.perez@ucb.edu.bo
+[2025-06-24 16:10:30] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: maria.perez@ucb.edu.bo
+[2025-06-24 16:22:56] [INFO] [AuthController] - Solicitud de registro recibida para: juan.soliz@ucb.edu.bo
+[2025-06-24 16:22:57] [INFO] [AuthController] - Registro exitoso para: juan.soliz@ucb.edu.bo
+[2025-06-24 16:22:57] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: juan.soliz@ucb.edu.bo
+[2025-06-24 16:22:57] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: juan.soliz@ucb.edu.bo
+[2025-06-24 16:22:57] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para juan.soliz@ucb.edu.bo
+[2025-06-24 16:22:57] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: juan.soliz@ucb.edu.bo
+[2025-06-24 16:22:57] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: juan.soliz@ucb.edu.bo
+[2025-06-24 16:22:57] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 16:22:57] [INFO] [AuthController] - Login exitoso para: juan.soliz@ucb.edu.bo
+[2025-06-24 16:23:52] [INFO] [AuthController] - Solicitud para completar perfil del usuario: juan.soliz@ucb.edu.bo
+[2025-06-24 16:23:52] [INFO] [AuthController] - Perfil completado correctamente para: juan.soliz@ucb.edu.bo
+[2025-06-24 16:25:24] [INFO] [AuthController] - Solicitud de registro recibida para: maria@ucb.edu.bo
+[2025-06-24 16:25:24] [INFO] [AuthController] - Registro exitoso para: maria@ucb.edu.bo
+[2025-06-24 16:25:24] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: maria@ucb.edu.bo
+[2025-06-24 16:25:24] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: maria@ucb.edu.bo
+[2025-06-24 16:25:24] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para maria@ucb.edu.bo
+[2025-06-24 16:25:24] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: maria@ucb.edu.bo
+[2025-06-24 16:25:24] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: maria@ucb.edu.bo
+[2025-06-24 16:25:24] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 16:25:24] [INFO] [AuthController] - Login exitoso para: maria@ucb.edu.bo
+[2025-06-24 16:26:22] [INFO] [AuthController] - Solicitud para completar perfil del usuario: maria@ucb.edu.bo
+[2025-06-24 16:26:22] [INFO] [AuthController] - Perfil completado correctamente para: maria@ucb.edu.bo
+[2025-06-24 16:29:02] [INFO] [AuthController] - Solicitud de registro recibida para: fabri@ucb.edu.bo
+[2025-06-24 16:29:02] [INFO] [AuthController] - Registro exitoso para: fabri@ucb.edu.bo
+[2025-06-24 16:29:02] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: fabri@ucb.edu.bo
+[2025-06-24 16:29:02] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: fabri@ucb.edu.bo
+[2025-06-24 16:29:02] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para fabri@ucb.edu.bo
+[2025-06-24 16:29:02] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: fabri@ucb.edu.bo
+[2025-06-24 16:29:02] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:29:02] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 16:29:02] [INFO] [AuthController] - Login exitoso para: fabri@ucb.edu.bo
+[2025-06-24 16:30:17] [INFO] [AuthController] - Solicitud para completar perfil del usuario: fabri@ucb.edu.bo
+[2025-06-24 16:30:17] [INFO] [AuthController] - Perfil completado correctamente para: fabri@ucb.edu.bo
+[2025-06-24 16:30:23] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:30:41] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:37:56] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:38:13] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:41:49] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:41:56] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:42:17] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:42:31] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: fabri@ucb.edu.bo
+[2025-06-24 16:45:29] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-24 16:45:29] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-24 16:45:29] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-24 16:45:29] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-24 16:45:29] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 16:45:29] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 16:45:29] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 16:45:34] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 16:46:02] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 16:46:18] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 16:47:43] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 16:48:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 16:53:09] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-06-24 16:53:09] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-06-24 16:53:09] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-06-24 16:53:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 16:53:09] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 16:53:10] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 16:53:18] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 16:53:18] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 16:54:18] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:01:10] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-24 17:01:10] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-24 17:01:10] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-24 17:01:10] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-24 17:01:10] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 17:01:10] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 17:01:10] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 17:01:44] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 17:07:09] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 17:07:09] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:07:09] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 17:07:09] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:07:09] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:07:09] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 17:07:09] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 17:07:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:07:09] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:14:40] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-24 17:14:40] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-24 17:14:41] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-24 17:14:41] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-24 17:14:41] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 17:14:41] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 17:14:41] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 17:15:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:15:20] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:15:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:15:20] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:15:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:15:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:16:55] [DEBUG] [AuthenticatedUserBl] - Extrayendo usuario autenticado desde token: amir.rojas@ucb.edu.bo
+[2025-06-24 17:17:48] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-24 17:17:48] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-24 17:17:48] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-24 17:17:48] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-24 17:17:48] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 17:17:48] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 17:17:48] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 17:21:09] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 17:21:09] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 17:21:09] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 17:21:09] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 17:21:09] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 17:21:09] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 17:21:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:21:09] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 17:35:09] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 17:35:09] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 17:35:09] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 17:35:09] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [THERAPIST]
+[2025-06-24 17:35:09] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 17:35:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:35:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:44:44] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-24 17:44:44] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-24 17:44:45] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-24 17:44:45] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-24 17:44:45] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 17:44:45] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 17:44:45] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 17:44:54] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 17:53:44] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: amir.rojas@ucb.edu.bo
+[2025-06-24 17:53:44] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para amir.rojas@ucb.edu.bo: [THERAPIST]
+[2025-06-24 17:53:44] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para amir.rojas@ucb.edu.bo
+[2025-06-24 17:53:45] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: amir.rojas@ucb.edu.bo
+[2025-06-24 17:53:45] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:53:45] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: amir.rojas@ucb.edu.bo
+[2025-06-24 17:54:00] [DEBUG] [AuthenticatedUserBl] - Extrayendo usuario autenticado desde token: amir.rojas@ucb.edu.bo
+[2025-06-24 17:54:21] [INFO] [AuthController] - Solicitud de inicio de sesión recibida para: amirrojas@ucb.edu.bo
+[2025-06-24 17:54:21] [INFO] [AuthenticatedUserBl] - Iniciando autenticación para email: amirrojas@ucb.edu.bo
+[2025-06-24 17:54:21] [INFO] [AuthenticatedUserBl] - Autenticación exitosa para amirrojas@ucb.edu.bo
+[2025-06-24 17:54:21] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: amirrojas@ucb.edu.bo
+[2025-06-24 17:54:21] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: amirrojas@ucb.edu.bo
+[2025-06-24 17:54:21] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [PATIENT]
+[2025-06-24 17:54:21] [INFO] [AuthController] - Login exitoso para: amirrojas@ucb.edu.bo
+[2025-06-24 18:16:28] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 18:16:28] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 18:16:28] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-06-24 18:16:28] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: null
+[2025-06-24 18:16:28] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-06-24 18:16:28] [WARN] [AuthenticatedUserBl] - No se pudo extraer email del refresh token
+[2025-06-24 18:16:28] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-06-24 18:16:28] [WARN] [AuthController] - Refresh token inválido o expirado.
+[2025-06-24 18:16:33] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-06-24 18:16:33] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [INTERN-THERAPSIT]
+[2025-06-24 18:16:33] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-06-24 18:16:34] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:16:34] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:16:34] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:33] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:33] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:33] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:33] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:33] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:34] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:34] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:34] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:34] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:34] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:34] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:35] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:36] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:43] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:43] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:43] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:43] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:43] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:18:44] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:25:25] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:25:25] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:25:25] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:25:25] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:25:25] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:25:25] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:15] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:15] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:20] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:20] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:20] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:22] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:22] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:22] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:23] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:44] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:44] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:44] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:44] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:44] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:45] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:49] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:49] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [INTERN-THERAPSIT]
+[2025-06-24 18:28:49] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:49] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:49] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:49] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:50] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:50] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:50] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:50] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:50] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:28:50] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:33] [INFO] [AuthController] - Solicitud a /auth/token/refresh
+[2025-06-24 18:30:33] [INFO] [AuthenticatedUserBl] - Intentando refrescar token para usuario: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:33] [INFO] [AuthenticatedUserBl] - Refresh token válido. Generando nuevos tokens para: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:33] [INFO] [AuthenticatedUserBl] - Generando tokens para usuario: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:33] [DEBUG] [AuthenticatedUserBl] - Obteniendo roles del usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:33] [DEBUG] [AuthenticatedUserBl] - Roles encontrados: [INTERN-THERAPSIT]
+[2025-06-24 18:30:33] [INFO] [AuthController] - Refresh token válido. Nuevos tokens generados.
+[2025-06-24 18:30:33] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:33] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:50] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:50] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:50] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:50] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:50] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:51] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:55] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:55] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:55] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:55] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:55] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:55] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:56] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:56] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:57] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:57] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:57] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:30:57] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:02] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:02] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [INTERN-THERAPSIT]
+[2025-06-24 18:31:02] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:02] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:02] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:02] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:02] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:02] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:03] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:03] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:03] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:31:03] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:00] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:00] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:00] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:00] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:00] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:00] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:08] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:08] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:09] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:09] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:14] [INFO] [OAuth2AuthenticationBl] - Autenticación OAuth2 iniciada para: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:14] [DEBUG] [OAuth2AuthenticationBl] - Roles encontrados para melany.kaune@ucb.edu.bo: [INTERN-THERAPIST]
+[2025-06-24 18:32:14] [INFO] [OAuth2AuthenticationBl] - Tokens generados exitosamente para melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:14] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:15] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:15] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:15] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:15] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:16] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:16] [DEBUG] [AuthenticatedUserBl] - Buscando usuario con email: melany.kaune@ucb.edu.bo
+[2025-06-24 18:32:20] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 18:32:20] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 18:32:26] [INFO] [TherapistScheduleController] - GET /api/schedules → todos los horarios registrados
+[2025-06-24 18:32:26] [INFO] [TherapistScheduledBl] - Obteniendo todos los horarios registrados
+[2025-06-24 18:32:29] [INFO] [TherapistProfileController] - Solicitud para obtener perfil del terapeuta autenticado: melany.kaune@ucb.edu.bo

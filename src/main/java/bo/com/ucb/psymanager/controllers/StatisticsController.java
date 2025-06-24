@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @RequestMapping("/api/statistics")
 @RequiredArgsConstructor
 @Slf4j
-@PreAuthorize("hasRole('THERAPIST')")
+@PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
 public class StatisticsController {
 
     private final CompletedExerciseBl completedExerciseBl;

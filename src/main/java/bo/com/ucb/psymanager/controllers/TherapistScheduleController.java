@@ -33,7 +33,7 @@ public class TherapistScheduleController {
      * @return horario registrado como DTO
      */
     @PostMapping
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<ScheduleResponseDto> createSchedule(@RequestBody CreateScheduleRequestDto requestDto) {
         logger.info("POST /api/schedules → terapeutaId=" + requestDto.getUserTherapistId()
                 + ", fecha=" + requestDto.getDate()
@@ -52,7 +52,7 @@ public class TherapistScheduleController {
      * @return horario actualizado
      */
     @PutMapping("/{scheduleId}")
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST','INTERN-THERAPIST')")
     public ResponseEntity<ScheduleResponseDto> updateSchedule(
             @PathVariable Long scheduleId,
             @RequestBody CreateScheduleRequestDto requestDto
@@ -69,7 +69,7 @@ public class TherapistScheduleController {
      * @return lista de horarios
      */
     @GetMapping
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<List<ScheduleResponseDto>> getSchedules(
             @RequestParam(name = "therapistId", required = false) Integer therapistId
     ) {

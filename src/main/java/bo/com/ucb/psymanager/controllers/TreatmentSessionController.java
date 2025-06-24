@@ -31,7 +31,7 @@ public class TreatmentSessionController {
      * @return lista de sesiones creadas como DTOs
      */
     @PostMapping("/{planId}/sessions")
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<List<TreatmentSessionDto>> addSessionsToPlan(
             @PathVariable Long planId,
             @RequestBody CreateTreatmentSessionsRequestDto dto
@@ -49,7 +49,7 @@ public class TreatmentSessionController {
      * @return respuesta sin contenido
      */
     @DeleteMapping("/{treatmentId}/sessions/{sessionId}")
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<Void> cancelTreatmentSession(
             @PathVariable Long treatmentId,
             @PathVariable Long sessionId
@@ -66,7 +66,7 @@ public class TreatmentSessionController {
      * @return respuesta sin contenido
      */
     @PutMapping("/sessions/{sessionId}/complete")
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<Void> completeSession(@PathVariable Long sessionId) {
         log.info("PUT /api/treatments/sessions/{}/complete → marcar como completada", sessionId);
         treatmentSessionBl.markSessionAsCompleted(sessionId);

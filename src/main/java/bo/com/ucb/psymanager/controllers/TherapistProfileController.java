@@ -34,7 +34,7 @@ public class TherapistProfileController {
      * @return respuesta vacía si fue exitoso
      */
     @PutMapping("/profile")
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<?> updateProfile(Principal principal,
                                            @RequestBody TherapistProfileUpdateDto dto) {
         String email = principal.getName();
@@ -65,7 +65,7 @@ public class TherapistProfileController {
      * @return perfil completo del terapeuta (datos personales y especialidades)
      */
     @GetMapping("/profile")
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<TherapistProfileViewDto> getProfile(Principal principal) {
         String email = principal.getName(); // obtenido desde el JWT
         logger.info("Solicitud para obtener perfil del terapeuta autenticado: " + email);

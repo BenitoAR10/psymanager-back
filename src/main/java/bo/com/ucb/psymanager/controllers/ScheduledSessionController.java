@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("/api/sessions")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:8081")
-@PreAuthorize("hasAnyRole('PATIENT', 'THERAPIST')")
+@PreAuthorize("hasAnyRole('PATIENT', 'THERAPIST', 'INTERN-THERAPIST')")
 public class ScheduledSessionController {
 
     private static final Logger logger = LoggerFactory.getLogger(ScheduledSessionController.class);

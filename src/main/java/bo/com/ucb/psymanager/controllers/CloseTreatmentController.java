@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/treatments")
 @RequiredArgsConstructor
 @Slf4j
-@PreAuthorize("hasRole('THERAPIST')")
+@PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
 public class CloseTreatmentController {
 
     private final CloseTreatmentBl closeTreatmentBl;

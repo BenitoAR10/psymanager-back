@@ -27,7 +27,7 @@ public class SessionNoteController {
      * @return nota registrada
      */
     @PostMapping
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<SessionNoteDto> saveOrUpdateNote(@RequestBody CreateOrUpdateSessionNoteDto dto) {
         log.info("POST /api/notes → sesión ID={}", dto.getTreatmentSessionId());
         SessionNoteDto result = sessionNoteBl.saveOrUpdateSessionNote(dto);
@@ -41,7 +41,7 @@ public class SessionNoteController {
      * @return nota encontrada, o 404 si no existe
      */
     @GetMapping("/session/{sessionId}")
-    @PreAuthorize("hasRole('THERAPIST')")
+    @PreAuthorize("hasAnyRole('THERAPIST', 'INTERN-THERAPIST')")
     public ResponseEntity<SessionNoteDto> getNoteBySession(@PathVariable Long sessionId) {
         log.info("GET /api/notes/session/{}", sessionId);
         return sessionNoteBl.getNoteBySessionId(sessionId)

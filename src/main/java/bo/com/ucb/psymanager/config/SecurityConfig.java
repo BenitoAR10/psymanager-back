@@ -53,7 +53,8 @@ public class SecurityConfig {
 
                         // Endpoints por rol
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/dashboard/**", "/api/therapists").hasRole("THERAPIST")
+                        .requestMatchers("/api/dashboard/**", "/api/therapists")
+                        .hasAnyRole("THERAPIST", "INTERN-THERAPIST")
 
                         // Todos los demás requieren autenticación
                         .anyRequest().authenticated()
