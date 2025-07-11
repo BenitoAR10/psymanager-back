@@ -41,12 +41,16 @@ public class TreatmentBl {
     public TreatmentPlanDto createTreatmentPlan(CreateTreatmentPlanRequestDto dto) {
         log.info("Creando TreatmentPlan para paciente={} terapeuta={}", dto.getPatientId(), dto.getTherapistId());
 
-        // Validación de sesión previa aceptada
-        boolean hasAccepted = scheduleSessionDao.existsByUserPatient_UserPatientIdAndStateIn(
-                dto.getPatientId().intValue(), List.of(SessionState.ACCEPTED)
+        // Validación de sesión previa aceptada o completada
+        boolean hasValidSession = scheduleSessionDao.existsByUserPatient_UserPatientIdAndStateIn(
+                dto.getPatientId().intValue(),
+                List.of(SessionState.ACCEPTED, SessionState.COMPLETED)
         );
-        if (!hasAccepted) {
-            throw new IllegalStateException("El paciente " + dto.getPatientId() + " no tiene ninguna sesión aceptada previa");
+        if (!hasValidSession) {
+            throw new IllegalStateException(
+                    "El paciente " + dto.getPatientId() +
+                            " no tiene ninguna sesión previa aceptada o completada"
+            );
         }
 
         // Verificar existencia de tratamiento activo
