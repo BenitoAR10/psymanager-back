@@ -16,6 +16,9 @@ public class CreateWellnessExerciseDto {
 
     private Integer pointsReward;
 
+    /** ¿Mostrar puntos al completar? */
+    private Boolean showPoints;
+
     /** Archivo de audio del ejercicio, en formato .mp3 o .wav */
     private MultipartFile audioFile;
 }

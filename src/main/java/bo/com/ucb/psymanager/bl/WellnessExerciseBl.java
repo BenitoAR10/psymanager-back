@@ -45,17 +45,22 @@ public class WellnessExerciseBl {
         }
 
         try {
-            // Subir a MinIO con el nombre original del archivo
+            // 1. Subir a MinIO con el nombre original del archivo
             String objectName = file.getOriginalFilename();
             minioService.uploadExerciseAudio(file, objectName);
 
-            // Crear y guardar el ejercicio
+            // 2. Crear y poblar la entidad
             WellnessExercise exercise = new WellnessExercise();
             exercise.setTitle(dto.getTitle());
             exercise.setCategory(dto.getCategory());
             exercise.setPointsReward(dto.getPointsReward());
-            exercise.setAudioUrl(objectName); // Guardamos solo el nombre del archivo
+            exercise.setAudioUrl(objectName);
 
+            // 3. Asignar el nuevo campo showPoints (por defecto true si viene null)
+            Boolean show = dto.getShowPoints();
+            exercise.setShowPoints(show != null ? show : Boolean.TRUE);
+
+            // 4. Guardar en BD
             return wellnessExerciseDao.save(exercise);
 
         } catch (Exception e) {
@@ -63,6 +68,7 @@ public class WellnessExerciseBl {
             throw new RuntimeException("No se pudo registrar el ejercicio de bienestar.");
         }
     }
+
 
     /**
      * Obtiene todos los ejercicios de bienestar registrados en el sistema
@@ -77,6 +83,7 @@ public class WellnessExerciseBl {
                         ex.getTitle(),
                         ex.getCategory(),
                         ex.getPointsReward(),
+                        ex.getShowPoints(),
                         minioPublicHost + "/wellness-audios/" + ex.getAudioUrl()
 
 
@@ -107,6 +114,7 @@ public class WellnessExerciseBl {
                         ex.getTitle(),
                         ex.getCategory(),
                         ex.getPointsReward(),
+                        ex.getShowPoints(),
                         minioPublicHost + "/wellness-audios/" + ex.getAudioUrl()
 
 

@@ -13,6 +13,8 @@ public class WellnessExerciseResponseDto {
     private String title;
     private String category;
     private Integer pointsReward;
+    /** ¿Mostrar puntos al completar? */
+    private Boolean showPoints;
     /**
      * URL pública del archivo de audio, accesible directamente desde frontend.
      */

@@ -28,4 +28,7 @@ public class WellnessExercise {
 
     @Column(name = "points_reward", nullable = false)
     private Integer pointsReward;
+
+    @Column(name = "show_points", nullable = false)
+    private Boolean showPoints;
 }

@@ -96,6 +96,7 @@ public class WellnessExerciseController {
                 created.getTitle(),
                 created.getCategory(),
                 created.getPointsReward(),
+                created.getShowPoints(),
                 publicUrl
         );
 
